@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
-import SEO from "../components/layout/seo"
+import SearchEngine from "../components/layout/seo"
 
 function SecondPage() {
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SearchEngine title="Page two" />
       <Link to="/">
         <img src="/images/logos/logo.svg" alt="logo" />
       </Link>

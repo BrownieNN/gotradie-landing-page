@@ -1,17 +1,17 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import SEO from "../components/layout/seo"
-import Footer from "../components/sections/Footer"
+import SearchEngine from "../components/layout/seo"
+import ScrollIndicator from "../components/scroll/Scroll"
+import HeroAnimation from "../components/sections/HeroAnimation"
 import HeroSection from "../components/sections/HeroSection"
-import Blog from "./blog"
 
 function IndexPage() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SearchEngine title="Home" />
       <HeroSection />
-      <Blog />
-      <Footer />
+      <ScrollIndicator />
+      <HeroAnimation />
     </Layout>
   )
 }

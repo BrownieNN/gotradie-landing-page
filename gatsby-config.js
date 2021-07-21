@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Bottomless Brunch`,
-    description: `The place where all you can eat brunch and booze, all in one place`,
-    author: `BBAU`,
+    title: `GoTradie`,
+    description: `Tradie Chat Sorted`,
+    author: `GoTradie`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

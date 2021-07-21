@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const H1 = styled.h1`
   font-weight: bold;
-  font-size: 60px;
+  font-size: 67px;
 
   @media (max-width: 450px) {
     font-size: 48px;
@@ -68,5 +68,12 @@ export const SmallText2 = styled.p`
   font-weight: 600;
   font-size: 13px;
   line-height: 130%;
+  text-transform: uppercase;
+`
+export const ButtonText = styled.p`
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 `

@@ -1,26 +1,26 @@
 import React from "react"
 import styled from "styled-components"
 
-export default function MockupAnimation() {
+export default function MessagesAnimation() {
   return (
     <Wrapper>
       <div className="mockup1" />
-      <div className="mockup2" />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   position: relative;
-  width: 558px;
+  width: 1234px;
 
-  @media (max-width: 768px) {
-    transform: scale(0.9);
-    transform-origin: top left;
+  @media (max-width: 1354px) {
+    transform-origin: center;
+    width: 588px;
   }
 
   @media (max-width: 450px) {
-    transform: scale(0.57);
+    transform-origin: center;
+    width: 375px;
   }
 
   /* div {
@@ -49,20 +49,25 @@ const Wrapper = styled.div`
 
   .mockup1 {
     position: absolute;
-    width: 413px;
-    height: 574px;
-    left: 190px;
-    top: 40px;
-    background: url("/images/shots/hero-shot1.png") no-repeat;
-    background-size: contain;
-  }
-  .mockup2 {
-    position: absolute;
-    width: 272px;
-    height: 550px;
-    left: 44px;
+    width: 1196px;
+    height: 463px;
+    left: 0px;
     top: 0px;
-    background: url("/images/phones/phone-hero.png") no-repeat;
+    background: url("/images/animations/messages.svg");
     background-size: contain;
+
+    @media (max-width: 450px) {
+      background: url("/images/animations/messages-mobile.svg") no-repeat;
+      transform: scale(1) !important;
+      width: 375px;
+      height: 342px;
+    }
+
+    @media (max-width: 1354px) {
+      background: url("/images/animations/messages-mobile.svg") no-repeat;
+      transform: scale(1.8);
+      transform-origin: left top;
+      width: 375px;
+    }
   }
 `

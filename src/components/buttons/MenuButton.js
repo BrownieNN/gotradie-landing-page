@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 export default function MenuButton(props) {
   const { item } = props
   return (
-    <Link to={item.link} onClick={props.onClick}>
+    <Link to={`${item.nav}`} onClick={props.onClick}>
       <MenuItem title={item.title}>
         <img src={item.icon} alt={item.title} />
         {item.title}
@@ -16,13 +16,15 @@ export default function MenuButton(props) {
 
 const MenuItem = styled.div`
   color: rgba(255, 255, 255, 0.7);
-  display: grid;
-  grid-template-columns: 24px auto;
-  gap: ${props => (props.title ? "10px" : "0px")};
   align-items: center;
-  padding: 10px;
+  margin-right: ${props => (props.title ? "10px" : "5px")};
+  padding: ${props => (props.title ? "10px" : "0px")};
   border-radius: 10px;
   transition: 0.5s ease-out;
+
+  img {
+    display: ${props => (props.title ? "none" : "block")};
+  }
 
   :hover {
     background: rgba(255, 255, 255, 0.1);

@@ -1,33 +1,36 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-import Img from "gatsby-image"
+// export const query = graphql`
+//   query($slug: String, $tag: [String!]) {
+//     contentfulBrunchPost(slug: { eq: $slug }, tag: { in: $tag }) {
+//       title
+//       slug
+//       tag
+//     }
+//   }
+// `
 
-const Blog = () => {
+const TagPosts = () => {
   const data = useStaticQuery(
     graphql`
-      query {
-        allContentfulBrunchPost(sort: { order: DESC, fields: contentful_id }) {
+      query($slug: String, $tag: String) {
+        allContentfulBrunchPost(
+          filter: { tag: { eq: $tag }, slug: { eq: $slug } }
+        ) {
           edges {
             node {
-              title
-              tag
-              id
               slug
-              featuredImage {
-                fluid {
-                  src
-                }
-              }
-              shortDescription {
-                shortDescription
-              }
+              tag
+              title
+              id
             }
           }
         }
       }
     `
   )
+
   return (
     <div>
       <p>
@@ -40,16 +43,6 @@ const Blog = () => {
               <h2>
                 <Link to={`/blog/${edge.node.slug}/`}>{edge.node.title}</Link>
               </h2>
-              {edge.node.featuredImage && (
-                <Img
-                  className="featured"
-                  fluid={edge.node.featuredImage.fluid}
-                  alt={edge.node.title}
-                />
-              )}
-              <p className="excerpt">
-                {edge.node.shortDescription.shortDescription}
-              </p>
               <div className="button">
                 <Link to={`/blog/${edge.node.slug}/`}>Read More</Link>
               </div>
@@ -61,4 +54,14 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default TagPosts
+
+// const TagPost = props => {
+//   return (
+//     <div>
+//       <div className="content">
+//         <h1>{props.data.contentfulBrunchPost.title}</h1>
+//       </div>
+//     </div>
+//   )
+// }

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import { menuData } from "../../data/menuData"
 import MenuButton from "../buttons/MenuButton"
 import MenuTooltip from "../tooltips/MenuTooltip"
@@ -38,12 +37,10 @@ export default function Header() {
 
   return (
     <Wrapper>
-      <Link to="/">
-        <img src="/images/logos/logo.svg" alt="" />
-      </Link>
+      <img src="/images/logos/gt-logo.svg" alt="GoTradie" />
       <MenuWrapper count={menuData.length} ref={ref}>
         {menuData.map((item, index) =>
-          item.link === "/account" ? (
+          item.nav === "/" ? (
             <MenuButton
               item={item}
               key={index}
@@ -55,11 +52,12 @@ export default function Header() {
         )}
         <HamburgerWrapper>
           <MenuButton
-            item={{ title: "", icon: "/images/icons/hamburger.svg", link: "/" }}
+            item={{ title: "", icon: "/images/icons/hamburger.svg", nav: "/" }}
             onClick={event => handleClick(event)}
           />
         </HamburgerWrapper>
       </MenuWrapper>
+
       <div ref={tooltipRef}>
         <MenuTooltip isOpen={isOpen} />
       </div>
@@ -69,16 +67,17 @@ export default function Header() {
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 60px;
+  top: 30px;
   display: grid;
   grid-template-columns: 44px auto;
   width: 100%;
   justify-content: space-between;
-  padding: 0px 30px;
+  padding: 0px 100px;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1345px) {
     top: 30px;
+    padding: 0px 30px;
   }
   @media (max-width: 450px) {
     top: 20px;
@@ -88,10 +87,10 @@ const Wrapper = styled.div`
 
 const MenuWrapper = styled.div`
   display: grid;
-  gap: 30px;
+  gap: 10px;
   grid-template-columns: repeat(${props => props.count}, auto);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1345px) {
     > a {
       display: none;
     }
@@ -102,7 +101,7 @@ const MenuWrapper = styled.div`
 const HamburgerWrapper = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1345px) {
     display: block;
   }
 `

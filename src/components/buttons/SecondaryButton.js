@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import { ButtonText, Caption2, SmallText } from "../styles/TextStyles"
 
-export default function PurchaseButton(props) {
+export default function SecondaryButton(props) {
   const { title, subtitle } = props
   return (
     <Link to="/page-2">
@@ -11,35 +11,29 @@ export default function PurchaseButton(props) {
         <TextWrapper>
           <Title>{title || "Get pro access"}</Title>
         </TextWrapper>
-        <IconWrapper>
-          <img src="/images/icons/arrow-left.svg" />
-        </IconWrapper>
       </Wrapper>
     </Link>
   )
 }
 
 const Wrapper = styled.div`
-  background: #54c5c0;
+  background: rgba(15, 32, 40, 0);
   /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5); */
   border-radius: 8px;
   width: 250px;
   height: 52px;
-  display: grid;
-  grid-template-columns: auto 18px;
+  border: 2px solid rgba(84, 197, 192, 1);
   padding: 16px 24px;
-  text-align: left;
+  text-align: center;
   align-items: center;
   gap: 8px;
   justify-content: center;
   /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
-
   @media (max-width: 480px) {
     width: 340px;
   }
-
   *,
   & {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -50,10 +44,6 @@ const Wrapper = styled.div`
       0px 30px 60px rgba(23, 0, 102, 0.5),
       inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5); */
     transform: translateY(-3px);
-
-    .icon {
-      transform: translateX(1px);
-    }
   }
 `
 
@@ -63,39 +53,5 @@ const TextWrapper = styled.div`
 `
 
 const Title = styled(ButtonText)`
-  color: white;
-`
-
-const Subtitle = styled(SmallText)`
-  color: white;
-  opacity: 0.7;
-`
-
-const Ring = styled.img`
-  position: absolute;
-  top: -15px;
-  left: -16px;
-
-  ${Wrapper}:hover & {
-    transform: rotate(30deg) scale(1.2) translate(1px, 1px);
-  }
-`
-
-const IconWrapper = styled.div`
-  width: 18px;
-  height: 18px;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  justify-self: center;
-  position: relative;
-
-  ${Wrapper}:hover & {
-    /* filter: hue-rotate(10deg) brightness(150%) saturate(120%); */
-  }
-`
-
-const Icon = styled.img`
-  width: 18px;
-  height: 18px;
+  color: #54c5c0; ;
 `

@@ -7,6 +7,7 @@ export const query = graphql`
   query($slug: String!) {
     contentfulBrunchPost(slug: { eq: $slug }) {
       title
+      tag
       featuredImage {
         fluid(maxWidth: 750) {
           ...GatsbyContentfulFluid
@@ -45,6 +46,17 @@ const BlogPost = props => {
       <Link to="/blog/">Visit the Blog Page</Link>
       <div className="content">
         <h1>{props.data.contentfulBrunchPost.title}</h1>
+        <div>
+          {props.data.contentfulBrunchPost.tag.map(tag => {
+            let slugifiedTag = tag.toLowerCase().replace("/^s+$/g", "-")
+
+            return (
+              <Link className="tag" key={tag} to={`/tag/${slugifiedTag}`}>
+                {tag}
+              </Link>
+            )
+          })}
+        </div>
         {props.data.contentfulBrunchPost.featuredImage && (
           <Img
             className="featured"
