@@ -26,12 +26,12 @@ const Wrapper = styled.div`
   height: auto;
 
   @media (max-width: 1354px) {
-    transform: scale(0.9);
+    transform: scale(0.9) translateX(40px);
     transform-origin: top left;
   }
 
   @media (max-width: 450px) {
-    transform: scale(0.57) translateY(950px);
+    transform: scale(0.58) translateX(40px);
   }
 
   /* div {

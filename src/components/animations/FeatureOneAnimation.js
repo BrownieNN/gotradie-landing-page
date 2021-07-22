@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 450px) {
-    transform: scale(0.57) translateY(950px);
+    transform: scale(0.57) translateY(1000px);
   }
 
   /* div {

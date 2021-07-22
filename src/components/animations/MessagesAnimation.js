@@ -53,18 +53,18 @@ const Wrapper = styled.div`
     height: 463px;
     left: 0px;
     top: 0px;
-    background: url("/images/animations/messages.svg");
+    background: url("/images/animations/messages.svg") no-repeat center;
     background-size: contain;
 
     @media (max-width: 450px) {
-      background: url("/images/animations/messages-mobile.svg") no-repeat;
+      background: url("/images/animations/messages-mobile.svg") no-repeat center;
       transform: scale(1) !important;
       width: 375px;
       height: 342px;
     }
 
     @media (max-width: 1354px) {
-      background: url("/images/animations/messages-mobile.svg") no-repeat;
+      background: url("/images/animations/messages-mobile.svg") no-repeat center;
       transform: scale(1.8);
       transform-origin: left top;
       width: 375px;
