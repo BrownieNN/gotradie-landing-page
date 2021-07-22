@@ -3,39 +3,71 @@ import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H1, H3, MediumText, SmallText } from "../styles/TextStyles"
 import PurchaseButton from "../buttons/PurchaseButton"
-import SecondaryButton from "../buttons/SecondaryButton"
-import MockupAnimation from "../animations/MockupAnimation"
+import Losenge from "../buttons/losenge"
+import FeatureAnimationTwo from "../animations/FeatureTwoAnimation"
 
-function HeroSection() {
+function FeatureSectionTwo(props) {
+  const {
+    subtitle,
+    title,
+    description,
+    iconOne,
+    iconTwo,
+    iconThree,
+    tagTitleOne,
+    tagTitleTwo,
+    tagTitleThree,
+    animationImageOne,
+    animationImageTwo,
+    animationImageThree,
+    animationImageFour,
+    animationImageFive,
+  } = props
   return (
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
           <Lockup>
-            <Subtitle>Get back at it with</Subtitle>
-            <Title>Tradie chat</Title>
-            <img src="/images/lockup/sorted.svg" alt="Sorted" />
+            <Subtitle>{subtitle || "No nonense communication"}</Subtitle>
+            <Title>{title || "Messages all in one place"}</Title>
           </Lockup>
-
+          <TagWrapper>
+            <Losenge
+              tagTitle={tagTitleOne}
+              icon={iconOne || "/images/icons/conversation.svg"}
+            />
+            <Losenge
+              tagTitle={tagTitleTwo}
+              icon={iconTwo || "/images/icons/conversation.svg"}
+            />
+            <Losenge
+              tagTitle={tagTitleThree}
+              icon={iconThree || "/images/icons/conversation.svg"}
+            />
+          </TagWrapper>
           <Description>
-            We help tradies get back at it by simplifying the process of
-            communicating with your team and client in one place.
+            {description ||
+              "No need for mutliple apps. We made it easy to chat to your team, client & tradies in one place"}
           </Description>
           <ButtonWrapper>
             <InnerButtonWrapper>
               <PurchaseButton title="Get Started" />
-              <SecondaryButton title="Schedule Demo" />
             </InnerButtonWrapper>
-            <CreditCard>No credit card needed</CreditCard>
           </ButtonWrapper>
         </TextWrapper>
-        <MockupAnimation />
+        <FeatureAnimationTwo
+          backgroundOne={animationImageOne}
+          backgroundTwo={animationImageTwo}
+          backgroundThree={animationImageThree}
+          backgroundFour={animationImageFour}
+          backgroundFive={animationImageFive}
+        />
       </ContentWrapper>
     </Wrapper>
   )
 }
 
-export default HeroSection
+export default FeatureSectionTwo
 
 const animation = keyframes`
   0% { opacity: 0; transform: translateY(-10px); filter: blur(10px); }
@@ -50,14 +82,15 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 150px 0px 190px 0px;
+  padding: 60px 0px 340px 0px;
   display: grid;
-  grid-template-columns: 588px auto;
+  gap: 33px;
+  grid-template-columns: auto 588px;
 
   @media (max-width: 1354px) {
     grid-template-columns: auto;
     gap: 60px;
-    padding: 100px 20px 680px;
+    padding: 0px 20px 680px;
     justify-content: center;
     text-align: center;
   }
@@ -66,7 +99,7 @@ const ContentWrapper = styled.div`
     max-width: 375px;
     grid-template-columns: 375px;
     gap: 60px;
-    padding: 130px 20px 440px;
+    padding: 0px 20px 440px;
   }
 `
 const TextWrapper = styled.div`
@@ -98,16 +131,13 @@ const TextWrapper = styled.div`
   }
 `
 
-const Subtitle = styled(H3)`
+const Subtitle = styled(MediumText)`
   color: ${themes.dark.text1};
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 500;
 `
 
 const Title = styled(H1)`
   color: ${themes.dark.text1};
-  text-transform: uppercase;
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
     background-clip: text;
@@ -153,8 +183,6 @@ const ButtonWrapper = styled.div`
   gap: 8px;
 
   @media (max-width: 1354px) {
-    display: grid;
-    gap: 8px;
     justify-content: center;
     text-align: center;
   }
@@ -164,23 +192,18 @@ const ButtonWrapper = styled.div`
   }
 `
 
-const InnerButtonWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 250px 250px;
-  gap: 16px;
+const TagWrapper = styled.div`
+  display: flex;
+
+  @media (max-width: 1354px) {
+    justify-content: center;
+    display: flex;
+  }
 
   @media (max-width: 480px) {
-    grid-template-columns: auto;
+    justify-content: center;
+    display: grid;
   }
 `
 
-const CreditCard = styled(SmallText)`
-  width: 250px;
-  color: white;
-  text-align: center;
-
-  @media (max-width: 480px) {
-    width: 340px;
-    text-align: center;
-  }
-`
+const InnerButtonWrapper = styled.div``

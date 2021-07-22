@@ -66,7 +66,7 @@ export const SmallText = styled.p`
 
 export const SmallText2 = styled.p`
   font-weight: 600;
-  font-size: 13px;
+  font-size: 10px;
   line-height: 130%;
   text-transform: uppercase;
 `
