@@ -11,7 +11,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-weight: bold;
-  font-size: 40px;
+  font-size: 54px;
 
   @media (max-width: 450px) {
     font-size: 28px;
@@ -40,9 +40,14 @@ export const BodyMain = styled.p`
 `
 
 export const MediumText = styled.p`
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 130%;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 140%;
+  }
 `
 
 export const Caption = styled.p`

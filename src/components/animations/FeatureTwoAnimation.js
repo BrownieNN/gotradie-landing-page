@@ -66,7 +66,8 @@ const BackgroundImageOne = styled.div`
   left: 38px;
   top: 55px;
   background: ${props => `url(${props.backgroundOne}) no-repeat top center`};
-  background-size: cover;
+  background-size: contain;
+  overflow: visible;
 `
 /*Services*/
 const BackgroundImageTwo = styled.div`
@@ -76,17 +77,18 @@ const BackgroundImageTwo = styled.div`
   left: 0px;
   top: 4px;
   background: ${props => `url(${props.backgroundTwo}) no-repeat top center`};
-  background-size: cover;
+  background-size: contain;
+  overflow: visible;
 `
 /*Calendar*/
 const BackgroundImageThree = styled.div`
   position: absolute;
-  width: 243.61px;
+  width: 293.61px;
   height: 213px;
   left: 323px;
   top: 168px;
   background: ${props => `url(${props.backgroundThree}) no-repeat top center`};
-  background-size: cover;
+  background-size: contain;
 `
 /*Areas*/
 const BackgroundImageFour = styled.div`
@@ -97,14 +99,16 @@ const BackgroundImageFour = styled.div`
   top: 434px;
   background: ${props => `url(${props.backgroundFour}) no-repeat top center`};
   background-size: cover;
+  overflow: visible;
 `
 /*Licence*/
 const BackgroundImageFive = styled.div`
   position: absolute;
-  width: 257.36px;
-  height: 165.82px;
+  width: 287.36px;
+  height: 175.82px;
   left: 0px;
   top: 465px;
   background: ${props => `url(${props.backgroundFive}) no-repeat top center`};
-  background-size: cover;
+  background-size: contain;
+  overflow: visible;
 `

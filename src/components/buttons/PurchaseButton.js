@@ -9,7 +9,7 @@ export default function PurchaseButton(props) {
     <Link to="/page-2">
       <Wrapper>
         <TextWrapper>
-          <Title>{title || "Get pro access"}</Title>
+          <Title>{title || "Download"}</Title>
         </TextWrapper>
         <IconWrapper>
           <img src="/images/icons/arrow-left.svg" />

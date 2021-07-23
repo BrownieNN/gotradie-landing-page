@@ -6,6 +6,8 @@ import FeatureSectionOne from "../components/sections/FeatureSection1"
 import HeroAnimation from "../components/sections/HeroAnimation"
 import HeroSection from "../components/sections/HeroSection"
 import FeatureSectionTwo from "../components/sections/FeatureSection2"
+import CenterAlignSection from "../components/sections/CenterAlignSection"
+import Carousel, { CarouselItem } from "../components/carousel/Carousel"
 
 function IndexPage() {
   return (
@@ -45,10 +47,9 @@ function IndexPage() {
       />
       <FeatureSectionOne
         subtitle="Searching for help"
-        title="Find the right subbie"
+        title="Everyone under the same roof"
         iconOne="/images/icons/search.svg"
         iconTwo="/images/icons/filter.svg"
-        iconThree="/images/icons/conversation.svg"
         tagTitleOne="Search"
         tagTitleTwo="Filter by service"
         tagTitleThree="Multi message"
@@ -56,6 +57,28 @@ function IndexPage() {
         animationImageOne="/images/shots/hero-shot4.png"
         animationImageTwo="/images/animations/search-field.svg"
       />
+      <FeatureSectionTwo
+        subtitle="Introducing worksites"
+        title="Let your profile do the talking"
+        iconOne="/images/icons/people.svg"
+        iconTwo="/images/icons/chat.svg"
+        iconThree="/images/icons/conversation.svg"
+        tagTitleOne="Invite your team"
+        tagTitleTwo="Messages"
+        tagTitleThree="Group Messages"
+        description="Think of it as place to manage and run your trade business. House all messages, team member and more in the one place"
+        animationImageOne="/images/shots/hero-shot5.png"
+        animationImageTwo="/images/animations/notification.svg"
+        animationImageThree="/images/animations/chat.svg"
+        animationImageFive="/images/animations/members.svg"
+      />
+      <CenterAlignSection />
+      <Carousel>
+        <CarouselItem>Item 1</CarouselItem>
+        <CarouselItem>Item 2</CarouselItem>
+        <CarouselItem>Item 3</CarouselItem>
+        <CarouselItem>Item 4</CarouselItem>
+      </Carousel>
     </Layout>
   )
 }
