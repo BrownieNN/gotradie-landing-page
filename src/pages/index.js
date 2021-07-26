@@ -7,7 +7,10 @@ import HeroAnimation from "../components/sections/HeroAnimation"
 import HeroSection from "../components/sections/HeroSection"
 import FeatureSectionTwo from "../components/sections/FeatureSection2"
 import CenterAlignSection from "../components/sections/CenterAlignSection"
-import Carousel, { CarouselItem } from "../components/carousel/Carousel"
+import GallerySection from "../components/sections/GallerySection"
+import PanelSection from "../components/sections/PanelSection"
+import AppSection from "../components/sections/AppSection"
+import Footer from "../components/layout/footer"
 
 function IndexPage() {
   return (
@@ -73,12 +76,10 @@ function IndexPage() {
         animationImageFive="/images/animations/members.svg"
       />
       <CenterAlignSection />
-      <Carousel>
-        <CarouselItem>Item 1</CarouselItem>
-        <CarouselItem>Item 2</CarouselItem>
-        <CarouselItem>Item 3</CarouselItem>
-        <CarouselItem>Item 4</CarouselItem>
-      </Carousel>
+      <GallerySection />
+      <PanelSection />
+      <AppSection />
+      <Footer />
     </Layout>
   )
 }

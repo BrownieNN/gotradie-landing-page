@@ -1,46 +1,64 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import SecondaryButton from "../buttons/SecondaryButton"
-import TradeGrid from "../layout/TradeGrid"
 import { themes } from "../styles/ColorStyles"
 import { H2, MediumText } from "../styles/TextStyles"
 
-function CenterAlignSection() {
+export default function AppSection() {
   return (
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
           <Title>
-            Whether your a sole trader or been on the tools for years
+            Heard enough?
+            <br />
+            Download now
           </Title>
-          <Body>
-            We’ve made sure the app is a one size fits all app. Whether your
-            specialised trade to multiple cars on road sort of business we’ve
-            got you sorted
-          </Body>
+          <Subtitle>
+            Simplify all your communications in the one place and get back it
+            quicker
+          </Subtitle>
         </TextWrapper>
-        <TradeGrid />
-        <ButtonWrapper>
-          <SecondaryButton title="30+ more trades" />
-        </ButtonWrapper>
+        <ButtonGroup>
+          <img src="/images/app/apple-store-badge.png" alt="apple-store" />
+          <img src="/images/app/google-play-badge.png" alt="google-store" />
+        </ButtonGroup>
       </ContentWrapper>
     </Wrapper>
   )
 }
-
-export default CenterAlignSection
 
 const animation = keyframes`
   0% { opacity: 0; transform: translateY(-10px); filter: blur(10px); }
   //80% { opacity: 0.5; transform: translateY(-10px); filter: blur(10px); }
   100% { opacity: 1; transform: translateY(0px); filter: blur(0px); }
 `
+
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
   overflow: visible;
 `
-const ButtonWrapper = styled.div`
+const ButtonGroup = styled.div`
   margin: auto;
+  img {
+    width: 250px;
+    height: 75px;
+    margin-right: 16px;
+  }
+  @media (max-width: 1354px) {
+    img {
+      width: 250px;
+      height: 75px;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 250px;
+      height: 75px;
+      margin-bottom: 16px;
+    }
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -63,7 +81,7 @@ const ContentWrapper = styled.div`
   @media (max-width: 480px) {
     max-width: 375px;
     grid-template-columns: 375px;
-    gap: 60px;
+    gap: 30px;
     padding: 60px 20px 124px;
     justify-content: center;
   }
@@ -81,7 +99,7 @@ const TextWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 375px;
+    max-width: 345px;
     justify-content: center;
     text-align: center;
     padding: 0 8px;
@@ -117,7 +135,7 @@ const Title = styled(H2)`
   }
 `
 
-const Body = styled(MediumText)`
+const Subtitle = styled(MediumText)`
   text-align: center;
   color: ${themes.dark.text1};
 `

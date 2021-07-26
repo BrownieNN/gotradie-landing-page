@@ -1,21 +1,18 @@
-import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { ButtonText, Caption2, SmallText } from "../styles/TextStyles"
+import { ButtonText } from "../styles/TextStyles"
 
 export default function PurchaseButton(props) {
-  const { title, subtitle } = props
+  const { title, onClick, className } = props
   return (
-    <Link to="/page-2">
-      <Wrapper>
-        <TextWrapper>
-          <Title>{title || "Download"}</Title>
-        </TextWrapper>
-        <IconWrapper>
-          <img src="/images/icons/arrow-left.svg" />
-        </IconWrapper>
-      </Wrapper>
-    </Link>
+    <Wrapper onClick={onClick} className={className}>
+      <TextWrapper>
+        <Title>{title || "Download"}</Title>
+      </TextWrapper>
+      <IconWrapper>
+        <img src="/images/icons/arrow-left.svg" alt={title} />
+      </IconWrapper>
+    </Wrapper>
   )
 }
 
@@ -66,21 +63,6 @@ const Title = styled(ButtonText)`
   color: white;
 `
 
-const Subtitle = styled(SmallText)`
-  color: white;
-  opacity: 0.7;
-`
-
-const Ring = styled.img`
-  position: absolute;
-  top: -15px;
-  left: -16px;
-
-  ${Wrapper}:hover & {
-    transform: rotate(30deg) scale(1.2) translate(1px, 1px);
-  }
-`
-
 const IconWrapper = styled.div`
   width: 18px;
   height: 18px;
@@ -93,9 +75,4 @@ const IconWrapper = styled.div`
   ${Wrapper}:hover & {
     /* filter: hue-rotate(10deg) brightness(150%) saturate(120%); */
   }
-`
-
-const Icon = styled.img`
-  width: 18px;
-  height: 18px;
 `

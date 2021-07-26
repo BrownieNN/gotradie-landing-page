@@ -5,36 +5,6 @@ import { tradeData } from "../../data/tradeData"
 import TradeType from "../buttons/TradeType"
 
 export default function TradeGrid() {
-  //   const [isOpen, setIsOpen] = useState(false)
-
-  //   const ref = useRef()
-
-  //   const tooltipRef = useRef()
-
-  //   function handleClick(event) {
-  //     setIsOpen(!isOpen)
-  //     event.preventDefault()
-  //   }
-
-  //   function handleClickOutside(event) {
-  //     if (
-  //       ref.current &&
-  //       !ref.current.contains(event.target) &&
-  //       !tooltipRef.current.contains(event.target)
-  //     ) {
-  //       //console.log("Document clicked")
-  //       setIsOpen(false)
-  //     }
-  //   }
-
-  //   useEffect(() => {
-  //     document.addEventListener("mousedown", handleClickOutside)
-
-  //     return () => {
-  //       document.removeEventListener("mousedown", handleClickOutside)
-  //     }
-  //   }, [])
-
   return (
     <Wrapper>
       <MenuWrapper count={tradeData.length}>
@@ -76,13 +46,5 @@ const MenuWrapper = styled.div`
 
   @media (max-width: 480px) {
     grid-template-columns: repeat(2, auto);
-  }
-`
-
-const HamburgerWrapper = styled.div`
-  display: none;
-
-  @media (max-width: 1345px) {
-    display: block;
   }
 `

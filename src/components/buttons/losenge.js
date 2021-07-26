@@ -12,7 +12,7 @@ export default function Losenge(props) {
           <Title>{tagTitle}</Title>
         </TextWrapper>
         <IconWrapper>
-          <img src={icon} />
+          <img src={icon} alt={tagTitle} />
         </IconWrapper>
       </Wrapper>
     </Link>

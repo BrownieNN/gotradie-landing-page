@@ -1,10 +1,10 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { ButtonText, Caption2, SmallText } from "../styles/TextStyles"
+import { ButtonText } from "../styles/TextStyles"
 
 export default function SecondaryButton(props) {
-  const { title, subtitle } = props
+  const { title } = props
   return (
     <Link to="/page-2">
       <Wrapper>

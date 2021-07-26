@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { H1, H3, MediumText, SmallText } from "../styles/TextStyles"
+import { H1, MediumText } from "../styles/TextStyles"
 import PurchaseButton from "../buttons/PurchaseButton"
 import FeatureAnimationOne from "../animations/FeatureOneAnimation"
 import Losenge from "../buttons/losenge"

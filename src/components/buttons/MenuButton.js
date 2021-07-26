@@ -24,6 +24,8 @@ const MenuItem = styled.div`
 
   img {
     display: ${props => (props.title ? "none" : "block")};
+    width: 98px;
+    height: 33px;
   }
 
   :hover {

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { menuData } from "../../data/menuData"
 import MenuButton from "../buttons/MenuButton"
 
-export default function Header() {
+export default function Footer() {
   return (
     <Wrapper>
       <img src="/images/logos/gt-logo.svg" alt="GoTradie" />
@@ -15,33 +15,25 @@ export default function Header() {
             <MenuButton key={index} item={item} />
           )
         )}
-        <HamburgerWrapper>
-          <MenuButton
-            item={{ title: "", icon: "/images/icons/hamburger.svg", nav: "/" }}
-          />
-        </HamburgerWrapper>
       </MenuWrapper>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  position: absolute;
-  top: 30px;
   display: grid;
   grid-template-columns: 44px auto;
   width: 100%;
   justify-content: space-between;
-  padding: 0px 100px;
+  padding: 30px 100px;
   align-items: center;
 
   @media (max-width: 1345px) {
-    top: 30px;
-    padding: 0px 30px;
+    display: grid;
   }
   @media (max-width: 450px) {
-    top: 20px;
-    padding: 0 20px;
+    display: grid;
+    padding: 60px 100px;
   }
 `
 
@@ -55,13 +47,5 @@ const MenuWrapper = styled.div`
       display: none;
     }
     grid-template-columns: auto;
-  }
-`
-
-const HamburgerWrapper = styled.div`
-  display: none;
-
-  @media (max-width: 1345px) {
-    display: block;
   }
 `

@@ -8,7 +8,7 @@ function ScrollIndicator() {
       <ContentWrapper>
         <Title>Explore more</Title>
         <IconWrapper>
-          <img src="/images/icons/arrow-down.svg" />
+          <img src="/images/icons/arrow-down.svg" alt="" />
         </IconWrapper>
       </ContentWrapper>
     </Wrapper>

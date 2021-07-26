@@ -1,7 +1,7 @@
 import React from "react"
 import { themes } from "../styles/ColorStyles"
 import styled, { keyframes } from "styled-components"
-import { H1, H3, MediumText, SmallText, BodyIntro } from "../styles/TextStyles"
+import { H1, BodyIntro } from "../styles/TextStyles"
 import MessagesAnimation from "../animations/MessagesAnimation"
 
 function HeroAnimation() {
