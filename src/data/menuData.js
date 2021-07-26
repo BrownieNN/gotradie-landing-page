@@ -12,8 +12,8 @@ export const menuData = [
     nav: "/pricing",
   },
   { title: "Try for free", icon: "/images/icons/pricing.svg" },
-  { title: "", icon: "/images/app/apple-store-badge.png", nav: "" },
-  { title: "", icon: "/images/app/google-play-badge.png", nav: "" },
+  { title: "", icon: "/images/app/apple-store-badge.svg", nav: "" },
+  { title: "", icon: "/images/app/google-play-badge.svg", nav: "" },
 ]
 
 export const tooltipData = [

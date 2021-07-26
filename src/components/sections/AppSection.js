@@ -19,8 +19,8 @@ export default function AppSection() {
           </Subtitle>
         </TextWrapper>
         <ButtonGroup>
-          <img src="/images/app/apple-store-badge.png" alt="apple-store" />
-          <img src="/images/app/google-play-badge.png" alt="google-store" />
+          <img src="/images/app/apple-store-badge.svg" alt="apple-store" />
+          <img src="/images/app/google-play-badge.svg" alt="google-store" />
         </ButtonGroup>
       </ContentWrapper>
     </Wrapper>

@@ -29,7 +29,7 @@ export const H3 = styled.h3`
 
 export const BodyIntro = styled.p`
   font-weight: 500;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 140%;
 `
 
@@ -41,7 +41,7 @@ export const BodyMain = styled.p`
 
 export const MediumText = styled.p`
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 140%;
 
   @media (max-width: 480px) {
