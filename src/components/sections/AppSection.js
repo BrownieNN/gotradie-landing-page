@@ -49,6 +49,7 @@ const ButtonGroup = styled.div`
       width: 250px;
       height: 75px;
       margin-bottom: 16px;
+      margin-right: 0px;
     }
   }
 
@@ -57,6 +58,7 @@ const ButtonGroup = styled.div`
       width: 250px;
       height: 75px;
       margin-bottom: 16px;
+      margin-right: 0px;
     }
   }
 `

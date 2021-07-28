@@ -1,13 +1,34 @@
-import React from "react"
+import React, { createRef, useEffect } from "react"
 import styled from "styled-components"
+import lottie from "lottie-web"
+import animationData from "./lottie/messages.json"
 
 export default function MessagesAnimation() {
+  let animationContainer = createRef()
+  let anim = null
+
+  useEffect(() => {
+    anim = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+    })
+    return () => anim.destroy() // optional clean up for unmounting
+  }, [])
+
   return (
     <Wrapper>
-      <div className="mockup1" />
+      <div>
+        Hover me
+        <HeroHeading ref={animationContainer}></HeroHeading>
+      </div>
     </Wrapper>
   )
 }
+
+const HeroHeading = styled.div``
 
 const Wrapper = styled.div`
   position: relative;

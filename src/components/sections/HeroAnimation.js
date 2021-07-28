@@ -1,10 +1,25 @@
-import React from "react"
+import React, { createRef, useEffect } from "react"
 import { themes } from "../styles/ColorStyles"
 import styled, { keyframes } from "styled-components"
 import { H1, BodyIntro } from "../styles/TextStyles"
-import MessagesAnimation from "../animations/MessagesAnimation"
+import lottie from "lottie-web"
+import animationData from "../animations/lottie/messages.json"
 
 function HeroAnimation() {
+  let animationContainer = createRef()
+  let anim = null
+
+  useEffect(() => {
+    anim = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+    })
+    return () => anim.destroy() // optional clean up for unmounting
+  }, [])
+
   return (
     <Wrapper>
       <ContentWrapper>
@@ -12,13 +27,25 @@ function HeroAnimation() {
           <Subtitle>What is GoTradie?</Subtitle>
           <Title>Every ping, swoosh, ding all in one place</Title>
         </TextWrapper>
-        <MessagesAnimation />
+        <AnimationWrapper>
+          <Animation ref={animationContainer} />
+        </AnimationWrapper>
       </ContentWrapper>
     </Wrapper>
   )
 }
 
 export default HeroAnimation
+
+const AnimationWrapper = styled.div`
+  max-width: 1234px;
+  margin: 0 auto;
+`
+
+const Animation = styled.div`
+  max-width: 1234px;
+  height: auto;
+`
 
 const Wrapper = styled.div`
   max-width: 1234px;
@@ -31,7 +58,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 80px 0px 720px 0px;
+  padding: 80px 0px 120px 0px;
   display: grid;
   gap: 60px;
 

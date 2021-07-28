@@ -1,11 +1,41 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import PurchaseButton from "../buttons/PurchaseButton"
 import { H3, SmallText } from "../styles/TextStyles"
+import ContactForm from "../layout/ContactForm"
 
 export default function PanelSection() {
+  const [isOpen, setIsOpen] = useState(false)
+  const ref = useRef()
+  const tooltipRef = useRef()
+
+  function handleClick(event) {
+    setIsOpen(!isOpen)
+    event.preventDefault()
+    // console.log(event)
+  }
+
+  function handleClickOutside(event) {
+    if (
+      ref.current &&
+      ref.current.contains(event.target) &&
+      !tooltipRef.current.contains(event.target)
+    ) {
+      console.log("Document is clicked")
+      setIsOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside)
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
+
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <PanelWrapper>
         <ContentWrapper>
           <Profile>
@@ -18,10 +48,17 @@ export default function PanelSection() {
             </Subtitle>
           </TextWrapper>
           <ButtonGroup>
-            <PurchaseButton title="Schedule now" className="button" />
+            <PurchaseButton
+              title="Schedule now"
+              className="button"
+              onClick={event => handleClick(event)}
+            />
           </ButtonGroup>
         </ContentWrapper>
       </PanelWrapper>
+      <div ref={tooltipRef}>
+        <ContactForm isOpen={isOpen} />
+      </div>
     </Wrapper>
   )
 }
@@ -30,6 +67,8 @@ const Wrapper = styled.div`
   max-width: 1234px;
   padding: 80px 0px 80px 0px;
   margin: auto;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 1354px) {
     max-width: 588px;

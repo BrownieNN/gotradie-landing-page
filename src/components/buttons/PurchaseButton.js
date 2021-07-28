@@ -1,18 +1,21 @@
 import React from "react"
 import styled from "styled-components"
 import { ButtonText } from "../styles/TextStyles"
+import { Link } from "gatsby"
 
 export default function PurchaseButton(props) {
-  const { title, onClick, className } = props
+  const { title, className } = props
   return (
-    <Wrapper onClick={onClick} className={className}>
-      <TextWrapper>
-        <Title>{title || "Download"}</Title>
-      </TextWrapper>
-      <IconWrapper>
-        <img src="/images/icons/arrow-left.svg" alt={title} />
-      </IconWrapper>
-    </Wrapper>
+    <Link to="/" onClick={props.onClick}>
+      <Wrapper className={className}>
+        <TextWrapper>
+          <Title>{title || "Download"}</Title>
+        </TextWrapper>
+        <IconWrapper>
+          <img src="/images/icons/arrow-left.svg" alt={title} />
+        </IconWrapper>
+      </Wrapper>
+    </Link>
   )
 }
 

@@ -6,7 +6,7 @@ import { ButtonText } from "../styles/TextStyles"
 export default function SecondaryButton(props) {
   const { title } = props
   return (
-    <Link to="/page-2">
+    <Link to="/" onClick={props.onClick}>
       <Wrapper>
         <TextWrapper>
           <Title>{title || "Get pro access"}</Title>
