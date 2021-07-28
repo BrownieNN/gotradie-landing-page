@@ -30,8 +30,14 @@ const Wrapper = styled.div`
 
   @media (max-width: 1345px) {
     display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    padding: 60px 100px;
   }
   @media (max-width: 450px) {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
     display: grid;
     padding: 60px 100px;
   }

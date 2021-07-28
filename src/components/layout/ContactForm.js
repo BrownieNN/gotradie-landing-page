@@ -169,6 +169,12 @@ const FormWrapper = styled.div`
   transition: 0.3s ease-in-out;
   visibility: ${props => (props.isOpen ? "visible" : "hidden")};
 
+  @media (max-width: 1354px) {
+    position: fixed;
+    top: 150px;
+    left: 14%;
+  }
+
   @media (max-width: 480px) {
     position: fixed;
     top: 60px;

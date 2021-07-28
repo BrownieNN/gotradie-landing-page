@@ -9,7 +9,10 @@ const Worksites = {
     img: "/images/worksites/worksite1.png",
   },
   OakandOcean: {
-    img: "/images/shots/hero-shot2.png",
+    img: "/images/worksites/worksite2.png",
+  },
+  Greenstone: {
+    img: "/images/worksites/worksite3.png",
   },
 }
 
@@ -45,6 +48,15 @@ export default function GallerySection() {
                     : "static"
                 }`}
                 onClick={() => setSelectedWorksites(Worksites.OakandOcean)}
+              />
+              <PurchaseButton
+                title="Greenstone Landscaping"
+                className={`${
+                  selectedWorksites === Worksites.Greenstone
+                    ? "active"
+                    : "static"
+                }`}
+                onClick={() => setSelectedWorksites(Worksites.Greenstone)}
               />
             </ButtonGroup>
           </ul>

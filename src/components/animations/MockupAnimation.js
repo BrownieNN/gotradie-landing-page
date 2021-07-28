@@ -5,7 +5,6 @@ export default function MockupAnimation() {
   return (
     <Wrapper>
       <div className="mockup1" />
-      <div className="mockup2" />
     </Wrapper>
   )
 }
@@ -54,15 +53,6 @@ const Wrapper = styled.div`
     left: 190px;
     top: 40px;
     background: url("/images/shots/hero-shot1.png") no-repeat;
-    background-size: contain;
-  }
-  .mockup2 {
-    position: absolute;
-    width: 272px;
-    height: 550px;
-    left: 44px;
-    top: 0px;
-    background: url("/images/phones/phone-hero.png") no-repeat;
     background-size: contain;
   }
 `

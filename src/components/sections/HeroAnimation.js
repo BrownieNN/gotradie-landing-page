@@ -1,7 +1,7 @@
 import React, { createRef, useEffect } from "react"
 import { themes } from "../styles/ColorStyles"
 import styled, { keyframes } from "styled-components"
-import { H1, BodyIntro } from "../styles/TextStyles"
+import { H1, BodyIntro, MediumText } from "../styles/TextStyles"
 import lottie from "lottie-web"
 import animationData from "../animations/lottie/messages.json"
 
@@ -75,7 +75,7 @@ const ContentWrapper = styled.div`
     grid-template-columns: auto;
     gap: 60px;
     justify-content: center;
-    padding: 80px 0px 750px 0px;
+    padding: 80px 0px 150px 0px;
     text-align: center;
   }
 
@@ -98,6 +98,10 @@ const TextWrapper = styled.div`
   display: grid;
   padding-top: 60px;
   gap: 32px;
+
+  @media (max-width: 1354px) {
+    margin: auto;
+  }
 
   @media (max-width: 480px) {
     max-width: 345px;
@@ -124,11 +128,9 @@ const TextWrapper = styled.div`
   }
 `
 
-const Subtitle = styled(BodyIntro)`
+const Subtitle = styled(MediumText)`
   color: ${themes.dark.text1};
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 500px;
 
   @media (max-width: 480px) {
     font-size: 18px;

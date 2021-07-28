@@ -1,13 +1,28 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { createRef, useEffect, useRef, useState } from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H1, H3, MediumText, SmallText } from "../styles/TextStyles"
 import SecondaryButton from "../buttons/SecondaryButton"
-import MockupAnimation from "../animations/MockupAnimation"
 import ContactForm from "../layout/ContactForm"
 import GetStarted from "../buttons/GetStarted"
+import lottie from "lottie-web"
+import animationData from "../animations/lottie/walkthrough.json"
 
 function HeroSection(props) {
+  let animationContainer = createRef()
+  let anim = null
+
+  useEffect(() => {
+    anim = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+    })
+    return () => anim.destroy() // optional clean up for unmounting
+  }, [])
+
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef()
   const tooltipRef = useRef()
@@ -62,7 +77,10 @@ function HeroSection(props) {
             <CreditCard>No credit card needed</CreditCard>
           </ButtonWrapper>
         </TextWrapper>
-        <MockupAnimation />
+        <AnimationWrapper>
+          <div className="mockup1" />
+          <Walkthrough ref={animationContainer} />
+        </AnimationWrapper>
       </ContentWrapper>
       <div ref={tooltipRef}>
         <ContactForm isOpen={isOpen} />
@@ -94,6 +112,48 @@ const CloseIcon = styled.div`
   @media (max-width: 480px) {
     top: 40px;
     right: 10px;
+  }
+`
+
+const AnimationWrapper = styled.div`
+  position: relative;
+  width: 558px;
+
+  .mockup1 {
+    position: absolute;
+    width: 413px;
+    height: 574px;
+    left: 190px;
+    top: 40px;
+    background: url("/images/shots/hero-shot1.png") no-repeat;
+    background-size: contain;
+  }
+
+  @media (max-width: 480px) {
+    width: 345px;
+    .mockup1 {
+      position: absolute;
+      width: 260px;
+      height: 361px;
+      left: 60px;
+      top: 40px;
+    }
+  }
+`
+
+const Walkthrough = styled.div`
+  position: absolute;
+  width: 272px;
+  height: 550px;
+  left: 44px;
+  top: 0px;
+
+  @media (max-width: 480px) {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 20px;
+    top: 0px;
   }
 `
 
