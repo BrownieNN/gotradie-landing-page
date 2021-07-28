@@ -63,7 +63,7 @@ const BackgroundImageTwo = styled.div`
   position: absolute;
   width: 272px;
   height: 550px;
-  left: 340px;
+  left: 330px;
   top: 78px;
   background: ${props => `url(${props.backgroundTwo}) no-repeat top center`};
   background-size: contain;

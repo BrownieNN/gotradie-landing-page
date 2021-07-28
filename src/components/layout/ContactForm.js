@@ -178,9 +178,9 @@ const FormWrapper = styled.div`
   @media (max-width: 480px) {
     position: fixed;
     top: 60px;
-    left: 5%;
-    width: 345px;
-    padding: 30px 30px;
+    left: 0px;
+    width: 100%;
+    padding: 24px 24px;
   }
 `
 
