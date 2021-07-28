@@ -6,17 +6,16 @@ import { ButtonText } from "../styles/TextStyles"
 export default function SecondaryButton(props) {
   const { title } = props
   return (
-    <Link to="/" onClick={props.onClick}>
-      <Wrapper>
-        <TextWrapper>
-          <Title>{title || "Get pro access"}</Title>
-        </TextWrapper>
-      </Wrapper>
-    </Link>
+    <Wrapper onClick={props.onClick}>
+      <TextWrapper>
+        <Title>{title || "Get pro access"}</Title>
+      </TextWrapper>
+    </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
+  cursor: pointer;
   background: rgba(15, 32, 40, 0);
   /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
     0px 20px 40px rgba(23, 0, 102, 0.2),

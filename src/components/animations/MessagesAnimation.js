@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 450px) {
     transform-origin: center;
-    width: 375px;
+    width: 345px;
   }
 
   /* div {
@@ -80,7 +80,7 @@ const Wrapper = styled.div`
     @media (max-width: 450px) {
       background: url("/images/animations/messages-mobile.svg") no-repeat center;
       transform: scale(1) !important;
-      width: 375px;
+      width: 345px;
       height: 342px;
     }
 
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
       background: url("/images/animations/messages-mobile.svg") no-repeat center;
       transform: scale(1.8);
       transform-origin: left top;
-      width: 375px;
+      width: 345px;
     }
   }
 `

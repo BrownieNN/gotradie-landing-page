@@ -18,8 +18,9 @@ function IndexPage() {
       <SearchEngine title="Home" />
       <HeroSection />
       <ScrollIndicator />
-      <HeroAnimation />
+      <HeroAnimation id="why" />
       <FeatureSectionOne
+        id="features"
         subtitle="No nonense communication"
         title="Messages all in one place"
         iconOne="/images/icons/people.svg"
@@ -75,7 +76,7 @@ function IndexPage() {
         animationImageThree="/images/animations/chat.svg"
         animationImageFive="/images/animations/members.svg"
       />
-      <CenterAlignSection />
+      <CenterAlignSection id="industries" />
       <GallerySection />
       <PanelSection />
       <AppSection />

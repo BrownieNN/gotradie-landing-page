@@ -7,7 +7,7 @@ import { H2, MediumText } from "../styles/TextStyles"
 
 function CenterAlignSection() {
   return (
-    <Wrapper>
+    <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
           <Title>
@@ -61,8 +61,8 @@ const ContentWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 375px;
-    grid-template-columns: 375px;
+    max-width: 345px;
+    grid-template-columns: 345px;
     gap: 60px;
     padding: 60px 20px 124px;
     justify-content: center;
@@ -81,7 +81,7 @@ const TextWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 375px;
+    max-width: 345px;
     justify-content: center;
     text-align: center;
     padding: 0 8px;

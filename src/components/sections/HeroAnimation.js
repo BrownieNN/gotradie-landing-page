@@ -21,7 +21,7 @@ function HeroAnimation() {
   }, [])
 
   return (
-    <Wrapper>
+    <Wrapper id="why">
       <ContentWrapper>
         <TextWrapper>
           <Subtitle>What is GoTradie?</Subtitle>
@@ -40,11 +40,17 @@ export default HeroAnimation
 const AnimationWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
+  @media (max-width: 480px) {
+    max-width: 345px;
+  }
 `
 
 const Animation = styled.div`
   max-width: 1234px;
   height: auto;
+  @media (max-width: 480px) {
+    max-width: 345px;
+  }
 `
 
 const Wrapper = styled.div`
@@ -53,6 +59,9 @@ const Wrapper = styled.div`
   display: grid;
   gap: 64px;
   grid-template-columns: auto;
+  @media (max-width: 480px) {
+    max-width: 345px;
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -71,9 +80,9 @@ const ContentWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 375px;
-    grid-template-columns: 375px;
-    padding: 80px 0px 390px 0px;
+    max-width: 345px;
+    grid-template-columns: 345px;
+    padding: 80px 0px 120px 0px;
     gap: 40px;
   }
 `
@@ -91,7 +100,7 @@ const TextWrapper = styled.div`
   gap: 32px;
 
   @media (max-width: 480px) {
-    max-width: 375px;
+    max-width: 345px;
     justify-content: center;
     text-align: center;
     padding: 0 8px;

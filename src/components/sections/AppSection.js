@@ -5,7 +5,7 @@ import { H2, MediumText } from "../styles/TextStyles"
 
 export default function AppSection() {
   return (
-    <Wrapper>
+    <Wrapper id="app">
       <ContentWrapper>
         <TextWrapper>
           <Title>
@@ -19,8 +19,18 @@ export default function AppSection() {
           </Subtitle>
         </TextWrapper>
         <ButtonGroup>
-          <img src="/images/app/apple-store-badge.svg" alt="apple-store" />
-          <img src="/images/app/google-play-badge.svg" alt="google-store" />
+          <a
+            href="https://apps.apple.com/au/app/gotradie/id1497078123"
+            target="_blank"
+          >
+            <img src="/images/app/apple-store-badge.svg" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
+            target="_blank"
+          >
+            <img src="/images/app/google-play-badge.svg" />
+          </a>
         </ButtonGroup>
       </ContentWrapper>
     </Wrapper>
@@ -66,7 +76,7 @@ const ButtonGroup = styled.div`
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 60px 0px 340px 0px;
+  padding: 60px 0px 240px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;
@@ -81,8 +91,8 @@ const ContentWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 375px;
-    grid-template-columns: 375px;
+    max-width: 345px;
+    grid-template-columns: 345px;
     gap: 30px;
     padding: 60px 20px 124px;
     justify-content: center;

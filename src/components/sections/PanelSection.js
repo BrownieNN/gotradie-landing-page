@@ -80,7 +80,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 480px) {
     max-width: 345px;
-    grid-template-columns: 375px;
+    grid-template-columns: 345px;
     gap: 24px;
   }
 `
@@ -119,7 +119,7 @@ const ContentWrapper = styled.div`
 
   @media (max-width: 480px) {
     max-width: 345px;
-    grid-template-columns: 375px;
+    grid-template-columns: 345px;
     gap: 24px;
   }
 `

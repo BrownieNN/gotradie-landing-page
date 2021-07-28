@@ -5,6 +5,7 @@ import { H1, MediumText } from "../styles/TextStyles"
 import PurchaseButton from "../buttons/PurchaseButton"
 import Losenge from "../buttons/losenge"
 import FeatureAnimationTwo from "../animations/FeatureTwoAnimation"
+import GetStarted from "../buttons/GetStarted"
 
 function FeatureSectionTwo(props) {
   const {
@@ -51,7 +52,7 @@ function FeatureSectionTwo(props) {
           </Description>
           <ButtonWrapper>
             <InnerButtonWrapper>
-              <PurchaseButton title="Get Started" />
+              <GetStarted title="Get Started" />
             </InnerButtonWrapper>
           </ButtonWrapper>
         </TextWrapper>
@@ -96,8 +97,8 @@ const ContentWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 375px;
-    grid-template-columns: 375px;
+    max-width: 345px;
+    grid-template-columns: 345px;
     gap: 60px;
     padding: 0px 20px 440px;
   }
@@ -109,7 +110,7 @@ const TextWrapper = styled.div`
   gap: 32px;
 
   @media (max-width: 480px) {
-    max-width: 375px;
+    max-width: 345px;
     justify-content: center;
     text-align: center;
     padding: 0 8px;

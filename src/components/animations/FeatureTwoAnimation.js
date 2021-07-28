@@ -85,7 +85,7 @@ const BackgroundImageThree = styled.div`
   position: absolute;
   width: 293.61px;
   height: 213px;
-  left: 323px;
+  left: 253px;
   top: 168px;
   background: ${props => `url(${props.backgroundThree}) no-repeat top center`};
   background-size: contain;

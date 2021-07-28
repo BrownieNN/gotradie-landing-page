@@ -29,7 +29,14 @@ const ContactForm = props => {
       data: new FormData(form),
     })
       .then(r => {
-        handleServerResponse(true, <Losenge tagTitle="Thanks!" />, form)
+        handleServerResponse(
+          true,
+          <Losenge
+            tagTitle="Sorted! We'll get back you soon"
+            icon="/images/icons/verified.svg"
+          />,
+          form
+        )
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error, form)
@@ -161,12 +168,24 @@ const FormWrapper = styled.div`
   opacity: ${props => (props.isOpen ? 1 : 0)};
   transition: 0.3s ease-in-out;
   visibility: ${props => (props.isOpen ? "visible" : "hidden")};
+
+  @media (max-width: 480px) {
+    position: fixed;
+    top: 60px;
+    left: 5%;
+    width: 345px;
+    padding: 30px 30px;
+  }
 `
 
 const FormGroup = styled.div`
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 16px;
+  @media (max-width: 480px) {
+    font-size: 24px;
+    grid-template-columns: auto;
+  }
 `
 
 const InnerWrapper = styled.div``
@@ -182,7 +201,13 @@ const TextWrapper = styled.div`
 const Title = styled(H1)`
   color: white;
   font-size: 42px;
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `
 const Subtitle = styled(MediumText)`
   color: white;
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `

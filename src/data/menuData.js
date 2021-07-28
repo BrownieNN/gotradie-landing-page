@@ -1,19 +1,23 @@
 export const menuData = [
-  { title: "Feature", icon: "/images/icons/courses.svg", link: "/courses" },
+  { title: "Features", icon: "/images/icons/courses.svg", link: "/#features" },
   {
     title: "Why GoTradie",
     icon: "/images/icons/tutorials.svg",
-    nav: "/tutorials",
+    link: "/#why",
   },
-  { title: "Good Soiyze", icon: "/images/icons/pricing.svg", link: "/pricing" },
-  {
-    title: "Schedule Demo",
-    icon: "/images/icons/pricing.svg",
-    link: "/account",
-  },
+  { title: "Trades", icon: "/images/icons/pricing.svg", link: "/#industries" },
+
   { title: "Try for free", icon: "/images/icons/pricing.svg" },
-  { title: "", icon: "/images/app/apple-store-badge.png", link: "" },
-  { title: "", icon: "/images/app/google-play-badge.png", link: "" },
+  {
+    title: "",
+    icon: "/images/app/apple-store-badge.svg",
+    link: "https://apps.apple.com/au/app/gotradie/id1497078123",
+  },
+  {
+    title: "",
+    icon: "/images/app/google-play-badge.svg",
+    link: "https://play.google.com/store/apps/details?id=com.gotradie.paleale",
+  },
 ]
 
 export const tooltipData = [

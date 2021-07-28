@@ -3,17 +3,42 @@ import styled from "styled-components"
 import { ButtonText } from "../styles/TextStyles"
 import { Link } from "gatsby"
 
-export default function PurchaseButton(props) {
+export default function GetStarted(props) {
+  const scrollToElement = require("scroll-to-element")
   const { title, className } = props
+  const handleLinkClick = (e, target) => {
+    // NODE-SAFE CODE
+    // Gatsby uses Node to generate our pages.
+    // Node doesn't know what a window is.
+    // Be sure to wrap any of your browser interactions
+    // in some sort of node-safe if statement like this:
+
+    if (typeof window !== "undefined") {
+      // First, are we on the home page?
+      // If so, let's scroll to the desired block,
+      // which was passed in as an onClick method on our <Link />.
+      // If an event was also passed, we'll preventDefault()
+
+      if (window.location.pathname === "/") {
+        if (e) e.preventDefault()
+        scrollToElement(target, {
+          offset: -95, // Offset a fixed header if you please
+          duration: 1000,
+        })
+      }
+    }
+  }
   return (
-    <Wrapper className={className} onClick={props.onClick}>
-      <TextWrapper>
-        <Title>{title || "Download"}</Title>
-      </TextWrapper>
-      <IconWrapper>
-        <img src="/images/icons/arrow-left.svg" alt={title} />
-      </IconWrapper>
-    </Wrapper>
+    <Link onClick={e => handleLinkClick(e, "#app")} to={"/#app"}>
+      <Wrapper>
+        <TextWrapper>
+          <Title>{title || "Download"}</Title>
+        </TextWrapper>
+        <IconWrapper>
+          <img src="/images/icons/arrow-left.svg" alt={title} />
+        </IconWrapper>
+      </Wrapper>
+    </Link>
   )
 }
 

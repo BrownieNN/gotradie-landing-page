@@ -6,16 +6,14 @@ import { SmallText2 } from "../styles/TextStyles"
 export default function Losenge(props) {
   const { tagTitle, icon } = props
   return (
-    <Link to="/page-2">
-      <Wrapper>
-        <TextWrapper>
-          <Title>{tagTitle}</Title>
-        </TextWrapper>
-        <IconWrapper>
-          <img src={icon} alt={tagTitle} />
-        </IconWrapper>
-      </Wrapper>
-    </Link>
+    <Wrapper>
+      <TextWrapper>
+        <Title>{tagTitle}</Title>
+      </TextWrapper>
+      <IconWrapper>
+        <img src={icon} alt={tagTitle} />
+      </IconWrapper>
+    </Wrapper>
   )
 }
 
@@ -39,7 +37,7 @@ const Wrapper = styled.div`
   /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 
   @media (max-width: 480px) {
-    width: 200px;
+    width: 276px;
   }
 
   *,
