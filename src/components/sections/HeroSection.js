@@ -6,7 +6,7 @@ import SecondaryButton from "../buttons/SecondaryButton"
 import ContactForm from "../layout/ContactForm"
 import GetStarted from "../buttons/GetStarted"
 import lottie from "lottie-web"
-import animationData from "../animations/lottie/walkthrough.json"
+import animationData from "../animations/lottie/walkthrough2.json"
 
 function HeroSection(props) {
   let animationContainer = createRef()

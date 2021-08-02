@@ -33,7 +33,7 @@ export default function GallerySection() {
           <ul>
             <ButtonGroup>
               <PurchaseButton
-                title="Garside Electrcial & Solar"
+                title="Garside Power & Solar"
                 className={`${
                   selectedWorksites === Worksites.Garside ? "active" : "static"
                 }`}
