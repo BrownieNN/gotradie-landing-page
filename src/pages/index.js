@@ -51,7 +51,7 @@ function IndexPage() {
       />
       <FeatureSectionOne
         subtitle="Searching for help"
-        title="Everyone under the same roof"
+        title="Finding the right subbie"
         iconOne="/images/icons/search.svg"
         iconTwo="/images/icons/filter.svg"
         tagTitleOne="Search"
@@ -63,7 +63,7 @@ function IndexPage() {
       />
       <FeatureSectionTwo
         subtitle="Introducing worksites"
-        title="Let your profile do the talking"
+        title="Everyone under the same roof"
         iconOne="/images/icons/people.svg"
         iconTwo="/images/icons/chat.svg"
         iconThree="/images/icons/conversation.svg"
