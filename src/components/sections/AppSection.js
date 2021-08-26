@@ -13,23 +13,25 @@ export default function AppSection() {
             <br />
             Download now
           </Title>
-          <Subtitle>
-            Simplify all your communications in the one place and get back it
-            quicker
-          </Subtitle>
+          <Subtitle>Get our free app and give it a whirl</Subtitle>
         </TextWrapper>
         <ButtonGroup>
           <a
             href="https://apps.apple.com/au/app/gotradie/id1497078123"
             target="_blank"
+            rel="noreferrer"
           >
-            <img src="/images/app/apple-store-badge.svg" />
+            <img src="/images/app/apple-store-badge.svg" alt="Apple Store" />
           </a>
           <a
             href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
             target="_blank"
+            rel="noreferrer"
           >
-            <img src="/images/app/google-play-badge.svg" />
+            <img
+              src="/images/app/google-play-badge.svg"
+              alt="Google Play Store"
+            />
           </a>
         </ButtonGroup>
       </ContentWrapper>

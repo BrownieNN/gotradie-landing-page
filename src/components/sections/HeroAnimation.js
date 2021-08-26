@@ -1,7 +1,7 @@
 import React, { createRef, useEffect } from "react"
 import { themes } from "../styles/ColorStyles"
 import styled, { keyframes } from "styled-components"
-import { H1, BodyIntro, MediumText } from "../styles/TextStyles"
+import { H1, MediumText } from "../styles/TextStyles"
 import lottie from "lottie-web"
 import animationData from "../animations/lottie/messages.json"
 
@@ -25,7 +25,7 @@ function HeroAnimation() {
       <ContentWrapper>
         <TextWrapper>
           <Subtitle>What is GoTradie?</Subtitle>
-          <Title>Every ping, swoosh, ding all in one place</Title>
+          <Title>Every ping, swoosh, and ding all in one place</Title>
         </TextWrapper>
         <AnimationWrapper>
           <Animation ref={animationContainer} />

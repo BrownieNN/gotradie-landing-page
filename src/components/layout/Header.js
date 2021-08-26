@@ -75,7 +75,7 @@ export default function Header() {
               onClick={e => handleLinkClick(e, "#features")}
               to={"/#features"}
             >
-              Features
+              What's it do
             </Link>
           </MenuButton>
           <MenuButton>
@@ -83,28 +83,36 @@ export default function Header() {
               onClick={e => handleLinkClick(e, "#industries")}
               to={"/#industries"}
             >
-              Industries
+              Who's it for
             </Link>
           </MenuButton>
           <MenuButton>
             <Link onClick={event => handleClick(event)} to="/">
-              Schedule demo
+              Book demo
             </Link>
           </MenuButton>
           <Download>
-            <Link>Try for free</Link>
+            <FreeText>Try for free</FreeText>
             <ButtonGroup>
               <a
                 href="https://apps.apple.com/au/app/gotradie/id1497078123"
                 target="_blank"
+                rel="noreferrer"
               >
-                <img src="/images/app/apple-store-badge.svg" />
+                <img
+                  src="/images/app/apple-store-badge.svg"
+                  alt="Apple Store"
+                />
               </a>
               <a
                 href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
                 target="_blank"
+                rel="noreferrer"
               >
-                <img src="/images/app/google-play-badge.svg" />
+                <img
+                  src="/images/app/google-play-badge.svg"
+                  alt="Google Play Store"
+                />
               </a>
             </ButtonGroup>
           </Download>
@@ -116,6 +124,12 @@ export default function Header() {
     </HeaderWrapper>
   )
 }
+
+const FreeText = styled.div`
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+`
 
 const Download = styled.div`
   display: flex;

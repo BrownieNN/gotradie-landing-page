@@ -4,13 +4,28 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `GoTradie`,
-    description: `Tradie Chat Sorted`,
-    author: `GoTradie`,
+    title: "GoTradie",
+    titleTemplate: "Get back at it quicker",
+    description:
+      "With your teams, clients and subbies in one place – there’s no mess, no fuss and no wasted time Tradie chat Sorted",
+    url: "https://www.gotradie.com.au", // No trailing slash allowed!
+    image: "/images/meta/meta-image.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "GoTradie",
+        short_name: "GoTradie",
+        start_url: "/",
+        background_color: "#153549",
+        theme_color: "#153549",
+        display: "standalone",
+        icon: "static/images/favicon/favicon.png",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

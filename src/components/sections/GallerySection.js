@@ -24,11 +24,11 @@ export default function GallerySection() {
       <ContentWrapper>
         <TextWrapper>
           <Lockup>
-            <Title>See how trades work in GoTradie</Title>
+            <Title>Don’t take our word for it</Title>
           </Lockup>
           <Description>
-            You don’t have to believe us checkout some of the tradies already
-            using Gotradie
+            We’ve been tried and tested by tradies just like you. Wrap your
+            eyelids around these.
           </Description>
           <ul>
             <ButtonGroup>

@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { SmallText2 } from "../styles/TextStyles"

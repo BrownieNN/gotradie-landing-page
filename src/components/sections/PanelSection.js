@@ -42,14 +42,15 @@ export default function PanelSection() {
             <img src="/images/avatars/adam.png" alt="adam" />
           </Profile>
           <TextWrapper>
-            <Title>Schedule a demo with Adam</Title>
+            <Title>Give it a go & book a demo</Title>
             <Subtitle>
-              GoTradie and is more than happy to run you through the ins and out
+              Say G’day to one of the team, who'll help you take the app for a
+              spin.
             </Subtitle>
           </TextWrapper>
           <ButtonGroup>
             <PurchaseButton
-              title="Schedule now"
+              title="Book now"
               className="button"
               onClick={event => handleClick(event)}
             />

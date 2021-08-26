@@ -57,20 +57,19 @@ function HeroSection(props) {
       <ContentWrapper>
         <TextWrapper>
           <Lockup>
-            <Subtitle>Get back at it with</Subtitle>
             <Title>Tradie chat</Title>
             <img src="/images/lockup/sorted.svg" alt="Sorted" />
           </Lockup>
 
           <Description>
-            We help tradies get back at it by simplifying the process of
-            communicating with your team and client in one place.
+            With your team, clients and subbies in one place, there’s no mess,
+            no fuss and no wasted time.
           </Description>
           <ButtonWrapper>
             <InnerButtonWrapper>
               <GetStarted title="Get Started" />
               <SecondaryButton
-                title="Schedule Demo"
+                title="Book a demo"
                 onClick={event => handleClick(event)}
               />
             </InnerButtonWrapper>

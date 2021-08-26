@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { ButtonText } from "../styles/TextStyles"
-import { Link } from "gatsby"
 
 export default function PurchaseButton(props) {
   const { title, className } = props

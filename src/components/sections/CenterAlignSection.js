@@ -10,13 +10,10 @@ function CenterAlignSection() {
     <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
-          <Title>
-            Whether your a sole trader or been on the tools for years
-          </Title>
+          <Title>Made for tradies, by tradies</Title>
           <Body>
-            We’ve made sure the app is a one size fits all app. Whether your
-            specialised trade to multiple cars on road sort of business we’ve
-            got you sorted
+            our app is one-size fits all. Whether you’re a sole trader or have
+            multiple cars on the road we’ve got you sorted.
           </Body>
         </TextWrapper>
         <TradeGrid />

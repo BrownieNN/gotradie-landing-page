@@ -48,8 +48,7 @@ const ContactForm = props => {
         <TextWrapper>
           <Title>Let's book you in</Title>
           <Subtitle>
-            Send off your time and details and one of the team wil get back to
-            you asap
+            Flick us your details and our team will get back to you ASAP
           </Subtitle>
         </TextWrapper>
         <form
@@ -57,7 +56,7 @@ const ContactForm = props => {
           // action="https://getform.io/f/ccb0f400-fb48-4670-9022-eabf72706a6f"
         >
           <div className="form-group">
-            <label for="exampleInputEmail1" required="required">
+            <label htmlFor="exampleInputEmail1" required="required">
               Email address
             </label>
             <input
@@ -71,7 +70,7 @@ const ContactForm = props => {
             />
           </div>
           <div className="form-group">
-            <label for="exampleInputName">Name</label>
+            <label htmlFor="exampleInputName">Name</label>
             <input
               type="text"
               name="name"
@@ -83,7 +82,7 @@ const ContactForm = props => {
           </div>
           <FormGroup>
             <div className="form-group">
-              <label for="exampleFormControlSelect1">Preferred day</label>
+              <label htmlFor="exampleFormControlSelect1">Preferred day</label>
               <select
                 className="form-control"
                 id="exampleFormControlSelect1"
@@ -99,7 +98,7 @@ const ContactForm = props => {
               </select>
             </div>
             <div className="form-group">
-              <label for="exampleFormControlSelect2">Time slot</label>
+              <label htmlFor="exampleFormControlSelect2">Time slot</label>
               <select
                 className="form-control"
                 id="exampleFormControlSelect2"
@@ -107,9 +106,10 @@ const ContactForm = props => {
                 required="required"
               >
                 <option selected="selected">Choose time</option>
-                <option>Smoko</option>
-                <option>Lunch</option>
-                <option>After knock off</option>
+                <option>Morning 8am-12pm</option>
+                <option>Noon 12pm-1pm</option>
+                <option>Arvo 1pm-5pm</option>
+                <option>Night 6pm-8pm</option>
               </select>
             </div>
           </FormGroup>
@@ -119,7 +119,7 @@ const ContactForm = props => {
             className="btn btn-primary"
             disabled={serverState.submitting}
           >
-            Book Demo
+            GOOD TO GO
           </button>
           {serverState.status && (
             <p className={!serverState.status.ok ? "errorMsg" : ""}>

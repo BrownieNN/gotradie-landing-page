@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 export default function GetStarted(props) {
   const scrollToElement = require("scroll-to-element")
-  const { title, className } = props
+  const { title } = props
   const handleLinkClick = (e, target) => {
     // NODE-SAFE CODE
     // Gatsby uses Node to generate our pages.
