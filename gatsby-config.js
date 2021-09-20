@@ -9,7 +9,7 @@ module.exports = {
     description:
       "With your teams, clients and subbies in one place – there’s no mess, no fuss and no wasted time Tradie chat Sorted",
     url: "https://www.gotradie.com.au", // No trailing slash allowed!
-    image: "static/images/meta/meta-image.png", // Path to your image you placed in the 'static' folder
+    image: "/static/images/meta/meta-image.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
