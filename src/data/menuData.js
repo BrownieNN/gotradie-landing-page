@@ -1,13 +1,5 @@
 export const menuData = [
-  { title: "Features", icon: "/images/icons/courses.svg", link: "/#features" },
-  {
-    title: "Why GoTradie",
-    icon: "/images/icons/tutorials.svg",
-    link: "/#why",
-  },
-  { title: "Trades", icon: "/images/icons/pricing.svg", link: "/#industries" },
-
-  { title: "Try for free", icon: "/images/icons/pricing.svg" },
+  { title: "Available soon", icon: "/images/icons/pricing.svg" },
   {
     title: "",
     icon: "/images/app/apple-store-badge.svg",

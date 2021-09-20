@@ -9,11 +9,9 @@ export default function AppSection() {
       <ContentWrapper>
         <TextWrapper>
           <Title>
-            Heard enough?
-            <br />
-            Download now
+          Download on<br />android and iOS
           </Title>
-          <Subtitle>Get our free app and give it a whirl</Subtitle>
+          <Subtitle>Check back in later, available soon</Subtitle>
         </TextWrapper>
         <ButtonGroup>
           <a
@@ -48,6 +46,9 @@ const animation = keyframes`
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
   overflow: visible;
+  @media (min-width: 1354px) {
+    display: none;
+  }
 `
 const ButtonGroup = styled.div`
   margin: auto;
