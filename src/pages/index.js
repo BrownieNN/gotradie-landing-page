@@ -8,7 +8,7 @@ import Footer from "../components/layout/footer"
 function IndexPage() {
   return (
     <Layout>
-      <SearchEngine title="Home" />
+      <SearchEngine title="Tradie Chat Sorted" />
       <HeroSection />
       <AppSection />
       <Footer />
