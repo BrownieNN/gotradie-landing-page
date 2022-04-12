@@ -1,7 +1,7 @@
 import React, { createRef, useEffect } from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { H1, MediumText } from "../styles/TextStyles"
+import { H1, MediumText, BodyIntro } from "../styles/TextStyles"
 import ContactForm from "../layout/ContactForm"
 import lottie from "lottie-web"
 import animationData from "../animations/lottie/walkthrough2.json"
@@ -26,13 +26,12 @@ function HeroSection(props) {
       <ContentWrapper>
         <TextWrapper>
           <Lockup>
-            <Title>Tradie chat</Title>
-            <img src="/images/lockup/sorted.svg" alt="Sorted" />
+            <Title>The messaging app</Title>
+            <Subtitle>Built by tradies, for tradies</Subtitle>
           </Lockup>
 
           <Description>
-            With your team, clients and subbies in one place, there’s no mess,
-            no fuss and no wasted time.
+            Your go-to place for work photos, videos, docs and more
           </Description>
           <ContactForm />
         </TextWrapper>
@@ -75,9 +74,9 @@ const AnimationWrapper = styled.div`
 
 const Walkthrough = styled.div`
   position: absolute;
-  width: 272px;
-  height: 550px;
-  left: 44px;
+  width: 300px;
+  height: 580px;
+  left: 64px;
   top: 0px;
 
   @media (max-width: 480px) {
@@ -136,6 +135,7 @@ const TextWrapper = styled.div`
     justify-content: center;
     text-align: center;
     padding: 0 8px;
+    gap: 24px;
   }
 
   > * {
@@ -157,6 +157,8 @@ const TextWrapper = styled.div`
 
 
 const Title = styled(H1)`
+  font-size: 52px;
+  text-align: center;
   color: ${themes.dark.text1};
   text-transform: uppercase;
   span {
@@ -167,12 +169,34 @@ const Title = styled(H1)`
   }
 
   @media (max-width: 480px) {
-    font-size: 43px;
+    font-size: 30px;
+    text-align: center;
+  }
+`
+
+const Subtitle = styled(BodyIntro)`
+  color: ${themes.dark.text1};
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 6px;
+  span {
+    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-align: center;
   }
 `
 
 const Description = styled(MediumText)`
   color: ${themes.dark.text1};
+  text-align: center;
 `
 const Lockup = styled.div`
   display: grid;

@@ -21,6 +21,13 @@ export default function GallerySection() {
 
   return (
     <Wrapper>
+      <ImageWrapper>
+        {selectedWorksites ? (
+          <div>
+            <img src={selectedWorksites.img} alt="" />
+          </div>
+        ) : null}
+      </ImageWrapper>
       <ContentWrapper>
         <TextWrapper>
           <Lockup>
@@ -62,13 +69,6 @@ export default function GallerySection() {
           </ul>
         </TextWrapper>
       </ContentWrapper>
-      <ImageWrapper>
-        {selectedWorksites ? (
-          <div>
-            <img src={selectedWorksites.img} alt="" />
-          </div>
-        ) : null}
-      </ImageWrapper>
     </Wrapper>
   )
 }

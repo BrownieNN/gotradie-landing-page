@@ -5,9 +5,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "GoTradie",
-    titleTemplate: "Get back at it quicker",
+    titleTemplate: "Tradie messenger | GoTradie",
     description:
-      "With your teams, clients and subbies in one place – there’s no mess, no fuss and no wasted time Tradie chat Sorted",
+      "Built by tradies, for tradies",
     url: "https://www.gotradie.com.au", // No trailing slash allowed!
     image: "/static/images/meta/meta-image.png", // Path to your image you placed in the 'static' folder
   },

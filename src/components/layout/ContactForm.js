@@ -96,7 +96,7 @@ export default ContactForm
 // `
 
 const FormWrapper = styled.div`
-max-width: 454px;
+width: 100%;
 @media (max-width: 1354px) {
   width: 454px;
   margin: auto;
@@ -115,5 +115,6 @@ const Subtitle = styled(SmallText2)`
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
+  text-align: center;
   margin-bottom: 16px;
 `
