@@ -44,7 +44,7 @@ const ContactForm = props => {
   return (
     <FormWrapper>
       <InnerWrapper>
-      <Subtitle>Register for early access today</Subtitle>
+      <Subtitle>Want a personal test drive? Enter your email below</Subtitle>
         <form
           onSubmit={handleOnSubmit}
           // action="https://getform.io/f/ccb0f400-fb48-4670-9022-eabf72706a6f"
@@ -56,7 +56,7 @@ const ContactForm = props => {
               className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
-              placeholder="Enter email address"
+              placeholder="johnny@plumblords.com.au"
               required
             />
           </div>

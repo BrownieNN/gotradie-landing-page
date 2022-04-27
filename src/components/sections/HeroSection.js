@@ -5,6 +5,7 @@ import { H1, MediumText, BodyIntro } from "../styles/TextStyles"
 import ContactForm from "../layout/ContactForm"
 import lottie from "lottie-web"
 import animationData from "../animations/lottie/walkthrough2.json"
+import SocialLayout from "../layout/SocialLayout"
 
 function HeroSection(props) {
   let animationContainer = createRef()
@@ -34,6 +35,7 @@ function HeroSection(props) {
             Your go-to place for work photos, videos, docs and more
           </Description>
           <ContactForm />
+           <SocialLayout />
         </TextWrapper>
         <AnimationWrapper>
           <div className="mockup1" />
@@ -105,7 +107,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 180px 0px 300px 0px;
+  padding: 180px 0px 150px 0px;
   display: grid;
   grid-template-columns: 588px auto;
 

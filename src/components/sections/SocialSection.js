@@ -1,84 +1,41 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
+import TradeLogo from "../layout/TradeLogos"
 import { themes } from "../styles/ColorStyles"
-import { H2 } from "../styles/TextStyles"
+import { H2, MediumText } from "../styles/TextStyles"
 
-export default function AppSection() {
+function LogoSection() {
   return (
-    <Wrapper id="app">
+    <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
-          <Title>
-          Download on<br />android and iOS
-          </Title>
+          <Title>Try it yourself</Title>
         </TextWrapper>
-        <ButtonGroup>
-          <a
-            href="https://apps.apple.com/au/app/gotradie/id1497078123"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/images/app/apple-store-badge.svg" alt="Apple Store" />
-          </a>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="/images/app/google-play-badge.svg"
-              alt="Google Play Store"
-            />
-          </a>
-        </ButtonGroup>
+        <TradeLogo />
       </ContentWrapper>
     </Wrapper>
   )
 }
+
+export default LogoSection
 
 const animation = keyframes`
   0% { opacity: 0; transform: translateY(-10px); filter: blur(10px); }
   //80% { opacity: 0.5; transform: translateY(-10px); filter: blur(10px); }
   100% { opacity: 1; transform: translateY(0px); filter: blur(0px); }
 `
-
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
   overflow: visible;
-  @media (min-width: 1354px) {
-    display: none;
-  }
 `
-const ButtonGroup = styled.div`
+const ButtonWrapper = styled.div`
   margin: auto;
-  img {
-    width: 250px;
-    height: 75px;
-    margin-right: 16px;
-  }
-  @media (max-width: 1354px) {
-    img {
-      width: 250px;
-      height: 75px;
-      margin-bottom: 16px;
-      margin-right: 0px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    img {
-      width: 250px;
-      height: 75px;
-      margin-bottom: 16px;
-      margin-right: 0px;
-    }
-  }
 `
 
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 60px 0px 240px 0px;
+  padding: 20px 0px 100px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;
@@ -86,8 +43,8 @@ const ContentWrapper = styled.div`
   @media (max-width: 1354px) {
     grid-template-columns: auto;
     max-width: 768px;
-    gap: 60px;
-    padding: 60px 20px 180px;
+    gap: 30px;
+    padding: 20px 20px 100px;
     justify-content: center;
     text-align: center;
   }
@@ -95,8 +52,8 @@ const ContentWrapper = styled.div`
   @media (max-width: 480px) {
     max-width: 345px;
     grid-template-columns: 345px;
-    gap: 30px;
-    padding: 60px 20px 124px;
+    gap: 20px;
+    padding: 10px 20px 100px;
     justify-content: center;
   }
 `
@@ -104,7 +61,6 @@ const ContentWrapper = styled.div`
 const TextWrapper = styled.div`
   max-width: 954px;
   display: grid;
-  padding-top: 60px;
   gap: 32px;
   margin: auto;
 
@@ -138,6 +94,9 @@ const TextWrapper = styled.div`
 const Title = styled(H2)`
   color: ${themes.dark.text1};
   text-align: center;
+  font-size: 16px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
     background-clip: text;
@@ -147,4 +106,9 @@ const Title = styled(H2)`
 
   @media (max-width: 480px) {
   }
+`
+
+const Body = styled(MediumText)`
+  text-align: center;
+  color: ${themes.dark.text1};
 `

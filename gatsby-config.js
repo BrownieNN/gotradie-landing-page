@@ -9,7 +9,7 @@ module.exports = {
     description:
       "Built by tradies, for tradies",
     url: "https://www.gotradie.com.au", // No trailing slash allowed!
-    image: "/static/images/meta/meta-image.png", // Path to your image you placed in the 'static' folder
+    image: "static/images/meta/meta-image.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,5 +1,5 @@
 export const menuData = [
-  { title: "Available soon", icon: "/images/icons/pricing.svg" },
+  { title: "Download now", icon: "/images/icons/pricing.svg" },
   {
     title: "",
     icon: "/images/app/apple-store-badge.svg",

@@ -19,6 +19,14 @@ export const logoData = [
     icon: "/images/logos/Ocar.png",
     link: "https://ocarbuildinggroup.com.au/",
   },
+  {
+    title: "",
+    icon: "/images/logos/Ojm.png",
+  },
+  {
+    title: "",
+    icon: "/images/logos/Boundless.png",
+  },
 ]
 
 // export const menuData = [

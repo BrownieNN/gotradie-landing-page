@@ -36,9 +36,9 @@ const Wrapper = styled.div`
 
 const MenuWrapper = styled.div`
   display: grid;
-  gap: 100px;
+  gap: 60px;
   columns: 6 auto;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(6, auto);
 
   @media (max-width: 1345px) {
     gap: 50px;

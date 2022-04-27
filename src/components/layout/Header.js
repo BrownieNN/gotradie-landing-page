@@ -11,7 +11,7 @@ export default function Header() {
         </Logo>
         <Container>
           <Download>
-            <FreeText>Available soon</FreeText>
+            <FreeText>Download now</FreeText>
             <ButtonGroup>
               <a
                 href="https://apps.apple.com/au/app/gotradie/id1497078123"
