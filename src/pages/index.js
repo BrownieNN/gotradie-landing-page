@@ -14,7 +14,7 @@ import CenterAlignSection from "../components/sections/CenterAlignSection"
 function IndexPage() {
   return (
     <Layout>
-      <SearchEngine title="Tradie Messenger" />
+      <SearchEngine title="We've got tradie chat sorted" />
       <HeroSection />
       <LogoSection />
       <HeroAnimation />
