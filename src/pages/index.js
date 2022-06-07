@@ -20,7 +20,7 @@ function IndexPage() {
       <HeroAnimation />
       <FeatureSection1
         subtitle="Helping you keep it together"
-        title={<p style={{color: "white"}}>All your work <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", webkitBackgroundClip: "text", color: "transparent" }}> messages, photos, videos, docs and more</span></p>}
+        title={<p style={{color: "white"}}>All your work <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", color: "transparent" }}> messages, photos, videos, docs and more</span></p>}
         tagTitleOne="Chat to your team"
         tagTitleTwo="Photos & videos"
         tagTitleThree="Organised inbox"
@@ -33,7 +33,7 @@ function IndexPage() {
       />
       <FeatureSection2 
         subtitle="In need of an extra pair of hands?"
-        title={<p style={{color: "white"}}>Bringing <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", webkitBackgroundClip: "text", color: "transparent" }}> businesses, worksites and wider trade community together</span></p>}
+        title={<p style={{color: "white"}}>Bringing <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", color: "transparent" }}> businesses, worksites and wider trade community together</span></p>}
         tagTitleOne="Subbies"
         tagTitleTwo="Network"
         tagTitleThree="Connect"
@@ -48,7 +48,7 @@ function IndexPage() {
       />
       <FeatureSection3
         subtitle="Easily collaborate and get more done"
-        title={<p style={{color: "white"}}>Bridging the gap between <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", webkitBackgroundClip: "text", color: "transparent" }}> site & office and everyone in between</span></p>}
+        title={<p style={{color: "white"}}>Bridging the gap between <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", color: "transparent" }}> site & office and everyone in between</span></p>}
         tagTitleOne="Collaborate"
         tagTitleTwo="Message"
         tagTitleThree="Manage team"
