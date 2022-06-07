@@ -5,11 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "GoTradie",
-    titleTemplate: "Tradie messenger | GoTradie",
+    titleTemplate: "We've got tradie chat sorted",
     description:
-      "Built by tradies, for tradies",
+      "Simplify the way your team, subbies and worksites connect, communicate & collaborate in a purpose built messaging app",
     url: "https://www.gotradie.com.au", // No trailing slash allowed!
-    image: "static/images/meta/meta-image.png", // Path to your image you placed in the 'static' folder
+    image: "/static/meta-image.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
