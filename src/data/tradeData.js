@@ -1,22 +1,28 @@
 export const tradeData = [
   { title: "Plumber", icon: "/images/icons/trades/plumber.svg" },
   {
-    title: "Concreter",
-    icon: "/images/icons/trades/concreter.svg",
+    title: "Architect",
+    icon: "/images/icons/trades/architect.svg",
   },
   { title: "Builder", icon: "/images/icons/trades/builder.svg" },
   {
-    title: "Flooring",
-    icon: "/images/icons/trades/flooring.svg",
+    title: "Surveyor",
+    icon: "/images/icons/trades/surveyor.svg",
   },
   { title: "Carpenter", icon: "/images/icons/trades/carpenter.svg" },
-  { title: "Earthworks", icon: "/images/icons/trades/excavator.svg" },
+  { title: "Engineer", icon: "/images/icons/trades/engineer.svg" },
   { title: "Bricklayer", icon: "/images/icons/trades/bricky.svg" },
-  { title: "Air Conditioning", icon: "/images/icons/trades/aircon.svg" },
+  { title: "Supplier", icon: "/images/icons/trades/supplier.svg" },
   { title: "Renderer", icon: "/images/icons/trades/renderer.svg" },
-  { title: "Landscaper", icon: "/images/icons/trades/landscaper.svg" },
-  { title: "Electrician", icon: "/images/icons/trades/electrician.svg" },
+  { title: "Engineer", icon: "/images/icons/trades/landscaper.svg" },
+  { title: "Drafts person", icon: "/images/icons/trades/draft.svg" },
   { title: "Plasterer", icon: "/images/icons/trades/plasterer.svg" },
+  { title: "Electrician", icon: "/images/icons/trades/electrician.svg" },
+  { title: "Client", icon: "/images/icons/trades/client.svg" },
+  { title: "Concreter", icon: "/images/icons/trades/concreter.svg" },
+  { title: "Landscaper", icon: "/images/icons/trades/landscaper.svg" },
+  { title: "Roofer", icon: "/images/icons/trades/Roofer.svg" },
+  { title: "Delivery", icon: "/images/icons/trades/delivery.svg" },
 ]
 
 // export const tooltipData = [

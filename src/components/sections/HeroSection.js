@@ -1,11 +1,9 @@
 import React, { createRef, useEffect } from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { H1, MediumText, BodyIntro } from "../styles/TextStyles"
-import ContactForm from "../layout/ContactForm"
+import { H1, MediumText } from "../styles/TextStyles"
 import lottie from "lottie-web"
 import animationData from "../animations/lottie/walkthrough2.json"
-import SocialLayout from "../layout/SocialLayout"
 
 function HeroSection(props) {
   let animationContainer = createRef()
@@ -27,15 +25,31 @@ function HeroSection(props) {
       <ContentWrapper>
         <TextWrapper>
           <Lockup>
-            <Title>The messaging app</Title>
-            <Subtitle>Built by tradies, for tradies</Subtitle>
+            <Title><span>Move aside Whatsapp,</span><br/>we've got tradie chat sorted</Title>
           </Lockup>
-
           <Description>
-            Your go-to place for work photos, videos, docs and more
+          Simplify the way your team, subbies and worksites
+connect, communicate & collaborate in a purpose built messaging app
           </Description>
-          <ContactForm />
-           <SocialLayout />
+          <ButtonGroup>
+          <a
+            href="https://apps.apple.com/au/app/gotradie/id1497078123"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/images/app/apple-store-badge.svg" alt="Apple Store" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="/images/app/google-play-badge.svg"
+              alt="Google Play Store"
+            />
+          </a>
+        </ButtonGroup>
         </TextWrapper>
         <AnimationWrapper>
           <div className="mockup1" />
@@ -62,6 +76,14 @@ const AnimationWrapper = styled.div`
     background-size: contain;
   }
 
+  @media (max-width: 1354px) {
+    .mockup1 {
+      left: 150px;
+      top: 40px;
+    }
+    
+  }
+
   @media (max-width: 480px) {
     width: 345px;
     .mockup1 {
@@ -81,11 +103,16 @@ const Walkthrough = styled.div`
   left: 64px;
   top: 0px;
 
+  @media (max-width: 1354px) {
+    left: -26px;
+    top: 0px;
+  }
+
   @media (max-width: 480px) {
     position: absolute;
     width: 200px;
     height: auto;
-    left: 20px;
+    left: 0px;
     top: 0px;
   }
 `
@@ -159,46 +186,41 @@ const TextWrapper = styled.div`
 
 
 const Title = styled(H1)`
-  font-size: 52px;
-  text-align: center;
+  font-size: 62px;
+  line-height: 68px;
+  text-align: left;
   color: ${themes.dark.text1};
-  text-transform: uppercase;
   span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+    background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-  }
+}
 
-  @media (max-width: 480px) {
-    font-size: 30px;
-    text-align: center;
-  }
-`
-
-const Subtitle = styled(BodyIntro)`
-  color: ${themes.dark.text1};
-  text-transform: uppercase;
+@media (max-width: 1354px) {
   text-align: center;
-  font-size: 24px;
-  letter-spacing: 6px;
-  span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
+}
 
   @media (max-width: 480px) {
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-align: center;
+    font-size: 48px;
+    line-height: 54px;
+    text-align: left;
   }
 `
 
 const Description = styled(MediumText)`
   color: ${themes.dark.text1};
-  text-align: center;
+  text-align: left;
+    span {
+      background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+  }
+
+  @media (max-width: 1354px) {
+    text-align: left;
+  }
 `
 const Lockup = styled.div`
   display: grid;
@@ -222,6 +244,30 @@ const Lockup = styled.div`
     text-align: center;
     img {
       width: 307px;
+    }
+  }
+`
+const ButtonGroup = styled.div`
+  img {
+    width: 250px;
+    height: 75px;
+    margin-right: 16px;
+  }
+  @media (max-width: 1354px) {
+    img {
+      width: 250px;
+      height: 75px;
+      margin-bottom: 16px;
+      margin-right: 0px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 250px;
+      height: 75px;
+      margin-bottom: 16px;
+      margin-right: 0px;
     }
   }
 `

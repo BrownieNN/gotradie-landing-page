@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 1345px) {
-    width: 588px;
+    width: 100%;
     top: 30px;
     padding: 0px 30px;
   }
@@ -42,7 +42,7 @@ const MenuWrapper = styled.div`
 
   @media (max-width: 1345px) {
     gap: 50px;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
   }
 
   @media (max-width: 480px) {

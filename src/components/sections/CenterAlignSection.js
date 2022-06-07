@@ -10,15 +10,15 @@ function CenterAlignSection() {
     <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
-          <Title>Made for tradies, by tradies</Title>
+         <Subtitle>Is this for me?</Subtitle>
+          <Title>Built for teams <span>from 1 to 1,000+</span></Title>
           <Body>
-            our app is one-size fits all. Whether you’re a sole trader or have
-            multiple cars on the road we’ve got you sorted.
+          The app built for an industry. Whether your jobs in the office or getting the hand dirty on site. We’ve got you covered.
           </Body>
         </TextWrapper>
         <TradeGrid />
         <ButtonWrapper>
-          <SecondaryButton title="30+ more trades" />
+          <SecondaryButton title="& many more" />
         </ButtonWrapper>
       </ContentWrapper>
     </Wrapper>
@@ -43,7 +43,7 @@ const ButtonWrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 60px 0px 340px 0px;
+  padding: 60px 0px 140px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;
@@ -104,17 +104,27 @@ const Title = styled(H2)`
   color: ${themes.dark.text1};
   text-align: center;
   span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+    background: linear-gradient(90deg, #54C5C0 0%, #789BB6 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
   @media (max-width: 480px) {
+    font-size: 40px;
+    text-align: center;
   }
+`
+
+const Subtitle = styled(MediumText)`
+  color: ${themes.dark.text1};
+  font-weight: 500;
+  text-align: center;
 `
 
 const Body = styled(MediumText)`
   text-align: center;
   color: ${themes.dark.text1};
+  max-width: 780px;
+  margin: auto;
 `

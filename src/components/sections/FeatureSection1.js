@@ -128,9 +128,15 @@ const TextWrapper = styled.div`
 const Subtitle = styled(MediumText)`
   color: ${themes.dark.text1};
   font-weight: 500;
+
+  @media (max-width: 480px) {
+    text-align: left;
+  }
 `
 
 const Title = styled(H1)`
+font-size:42px;
+line-height: 48px;
   color: ${themes.dark.text1};
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
@@ -138,14 +144,20 @@ const Title = styled(H1)`
     -webkit-background-clip: text;
     color: transparent;
   }
+  
 
   @media (max-width: 480px) {
-    font-size: 43px;
+    font-size: 42px;
+    text-align: left;
   }
 `
 
 const Description = styled(MediumText)`
   color: ${themes.dark.text1};
+
+  @media (max-width: 480px) {
+    text-align: left;
+  }
 `
 const Lockup = styled.div`
   display: grid;

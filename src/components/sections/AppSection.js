@@ -2,6 +2,8 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H2 } from "../styles/TextStyles"
+import SocialLayout from "../layout/SocialLayout"
+
 
 export default function AppSection() {
   return (
@@ -31,6 +33,7 @@ export default function AppSection() {
             />
           </a>
         </ButtonGroup>
+        <SocialLayout />
       </ContentWrapper>
     </Wrapper>
   )
@@ -45,10 +48,7 @@ const animation = keyframes`
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
   overflow: visible;
-  @media (min-width: 1354px) {
-    display: none;
-  }
-`
+  `
 const ButtonGroup = styled.div`
   margin: auto;
   img {
@@ -78,7 +78,7 @@ const ButtonGroup = styled.div`
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 60px 0px 240px 0px;
+  padding: 0px 0px 240px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;

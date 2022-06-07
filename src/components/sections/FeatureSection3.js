@@ -3,10 +3,10 @@ import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
 import Losenge from "../buttons/losenge"
-import FeatureAnimationTwo from "../animations/FeatureTwoAnimation"
+import FeatureAnimationThree from "../animations/FeatureThreeAnimation"
 import GetStarted from "../buttons/GetStarted"
 
-function FeatureSectionTwo(props) {
+function FeatureSectionThree(props) {
   const {
     subtitle,
     title,
@@ -21,11 +21,16 @@ function FeatureSectionTwo(props) {
     animationImageTwo,
     animationImageThree,
     animationImageFour,
-    animationImageFive,
   } = props
   return (
     <Wrapper>
       <ContentWrapper>
+      <FeatureAnimationThree
+          backgroundOne={animationImageOne}
+          backgroundTwo={animationImageTwo}
+          backgroundThree={animationImageThree}
+          backgroundFour={animationImageFour}
+        />
         <TextWrapper>
           <Lockup>
             <Subtitle>{subtitle || "No nonense communication"}</Subtitle>
@@ -55,19 +60,13 @@ function FeatureSectionTwo(props) {
             </InnerButtonWrapper>
           </ButtonWrapper>
         </TextWrapper>
-        <FeatureAnimationTwo
-          backgroundOne={animationImageOne}
-          backgroundTwo={animationImageTwo}
-          backgroundThree={animationImageThree}
-          backgroundFour={animationImageFour}
-          backgroundFive={animationImageFive}
-        />
+       
       </ContentWrapper>
     </Wrapper>
   )
 }
 
-export default FeatureSectionTwo
+export default FeatureSectionThree
 
 const animation = keyframes`
   0% { opacity: 0; transform: translateY(-10px); filter: blur(10px); }
@@ -159,6 +158,7 @@ line-height: 48px;
 
 const Description = styled(MediumText)`
   color: ${themes.dark.text1};
+
   @media (max-width: 480px) {
     text-align: left;
   }

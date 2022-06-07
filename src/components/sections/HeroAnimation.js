@@ -1,7 +1,7 @@
 import React, { createRef, useEffect } from "react"
 import { themes } from "../styles/ColorStyles"
 import styled, { keyframes } from "styled-components"
-import { H1, MediumText } from "../styles/TextStyles"
+import { H1 } from "../styles/TextStyles"
 import lottie from "lottie-web"
 import animationData from "../animations/lottie/messages.json"
 
@@ -24,8 +24,7 @@ function HeroAnimation() {
     <Wrapper id="why">
       <ContentWrapper>
         <TextWrapper>
-          <Subtitle>What is GoTradie?</Subtitle>
-          <Title>Every ping, swoosh, and ding all in one place</Title>
+          <Title><span>Every ping, swoosh, and ding</span> all in one place</Title>
         </TextWrapper>
         <AnimationWrapper>
           <Animation ref={animationContainer} />
@@ -94,10 +93,10 @@ const animation = keyframes`
 `
 
 const TextWrapper = styled.div`
-  max-width: 588px;
-  display: grid;
+  max-width: 980px;
   padding-top: 60px;
-  gap: 32px;
+  text-align: center;
+  margin: auto;
 
   @media (max-width: 1354px) {
     margin: auto;
@@ -128,25 +127,23 @@ const TextWrapper = styled.div`
   }
 `
 
-const Subtitle = styled(MediumText)`
-  color: ${themes.dark.text1};
-  font-weight: 500px;
-
-  @media (max-width: 480px) {
-    font-size: 18px;
-  }
-`
-
 const Title = styled(H1)`
   color: ${themes.dark.text1};
+  line-height: 78px;
   span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+    background: linear-gradient(90deg, #54C5C0 0%, #789BB6 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
+  @media (max-width: 1354px) {
+    text-align: center;
+  }
+
   @media (max-width: 480px) {
-    font-size: 42px;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: left;
   }
 `

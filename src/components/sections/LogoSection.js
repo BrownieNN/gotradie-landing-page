@@ -2,7 +2,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import TradeLogo from "../layout/TradeLogos"
 import { themes } from "../styles/ColorStyles"
-import { H2, MediumText } from "../styles/TextStyles"
+import { H2 } from "../styles/TextStyles"
 
 function LogoSection() {
   return (
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 20px 0px 100px 0px;
+  padding: 150px 0px 100px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;

@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { menuData } from "../../data/menuData"
 import MenuButton from "../buttons/MenuButton"
 import { SmallText2 } from "../styles/TextStyles"
-import { themes } from "../styles/ColorStyles"
 
 
 export default function Footer() {
