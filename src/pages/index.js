@@ -63,7 +63,7 @@ function IndexPage() {
       />
      <FeatureSection2 
         subtitle="Safe as houses"
-        title={<p style={{color: "white"}}>Find what you need, <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", webkitBackgroundClip: "text", color: "transparent" }}> when you need it</span></p>}
+        title={<p style={{color: "white"}}>Find what you need, <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip: "text", WebkitBackgroundClip: "text", color: "transparent" }}> when you need it</span></p>}
         tagTitleOne="Search"
         tagTitleTwo="Find"
         tagTitleThree="Secure"
