@@ -90,7 +90,7 @@ const AnimationWrapper = styled.div`
       position: absolute;
       width: 260px;
       height: 361px;
-      left: 60px;
+      left: 80px;
       top: 40px;
     }
   }
@@ -112,7 +112,7 @@ const Walkthrough = styled.div`
     position: absolute;
     width: 200px;
     height: auto;
-    left: 0px;
+    left: 24px;
     top: 0px;
   }
 `

@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 
   @media (max-width: 480px) {
-    width: 345px;
+    width: 330px;
   }
 
   *,

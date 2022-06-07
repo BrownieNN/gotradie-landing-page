@@ -110,9 +110,13 @@ const TextWrapper = styled.div`
 
   @media (max-width: 480px) {
     max-width: 345px;
+    -webkit-box-pack: center;
+    display: grid;
+    grid-template-columns: 330px;
+    gap: 30px;
     justify-content: center;
     text-align: center;
-    padding: 0 8px;
+    padding: 0px 8px;
   }
 
   > * {
