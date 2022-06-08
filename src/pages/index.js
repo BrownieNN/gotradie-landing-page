@@ -14,7 +14,7 @@ import CenterAlignSection from "../components/sections/CenterAlignSection"
 function IndexPage() {
   return (
     <Layout>
-      <SearchEngine title="We've got tradie chat sorted" />
+      <SearchEngine title="We've got tradie chat sorted" image={require('/static/meta-image.jpg')} />
       <HeroSection />
       <LogoSection />
       <HeroAnimation />
