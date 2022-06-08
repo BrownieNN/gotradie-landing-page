@@ -14,13 +14,13 @@ import CenterAlignSection from "../components/sections/CenterAlignSection"
 function IndexPage() {
   return (
     <Layout>
-      <SearchEngine title="We've got tradie chat sorted" image={require('/static/meta-image.jpg')} />
+      <SearchEngine title="We've got tradie chat sorted" />
       <HeroSection />
       <LogoSection />
       <HeroAnimation />
       <FeatureSection1
         subtitle="Helping you keep it together"
-        title={<p style={{color: "white"}}>All your work <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", color: "transparent" }}> messages, photos, videos, docs and more</span></p>}
+        title={<p style={{color: "white"}}>All your work <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}> messages, photos, videos, docs and more</span></p>}
         tagTitleOne="Chat to your team"
         tagTitleTwo="Photos & videos"
         tagTitleThree="Organised inbox"
@@ -33,7 +33,7 @@ function IndexPage() {
       />
       <FeatureSection2 
         subtitle="In need of an extra pair of hands?"
-        title={<p style={{color: "white"}}>Bringing <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", color: "transparent" }}> businesses, worksites and wider trade community together</span></p>}
+        title={<p style={{color: "white"}}>Bringing <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> businesses, worksites and wider trade community together</span></p>}
         tagTitleOne="Subbies"
         tagTitleTwo="Network"
         tagTitleThree="Connect"
@@ -48,7 +48,7 @@ function IndexPage() {
       />
       <FeatureSection3
         subtitle="Easily collaborate and get more done"
-        title={<p style={{color: "white"}}>Bridging the gap between <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", color: "transparent" }}> site & office and everyone in between</span></p>}
+        title={<p style={{color: "white"}}>Bridging the gap between <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> site & office and everyone in between</span></p>}
         tagTitleOne="Collaborate"
         tagTitleTwo="Message"
         tagTitleThree="Manage team"
@@ -63,7 +63,7 @@ function IndexPage() {
       />
      <FeatureSection2 
         subtitle="Safe as houses"
-        title={<p style={{color: "white"}}>Find what you need, <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip: "text", WebkitBackgroundClip: "text", color: "transparent" }}> when you need it</span></p>}
+        title={<p style={{color: "white"}}>Find what you need, <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> when you need it</span></p>}
         tagTitleOne="Search"
         tagTitleTwo="Find"
         tagTitleThree="Secure"

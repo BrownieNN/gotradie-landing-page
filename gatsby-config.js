@@ -9,7 +9,7 @@ module.exports = {
     description:
       "Simplify the way your team, subbies and worksites connect, communicate & collaborate in a purpose built messaging app",
     url: "https://www.gotradie.com.au", // No trailing slash allowed!
-    image: "/static/meta-image.jpg", // Path to your image you placed in the 'static' folder
+    image: "/static/images/meta-image.jpg", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
