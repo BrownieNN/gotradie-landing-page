@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import SearchEngine from "../components/layout/seo"
 import HeroSection from "../components/sections/HeroSection"
 import AppSection from "../components/sections/AppSection"
 import Footer from "../components/layout/footer"
@@ -10,11 +9,12 @@ import FeatureSection1 from "../components/sections/FeatureSection1"
 import FeatureSection2 from "../components/sections/FeatureSection2"
 import FeatureSection3 from "../components/sections/FeatureSection3"
 import CenterAlignSection from "../components/sections/CenterAlignSection"
+import SEO from "../components/layout/seo"
 
 function IndexPage() {
   return (
     <Layout>
-      <SearchEngine title="We've got tradie chat sorted" />
+      <SEO />
       <HeroSection />
       <LogoSection />
       <HeroAnimation />

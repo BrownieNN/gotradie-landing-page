@@ -1,74 +1,22 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import Helmet from 'react-helmet'
 
-const SearchEngine = ({ title, description, image, article }) => {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+import icon from '/static/images/favicon/favicon.png'
+import socialBanner from '/static/images/meta-image.jpg'
 
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata
+const Metadata = () => (
+  <div>
+    <Helmet>
+      <title>We've got tradie chat sorted</title>
 
-  const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
-  }
-
-  return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-
-      {seo.url && <meta property="og:url" content={seo.url} />}
-
-      {(article ? true : null) && <meta property="og:type" content="article" />}
-
-      {seo.title && <meta property="og:title" content={seo.title} />}
-
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
-
-      {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta property='og:image' content={ socialBanner } />
+      <meta property='og:locale' content='en_US' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content="We've got tradie chat sorted" />
+      <meta property='og:description' content="Simplify the way your team, subbies and worksites connect, communicate & collaborate in a purpose built messaging app" />
+      <meta property='og:url' content='https://www.gotradie.com.au' />
     </Helmet>
-  )
-}
+  </div>
+)
 
-export default SearchEngine
-
-SearchEngine.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  article: PropTypes.bool,
-}
-
-SearchEngine.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  article: false,
-}
-
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        titleTemplate
-        defaultDescription: description
-        siteUrl: url
-        defaultImage: image
-      }
-    }
-  }
-`
+export default Metadata
