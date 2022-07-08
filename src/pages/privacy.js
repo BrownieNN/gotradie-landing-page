@@ -201,14 +201,14 @@ const ContentWrapper = styled.div`
     grid-template-columns: auto;
     gap: 48px;
     justify-content: center;
-    padding: 80px 0px 150px 0px;
+    padding: 180px 0px 150px 0px;
     text-align: left;
   }
 
   @media (max-width: 480px) {
     max-width: 345px;
     grid-template-columns: 345px;
-    padding: 80px 0px 120px 0px;
+    padding: 180px 0px 120px 0px;
     gap: 40px;
   }
 }
