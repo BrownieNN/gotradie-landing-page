@@ -9,7 +9,7 @@ function Privacy() {
     <Layout>
     <Wrapper>
       <ContentWrapper>
-      <Title>1.Introduction</Title>
+      <Title>1. Introduction</Title>
 <Description>
 <p>This Privacy Policy applies to all personal information collected by GoTradie Holdings Pty Ltd  and its subsidiaries including GoTradie Trading Pty Ltd (together "GoTradie"). By accessing GoTradie websites or apps or using our products or services, you consent to the terms of this policy and the GoTradie Terms & Conditions and agree to be bound by them. This policy is also incorporated by reference into the GoTradie Terms & Conditions that apply to products and services provided by GoTradie.</p>
 <p>In this policy we explain how and why we collect your personal information, the kinds of personal information we collect, how we use it, and what controls you have over our use of it. GoTradie is committed to complying with Commonwealth legislation governing privacy of personal information by businesses and to protecting and safeguarding your privacy when you deal with us.</p>
@@ -18,6 +18,14 @@ function Privacy() {
 <p>The kinds of personal information we may collect from you and hold may include:</p>
 <p>Identity information such as your name, age or date of birth, contact details (including address, email address, phone number or mobile phone number), occupation, licence information, driver’s licence or passport number, usernames or passwords; and financial details such as your bank account details or credit card information</p>
 <p>Without these details we may not be able to carry on our business and provide you with the products or services you require or the level of services which we aim to offer.</p>
+</Description>
+
+<Title>2. How we collect and hold your personal information</Title>
+<Description>
+<p>Personal information about you may be collected by us in a number of ways, including over the phone and via email, from devices or browsers which you use to access our apps and webpages, other webpages, where we keep a record and a copy of your contact with us, where you submit information through web forms, by logging your IP address, collecting GPS data, by use of cookies, by recording phone numbers and email addresses from which you contact us, by any smart phone, browser plugin or other application we use which might collect information from the device or browser used by you and in other ways which rely on technical access to information available from devices and operating systems that you might use.</p>
+<p>We may also obtain your personal information from our affiliates or advertising partners, clients, contractors, customers and other third parties such as survey or competition websites, marketing websites, any other websites accessible via our website that we consider helps us to deliver or advertise our services, understand online activity and collect information that we consider important to managing the quality or content of the services that we deliver.</p>
+<p>We may also collect your personal information from share registries contracted by us to manage GoTradie share applications and holdings, from publicly available sources of information and/or where legally required or authorised to do so.</p>
+<p>Once we have collected your personal information, we may hold it electronically or in paper files.</p>
 </Description>
 
 <Title>2. How we collect and hold your personal information</Title>
@@ -238,7 +246,9 @@ const Description = styled(MediumText)`
   color: #ffffff;
 
   p{
+    color: #ffffff;
     margin-bottom: 16px;
+    font-size: 16px;
   }
 
   ol{
