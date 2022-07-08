@@ -1,7 +1,7 @@
 export const menuData = [
   {
     title: "Privacy policy",
-    link: "/privacy",
+    link: "/privacy/",
   },
   { title: "Download now", icon: "/images/icons/pricing.svg" },
   {

@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import { H1, MediumText } from "../components/styles/TextStyles"
+import { themes } from "../components/styles/ColorStyles"
 import Footer from "../components/layout/footer"
 
 function Privacy() {
@@ -22,10 +23,10 @@ function Privacy() {
 
 <Title>2. How we collect and hold your personal information</Title>
 <Description>
-<p>Personal information about you may be collected by us in a number of ways, including over the phone and via email, from devices or browsers which you use to access our apps and webpages, other webpages, where we keep a record and a copy of your contact with us, where you submit information through web forms, by logging your IP address, collecting GPS data, by use of cookies, by recording phone numbers and email addresses from which you contact us, by any smart phone, browser plugin or other application we use which might collect information from the device or browser used by you and in other ways which rely on technical access to information available from devices and operating systems that you might use.</p>
-<p>We may also obtain your personal information from our affiliates or advertising partners, clients, contractors, customers and other third parties such as survey or competition websites, marketing websites, any other websites accessible via our website that we consider helps us to deliver or advertise our services, understand online activity and collect information that we consider important to managing the quality or content of the services that we deliver.</p>
-<p>We may also collect your personal information from share registries contracted by us to manage GoTradie share applications and holdings, from publicly available sources of information and/or where legally required or authorised to do so.</p>
-<p>Once we have collected your personal information, we may hold it electronically or in paper files.</p>
+Personal information about you may be collected by us in a number of ways, including over the phone and via email, from devices or browsers which you use to access our apps and webpages, other webpages, where we keep a record and a copy of your contact with us, where you submit information through web forms, by logging your IP address, collecting GPS data, by use of cookies, by recording phone numbers and email addresses from which you contact us, by any smart phone, browser plugin or other application we use which might collect information from the device or browser used by you and in other ways which rely on technical access to information available from devices and operating systems that you might use.<br /><br />
+We may also obtain your personal information from our affiliates or advertising partners, clients, contractors, customers and other third parties such as survey or competition websites, marketing websites, any other websites accessible via our website that we consider helps us to deliver or advertise our services, understand online activity and collect information that we consider important to managing the quality or content of the services that we deliver.<br /><br />
+We may also collect your personal information from share registries contracted by us to manage GoTradie share applications and holdings, from publicly available sources of information and/or where legally required or authorised to do so.<br /><br />
+Once we have collected your personal information, we may hold it electronically or in paper files.
 </Description>
 
 
@@ -152,7 +153,7 @@ function Privacy() {
 
 <Title>14. GoTradie's role and obligations</Title>
 <Description>
-<p>GoTradie  – Website Privacy</p>
+<p>GoTradie – Website Privacy</p>
 <p>GoTradie Privacy Policy</p>
 <p>Updated 12 November 2020</p>
 <p>Introduction</p>
@@ -235,7 +236,7 @@ line-height: 40px;
 
 const Description = styled(MediumText)`
   font-size: 16px;
-  color: #ffffff;
+  color: ${themes.dark.text1};
 
   p{
     color: #ffffff;
