@@ -21,6 +21,9 @@ function Privacy() {
 <p>Without these details we may not be able to carry on our business and provide you with the products or services you require or the level of services which we aim to offer.</p>
 </Description>
 
+<Title>right4iuhgt4uihtg4i</Title>
+<Description>4tjngt4jntj4nt4jont</Description>
+
 <Title>2. How we collect and hold your personal information</Title>
 <Description>
 Personal information about you may be collected by us in a number of ways, including over the phone and via email, from devices or browsers which you use to access our apps and webpages, other webpages, where we keep a record and a copy of your contact with us, where you submit information through web forms, by logging your IP address, collecting GPS data, by use of cookies, by recording phone numbers and email addresses from which you contact us, by any smart phone, browser plugin or other application we use which might collect information from the device or browser used by you and in other ways which rely on technical access to information available from devices and operating systems that you might use.<br /><br />
@@ -43,7 +46,7 @@ Once we have collected your personal information, we may hold it electronically 
 <li>6. To assist you gain approval to be connected with customers for particular job categories;</li>
 <li>7. To research, design, develop, manage, provide and improve our products and services;</li>
 <li>8. To contact you;</li>
-<li>9. To comply with laws, including laws regarding handling matters relevant to shares, share applicants and shareholders) and assist government, licensing or law enforcement agencies;</li>
+<li>9. To comply with laws, including laws regarding handling matters relevant to shares, share applicants and shareholders and assist government, licensing or law enforcement agencies;</li>
 <li>10. To undertake acts or practices related to the matters described above.</li>
 </ol>
 <p>We may also collect, hold, use and disclose your personal information for other reasons where the law allows or requires us to do so.</p>
