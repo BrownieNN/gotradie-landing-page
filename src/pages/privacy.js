@@ -254,6 +254,12 @@ const Description = styled(MediumText)`
   @media (max-width: 480px) {
     text-align: left;
   }
+
+  p {
+    color: #ffffff;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
 }
 `
 
