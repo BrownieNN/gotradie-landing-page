@@ -20,7 +20,7 @@ function Privacy() {
 <p>Without these details we may not be able to carry on our business and provide you with the products or services you require or the level of services which we aim to offer.</p>
 </Description>
 
-<Title>2.How we collect and hold your personal information</Title>
+<Title>2. How we collect and hold your personal information</Title>
 <Description>
 <p>Personal information about you may be collected by us in a number of ways, including over the phone and via email, from devices or browsers which you use to access our apps and webpages, other webpages, where we keep a record and a copy of your contact with us, where you submit information through web forms, by logging your IP address, collecting GPS data, by use of cookies, by recording phone numbers and email addresses from which you contact us, by any smart phone, browser plugin or other application we use which might collect information from the device or browser used by you and in other ways which rely on technical access to information available from devices and operating systems that you might use.</p>
 <p>We may also obtain your personal information from our affiliates or advertising partners, clients, contractors, customers and other third parties such as survey or competition websites, marketing websites, any other websites accessible via our website that we consider helps us to deliver or advertise our services, understand online activity and collect information that we consider important to managing the quality or content of the services that we deliver.</p>
@@ -28,8 +28,10 @@ function Privacy() {
 <p>Once we have collected your personal information, we may hold it electronically or in paper files.</p>
 </Description>
 
+
 <Title>3.	Why we collect, hold, use and disclose your personal information</Title>
-<Description><p>We collect, hold, use and disclose your personal information for the following purposes:</p>
+<Description>
+<p>We collect, hold, use and disclose your personal information for the following purposes:</p>
 <p>To perform and manage our business functions or activities, including providing our products or services to you;</p>
 <ol>
 <li>1. To manage invoicing and payment systems and services;</li>
