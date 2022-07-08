@@ -9,7 +9,7 @@ export default function Header() {
       <InnerWrapper>
       <Link to="/">
         <Logo>
-          <img src="images/logos/gt-logo.svg" alt="GoTradie" />
+          <img src="/images/logos/gt-logo.svg" alt="GoTradie" />
         </Logo>
       </Link>
         <Container>

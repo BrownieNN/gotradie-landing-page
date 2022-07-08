@@ -1,15 +1,13 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import styled, { keyframes } from "styled-components"
-import SearchEngine from "../components/layout/seo"
-import { themes } from "../components/styles/ColorStyles"
 import { H1, MediumText } from "../components/styles/TextStyles"
+import Footer from "../components/layout/footer"
 
 function Privacy() {
   return (
     <Layout>
     <Wrapper>
-      <SearchEngine title="Privacy policy" />
       <ContentWrapper>
       <Title>1.Introduction</Title>
 <Description>
@@ -23,7 +21,8 @@ function Privacy() {
 </Description>
 
 <Title>2.How we collect and hold your personal information</Title>
-<Description><p>Personal information about you may be collected by us in a number of ways, including over the phone and via email, from devices or browsers which you use to access our apps and webpages, other webpages, where we keep a record and a copy of your contact with us, where you submit information through web forms, by logging your IP address, collecting GPS data, by use of cookies, by recording phone numbers and email addresses from which you contact us, by any smart phone, browser plugin or other application we use which might collect information from the device or browser used by you and in other ways which rely on technical access to information available from devices and operating systems that you might use.</p>
+<Description>
+<p>Personal information about you may be collected by us in a number of ways, including over the phone and via email, from devices or browsers which you use to access our apps and webpages, other webpages, where we keep a record and a copy of your contact with us, where you submit information through web forms, by logging your IP address, collecting GPS data, by use of cookies, by recording phone numbers and email addresses from which you contact us, by any smart phone, browser plugin or other application we use which might collect information from the device or browser used by you and in other ways which rely on technical access to information available from devices and operating systems that you might use.</p>
 <p>We may also obtain your personal information from our affiliates or advertising partners, clients, contractors, customers and other third parties such as survey or competition websites, marketing websites, any other websites accessible via our website that we consider helps us to deliver or advertise our services, understand online activity and collect information that we consider important to managing the quality or content of the services that we deliver.</p>
 <p>We may also collect your personal information from share registries contracted by us to manage GoTradie share applications and holdings, from publicly available sources of information and/or where legally required or authorised to do so.</p>
 <p>Once we have collected your personal information, we may hold it electronically or in paper files.</p>
@@ -170,6 +169,7 @@ function Privacy() {
 
 </ContentWrapper>
     </Wrapper>
+    <Footer />
     </Layout>
   )
 }
@@ -185,18 +185,19 @@ const Wrapper = styled.div`
   @media (max-width: 480px) {
     max-width: 345px;
   }
+}
 `
 
 const ContentWrapper = styled.div`
   max-width: 980px;
   margin: 0 auto;
-  padding: 80px 0px 120px 0px;
+  padding: 180px 0px 120px 0px;
   display: grid;
-  gap: 60px;
+  gap: 48px;
 
   @media (max-width: 1354px) {
     grid-template-columns: auto;
-    gap: 60px;
+    gap: 48px;
     justify-content: center;
     padding: 80px 0px 150px 0px;
     text-align: left;
@@ -208,12 +209,13 @@ const ContentWrapper = styled.div`
     padding: 80px 0px 120px 0px;
     gap: 40px;
   }
+}
 `
 
 const Title = styled(H1)`
 font-size: 28px;
 line-height: 40px;
-  color: ${themes.dark.text1};
+  color: #ffffff;
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
     background-clip: text;
@@ -226,11 +228,12 @@ line-height: 40px;
     font-size: 24px;
     text-align: left;
   }
+}
 `
 
 const Description = styled(MediumText)`
   font-size: 16px;
-  color: ${themes.dark.text1};
+  color: #ffffff;
 
   p{
     margin-bottom: 16px;
@@ -247,7 +250,6 @@ const Description = styled(MediumText)`
   @media (max-width: 480px) {
     text-align: left;
   }
-
-
+}
 `
 
