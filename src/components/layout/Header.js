@@ -1,14 +1,17 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export default function Header() {
 
   return (
     <HeaderWrapper>
       <InnerWrapper>
+      <Link to="/">
         <Logo>
           <img src="images/logos/gt-logo.svg" alt="GoTradie" />
         </Logo>
+      </Link>
         <Container>
           <Download>
             <FreeText>Download now</FreeText>
