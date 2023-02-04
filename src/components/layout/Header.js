@@ -14,7 +14,13 @@ export default function Header() {
       </Link>
         <Container>
           <Download>
-            <FreeText>Download now</FreeText>
+          <Link to="https://app.gotradie.com.au/signup">
+            <FreeText>Create account</FreeText>
+            </Link>
+            <Link to="https://app.gotradie.com.au/login">
+            <FreeText>Log in</FreeText>
+            </Link>
+          
             <ButtonGroup>
               <a
                 href="https://apps.apple.com/au/app/gotradie/id1497078123"
@@ -48,6 +54,11 @@ const FreeText = styled.div`
   color: white;
   font-weight: 600;
   text-decoration: none;
+  padding-right: 24px;
+
+  @media (max-width: 450px) {
+    padding-right: 0px;
+  }
 `
 
 const Download = styled.div`
@@ -57,7 +68,9 @@ const Download = styled.div`
   padding: 0px;
 
   @media (max-width: 480px) {
-   display: none;
+display: inline-flex;
+    flex-wrap: wrap;
+    gap: 24px;
   }
 `
 
@@ -72,6 +85,9 @@ const ButtonGroup = styled.div`
     height: 33.26px;
     margin-right: 16px;
   }
+  @media (max-width: 450px) {
+    display: none;
+  }
 `
 
 const Logo = styled.div`
@@ -79,10 +95,14 @@ const Logo = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
+  
 
   img {
     width: 174.88px;
     height: 20px;
+  }
+  @media (max-width: 450px) {
+    padding: 24px 0 24px 0;
   }
 `
 
@@ -109,15 +129,11 @@ const HeaderWrapper = styled.div`
     z-index: 10;
   }
   @media (max-width: 450px) {
-    width: 100%;
-    margin: auto;
     position: absolute;
-    top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 10;
+    top: 0px;
+    width: 100%;
+    display: block;
+    height: auto;
   }
 `
 const InnerWrapper = styled.div`
@@ -127,25 +143,47 @@ const InnerWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 1345px) {
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 10;
+  }
   @media (max-width: 450px) {
     width: 100%;
     margin: auto;
     position: absolute;
-    top: 30px;
+    top: 16px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    align-items: center;
-    z-index: 10;
-  }
-  @media (max-width: 1345px) {
-    width: 100%;
-    margin: auto;
-    position: absolute;
-    top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     z-index: 10;
   }
@@ -158,9 +196,26 @@ const Container = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  @media (max-width: 450px) {
-  }
+ 
   @media (max-width: 1345px) {
-    display: none;
   }
+  @media (max-width: 450px) {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: end;
+    justify-content: center;
+  }
+  
 `
