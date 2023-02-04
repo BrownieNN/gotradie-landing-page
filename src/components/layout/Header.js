@@ -14,13 +14,16 @@ export default function Header() {
       </Link>
         <Container>
           <Download>
-          <Link to="https://app.gotradie.com.au/signup">
-            <FreeText>Create account</FreeText>
-            </Link>
-            <Link to="https://app.gotradie.com.au/login">
-            <FreeText>Log in</FreeText>
-            </Link>
-          
+            <FreeText><a
+                href="https://app.gotradie.com.au/signup"
+                target="_blank"
+                rel="noreferrer"
+              >Create account</a></FreeText>
+            <FreeText><a
+                href="https://app.gotradie.com.au/login"
+                target="_blank"
+                rel="noreferrer"
+              >Log in</a></FreeText>          
             <ButtonGroup>
               <a
                 href="https://apps.apple.com/au/app/gotradie/id1497078123"
@@ -134,6 +137,7 @@ const HeaderWrapper = styled.div`
     width: 100%;
     display: block;
     height: auto;
+    z-index: 1111111;
   }
 `
 const InnerWrapper = styled.div`
