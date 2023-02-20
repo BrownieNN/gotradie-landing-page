@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<svg width="512" height="512" viewBox="0 0 512 512" fill="#0F2028" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg">
+<svg width="512" height="512" viewBox="0 0 512 512" style="background: #0F2028" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg">
   <title>GoTradie</title>
   <path d="M241.566 389.255H277.671C279.696 389.255 281.383 387.564 281.383 385.535V206.96H237.516V385.535C237.854 387.564 239.541 389.255 241.566 389.255Z" fill="white"/>
   <path d="M360.68 123.083C360.68 122.745 360.68 122.745 360.68 123.083L379.914 122.745C383.626 122.745 387 126.465 387 130.862V163.668C387 168.065 383.963 171.785 379.914 171.785H360.68C360.68 171.785 360.342 171.785 360.342 171.447V123.083H360.68Z" fill="#54C5C0"/>
