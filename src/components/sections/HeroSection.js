@@ -282,6 +282,8 @@ const ButtonGroup = styled.div`
   }
 
   @media (max-width: 480px) {
+    width: 100%;
+    padding: 0px;
     display: flex;
     gap: 8px;
     img {

@@ -19,6 +19,9 @@ const Wrapper = styled.div`
   box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25),
   inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px); /* Safari */
+  -moz-backdrop-filter: blur(40px); /* Firefox */
+  -ms-backdrop-filter: blur(40px); /* Edge */
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 20px;
