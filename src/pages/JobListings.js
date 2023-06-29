@@ -74,9 +74,9 @@ const ContentWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 345px;
+    width: 100%;
     margin: 0 auto;
-    padding: 54p 0px 120px 0px;
+    padding: 32px 24px;
     display: block;
     gap: 48px;
   }
@@ -90,12 +90,12 @@ const TextWrapper = styled.div`
   margin: auto;
 
   @media (max-width: 1354px) {
-    padding-top: 60px;
+    padding-top: 0px;
     max-width: 588px;
   }
 
   @media (max-width: 480px) {
-    margin-top: 60px;
+    margin-top: 0px;
     max-width: 345px;
     justify-content: center;
     text-align: center;
@@ -114,6 +114,7 @@ const TextWrapper = styled.div`
 
 const Title = styled(H2)`
   color: ${themes.dark.text1};
+  line-height: 45px;
   text-align: center;
   span {
     background: linear-gradient(90deg, #54C5C0 0%, #789BB6 100%);

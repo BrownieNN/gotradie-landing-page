@@ -76,7 +76,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
 max-width: 960px;
 margin: 0 auto;
-padding: 120px 0px 340px 0px;
+padding: 60px 0px 340px 0px;
 display: block;
 gap: 48px;
 
@@ -92,15 +92,15 @@ gap: 48px;
 @media (max-width: 1354px) {
   max-width: 640px;
   margin: 0 auto;
-  padding: 120px 0px 340px 0px;
+  padding: 0px 0px 340px 0px;
   display: block;
   gap: 48px;
 }
 
 @media (max-width: 480px) {
-  max-width: 345px;
+  width: 100%;
+  padding: 0 24px;
   margin: 0 auto;
-  padding: 120px 0px 340px 0px;
   display: block;
   gap: 48px;
 }
@@ -161,13 +161,13 @@ const HeaderWrapper = styled.div`
   @media (max-width: 1354px) {
     width: 100%;
     padding: 0px;
-    margin-top: 60px;
+    margin-top: 0px;
   }
   
   @media (max-width: 480px) {
     width: 100%;
-    padding: 0px;
-    margin-top: 60px;
+    padding: 16px;
+    margin-top: 0px;
   }
 `
 
