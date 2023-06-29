@@ -9,6 +9,7 @@ import FeatureSection1 from "../components/sections/FeatureSection1"
 import FeatureSection2 from "../components/sections/FeatureSection2"
 import FeatureSection3 from "../components/sections/FeatureSection3"
 import CenterAlignSection from "../components/sections/CenterAlignSection"
+import VideoSection from "../components/sections/VideoSection"
 import SEO from "../components/layout/seo"
 
 function IndexPage() {
@@ -16,6 +17,7 @@ function IndexPage() {
     <Layout>
       <SEO />
       <HeroSection />
+      <VideoSection />
       <LogoSection />
       <HeroAnimation />
       <FeatureSection1
@@ -79,7 +81,6 @@ function IndexPage() {
       />
       <CenterAlignSection />
       <AppSection />
-      <Footer />
     </Layout>
   )
 }

@@ -21,19 +21,21 @@ export default function PanelSection() {
       ref.current.contains(event.target) &&
       !tooltipRef.current.contains(event.target)
     ) {
-      console.log("Document is clicked")
+      //console.log("Document is clicked")
       setIsOpen(false)
     }
   }
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside)
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
+    if (typeof document !== 'undefined') {
+      document.addEventListener("mousedown", handleClickOutside);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
     }
-  }, [])
-
+  }, []);
+  
   return (
     <Wrapper ref={ref}>
       <PanelWrapper>

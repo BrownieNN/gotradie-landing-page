@@ -9,7 +9,7 @@ function LogoSection() {
     <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
-          <Title>Try it yourself</Title>
+          <Title>Watch our 60sec promo video</Title>
         </TextWrapper>
         <TradeLogo />
       </ContentWrapper>
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 150px 0px 100px 0px;
+  padding: 54px 0px 100px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;
@@ -41,7 +41,7 @@ const ContentWrapper = styled.div`
     grid-template-columns: auto;
     max-width: 768px;
     gap: 30px;
-    padding: 80px 20px 100px;
+    padding: 32px 20px 100px;
     justify-content: center;
     text-align: center;
   }
@@ -50,7 +50,7 @@ const ContentWrapper = styled.div`
     max-width: 345px;
     grid-template-columns: 345px;
     gap: 20px;
-    padding: 80px 20px 100px;
+    padding: 24px 20px 100px;
     justify-content: center;
   }
 `
@@ -102,5 +102,7 @@ const Title = styled(H2)`
   }
 
   @media (max-width: 480px) {
+    font-size: 11px;
+    letter-spacing: 4px;
   }
 `

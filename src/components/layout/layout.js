@@ -2,6 +2,7 @@ import React from "react"
 import "./layout.css"
 import { GlobalStyle } from "../styles/GlobalStyle"
 import Header from "./Header"
+import Footer from "./footer"
 
 function Layout({ children, data }) {
   return (
@@ -9,6 +10,7 @@ function Layout({ children, data }) {
       <GlobalStyle />
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

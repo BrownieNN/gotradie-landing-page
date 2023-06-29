@@ -6,11 +6,15 @@ import { SmallText2 } from "../styles/TextStyles"
 
 
 export default function Footer() {
+  // Filter the menuData array to exclude "Careers" option in the footer
+  const footerMenuData = menuData.filter(item => item.showInFooter !== false);
+
+
   return (
     <Wrapper>
     <LogoWrapper><img src="/images/logos/gt-logo.svg" alt="GoTradie" /></LogoWrapper>
-      <MenuWrapper count={menuData.length}>
-        {menuData.map((item, index) =>
+      <MenuWrapper count={footerMenuData.length}>
+        {footerMenuData.map((item, index) =>
           item.nav === "/" ? (
             <MenuButton item={item} key={index} />
           ) : (
@@ -18,7 +22,7 @@ export default function Footer() {
           )
         )}
       </MenuWrapper>
-      <FooterText>©2021 GoTradie Holdings PTY LTD<br/><a href="mailto:info@gotradie.com.au" target="_blank">Contact Us</a></FooterText>
+      <FooterText>©2023 GoTradie Holdings PTY LTD</FooterText>
     </Wrapper>
   )
 }

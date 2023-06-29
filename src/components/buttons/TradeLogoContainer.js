@@ -15,6 +15,9 @@ export default function TradeLogoContainer(props) {
 }
 
 const TradeTile = styled.div`
+  display: flex; /* Use flexbox */
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the items */
   position: relative;
   width: 150px;
   height: 113px;
@@ -23,7 +26,7 @@ const TradeTile = styled.div`
     width: 100%;
     height: auto;
   }
-`
+`;
 
 const TextWrapper = styled.div`
   position: absolute;

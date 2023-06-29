@@ -1,225 +1,111 @@
-import React from "react"
-import styled from "styled-components"
 import { Link } from "gatsby"
+import React, { useEffect, useRef, useState } from "react"
+import styled from "styled-components"
+import { menuData } from "../../data/menuData"
+import MenuButton from "../buttons/MenuButton"
+import MenuTooltip from "../tooltips/MenuTooltip"
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+  const ref = useRef()
+  const tooltipRef = useRef()
+
+  function handleClick(event) {
+    setIsOpen(!isOpen)
+    event.preventDefault()
+    // console.log(event)
+  }
+
+  function handleClickOutside(event) {
+    if (
+      ref.current &&
+      !ref.current.contains(event.target) &&
+      !tooltipRef.current.contains(event.target)
+    ) {
+      // console.log("Document is clicked")
+      setIsOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.addEventListener("mousedown", handleClickOutside);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
+  }, []);
+  
+
+  // Filter the menuData array to exclude "Careers" option in the header
+  const headerMenuData = menuData.filter(item => item.showInHeader !== false);
 
   return (
-    <HeaderWrapper>
-      <InnerWrapper>
+    <Wrapper>
       <Link to="/">
-        <Logo>
-          <img src="/images/logos/gt-logo.svg" alt="GoTradie" />
-        </Logo>
+        <img src="/images/logos/gt-logo.svg" alt="Logo" />
       </Link>
-        <Container>
-          <Download>
-            <FreeText><a
-                href="https://app.gotradie.com.au/signup"
-                target="_blank"
-                rel="noreferrer"
-              >Create account</a></FreeText>
-            <FreeText><a
-                href="https://app.gotradie.com.au/login"
-                target="_blank"
-                rel="noreferrer"
-              >Log in</a></FreeText>          
-            <ButtonGroup>
-              <a
-                href="https://apps.apple.com/au/app/gotradie/id1497078123"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="/images/app/apple-store-badge.svg"
-                  alt="Apple Store"
-                />
-              </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="/images/app/google-play-badge.svg"
-                  alt="Google Play Store"
-                />
-              </a>
-            </ButtonGroup>
-          </Download>
-        </Container>
-      </InnerWrapper>
-    </HeaderWrapper>
+      <MenuWrapper count={headerMenuData.length} ref={ref}>
+        {headerMenuData.map((item, index) =>
+          item.link === "/account" ? (
+            <MenuButton
+              item={item}
+              key={index}
+              onClick={event => handleClick(event)}
+            />
+          ) : (
+            <MenuButton item={item} key={index} />
+          )
+        )}
+        <HamburgerWrapper>
+          <MenuButton
+            item={{ title: "", icon: "/images/icons/hamburger.svg", link: "/" }}
+            onClick={event => handleClick(event)}
+          />
+        </HamburgerWrapper>
+      </MenuWrapper>
+      <div ref={tooltipRef}>
+        <MenuTooltip isOpen={isOpen} />
+      </div>
+    </Wrapper>
   )
 }
 
-const FreeText = styled.div`
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  padding-right: 24px;
-
-  @media (max-width: 450px) {
-    padding-right: 0px;
-  }
-`
-
-const Download = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-
-  @media (max-width: 480px) {
-display: inline-flex;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-`
-
-const ButtonGroup = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding-left: 20px;
-
-  img {
-    width: 105.1px;
-    height: 33.26px;
-    margin-right: 16px;
-  }
-  @media (max-width: 450px) {
-    display: none;
-  }
-`
-
-const Logo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  
-
-  img {
-    width: 174.88px;
-    height: 20px;
-  }
-  @media (max-width: 450px) {
-    padding: 24px 0 24px 0;
-  }
-`
-
-const HeaderWrapper = styled.div`
+const Wrapper = styled.div`
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px auto;
   width: 100%;
-  margin: auto;
-  position: absolute;
-  top: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 10;
-
-  @media (max-width: 1345px) {
-    width: 100%;
-    margin: auto;
-    position: absolute;
-    top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 10;
-  }
-  @media (max-width: 450px) {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    display: block;
-    height: auto;
-    z-index: 1111111;
-  }
-`
-const InnerWrapper = styled.div`
-  width: 1234px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  padding: 24px 110px;
+  align-items: center;
 
-  @media (max-width: 1345px) {
-    width: 90%;
-    margin: auto;
-    position: absolute;
-    top: 30px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    z-index: 10;
+  @media (max-width: 768px) {
+    padding: 16px; 30px;
   }
   @media (max-width: 450px) {
-    width: 100%;
-    margin: auto;
-    position: absolute;
-    top: 16px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    z-index: 10;
+    padding: 16px 24px;
   }
 `
 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
+const MenuWrapper = styled.div`
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(${props => props.count}, auto);
 
- 
-  @media (max-width: 1345px) {
+  @media (max-width: 768px) {
+    > a {
+      display: none;
+    }
+    grid-template-columns: auto;
   }
-  @media (max-width: 450px) {
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: end;
-    justify-content: center;
+`
+
+const HamburgerWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
   }
-  
 `

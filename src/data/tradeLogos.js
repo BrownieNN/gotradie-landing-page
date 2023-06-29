@@ -1,31 +1,33 @@
 export const logoData = [
   {
     title: "",
-    icon: "/images/logos/Garside.png",
-    link: "https://garsidepowerandsolar.com.au/",
+    icon: "/images/logos/tla-logo.png",
+    link: "https://www.landscapeassociation.com.au/",
   },
   {
     title: "",
-    icon: "/images/logos/Oak.png",
-    link: "https://play.google.com/store/apps/details?id=com.gotradie.paleale",
+    icon: "/images/logos/getter.png",
+    link: "https://getter.com.au/",
   },
   {
     title: "",
-    icon: "/images/logos/Greenstone.png",
-    link: "https://greenstonehomeandgardens.com.au/",
+    icon: "/images/logos/butopia-2.png",
+    link: "https://butopia.com.au/",
   },
   {
     title: "",
-    icon: "/images/logos/Ocar.png",
-    link: "https://ocarbuildinggroup.com.au/",
+    icon: "/images/logos/above-building.png",
+    link: "https://www.abovebuilding.com.au/",
   },
   {
     title: "",
-    icon: "/images/logos/Ojm.png",
+    icon: "/images/logos/ready-fence.png",
+    link: "https://www.readyfence.com.au/",
   },
   {
     title: "",
-    icon: "/images/logos/Boundless.png",
+    icon: "/images/logos/patioworld.png",
+    link: "https://patioworldcentralcoast.com.au/",
   },
 ]
 

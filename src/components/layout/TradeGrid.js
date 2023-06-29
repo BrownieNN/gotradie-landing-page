@@ -19,7 +19,6 @@ export default function TradeGrid() {
 const Wrapper = styled.div`
   display: grid;
   width: 1234px;
-  justify-content: space-between;
   justify-content: center;
 
   @media (max-width: 1345px) {

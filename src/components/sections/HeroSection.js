@@ -1,9 +1,10 @@
 import React, { createRef, useEffect } from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { H1, MediumText } from "../styles/TextStyles"
+import { ButtonText, H1, MediumText } from "../styles/TextStyles"
 import lottie from "lottie-web"
 import animationData from "../animations/lottie/walkthrough2.json"
+import FourColumnSection from "./FourColumnSection"
 
 function HeroSection(props) {
   let animationContainer = createRef()
@@ -31,13 +32,14 @@ function HeroSection(props) {
           Simplify the way your team, subbies and worksites
 connect, communicate & collaborate in a purpose built messaging app
           </Description>
+          <FourColumnSection />
           <ButtonGroup>
           <a
             href="https://apps.apple.com/au/app/gotradie/id1497078123"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/images/app/apple-store-badge.svg" alt="Apple Store" />
+            <img src="/images/app/apple-store-badge_sml.svg" alt="Apple Store" />
           </a>
           <a
             href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
@@ -45,16 +47,17 @@ connect, communicate & collaborate in a purpose built messaging app
             rel="noreferrer"
           >
             <img
-              src="/images/app/google-play-badge.svg"
+              src="/images/app/google-play-badge_sml.svg"
               alt="Google Play Store"
             />
           </a>
         </ButtonGroup>
+        <Subtitle>Try for free<span> no credit card required</span></Subtitle>
         </TextWrapper>
-        <AnimationWrapper>
+        {/* <AnimationWrapper>
           <div className="mockup1" />
           <Walkthrough ref={animationContainer} />
-        </AnimationWrapper>
+        </AnimationWrapper> */}
       </ContentWrapper>
     </Wrapper>
   )
@@ -125,45 +128,38 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
-  overflow: visible;
-  position: relative;
+  display: block;
   @media (max-width: 480px) {
-    z-index: 10;
+  
   }
 `
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 180px 0px 150px 0px;
-  display: grid;
-  grid-template-columns: 588px auto;
+  padding: 54px 0px 54px 0px;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 1354px) {
-    grid-template-columns: auto;
-    gap: 60px;
-    padding: 100px 20px 680px;
-    justify-content: center;
-    text-align: center;
+    padding: 54px 54px 54px 54px;
   }
 
   @media (max-width: 480px) {
-    max-width: 345px;
-    grid-template-columns: 345px;
-    gap: 60px;
-    padding: 130px 20px 440px;
+    padding: 24px 0px 45px 0px;
   }
 `
 const TextWrapper = styled.div`
-  max-width: 588px;
+  max-width: 960px;
   display: grid;
-  padding-top: 80px;
+  padding-top: 0px;
   gap: 32px;
+  justify-content: center;
 
   @media (max-width: 480px) {
-    max-width: 345px;
+    width: 100%
     justify-content: center;
     text-align: center;
-    padding: 0 8px;
+    padding: 0 24px;
     gap: 24px;
   }
 
@@ -188,7 +184,7 @@ const TextWrapper = styled.div`
 const Title = styled(H1)`
   font-size: 62px;
   line-height: 68px;
-  text-align: left;
+  text-align: center;
   color: ${themes.dark.text1};
   span {
     background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
@@ -202,15 +198,16 @@ const Title = styled(H1)`
 }
 
   @media (max-width: 480px) {
-    font-size: 48px;
-    line-height: 54px;
-    text-align: left;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
   }
 `
 
 const Description = styled(MediumText)`
   color: ${themes.dark.text1};
-  text-align: left;
+  text-align: center;
+  padding: 0 100px;
     span {
       background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
       background-clip: text;
@@ -219,7 +216,12 @@ const Description = styled(MediumText)`
   }
 
   @media (max-width: 1354px) {
-    text-align: left;
+    padding: 0px;
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    text-align: center;
+    font-size: 15px;
   }
 `
 const Lockup = styled.div`
@@ -247,26 +249,44 @@ const Lockup = styled.div`
     }
   }
 `
+
+const Subtitle = styled(ButtonText)`
+  color: ${themes.dark.text1};
+  text-align: center; 
+
+  span {
+    color: #54C5C0;
+}
+@media (max-width: 480px) {
+  font-size: 11px;
+  text-align: center;
+}
+`
+
 const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: center;
+
   img {
-    width: 250px;
-    height: 75px;
+    width: 200px;
+    height: auto;
     margin-right: 16px;
   }
   @media (max-width: 1354px) {
+    display: flex;
     img {
       width: 250px;
       height: 75px;
-      margin-bottom: 16px;
       margin-right: 0px;
     }
   }
 
   @media (max-width: 480px) {
+    display: flex;
+    gap: 8px;
     img {
-      width: 250px;
-      height: 75px;
-      margin-bottom: 16px;
+      width: 100%;
+      height: auto;
       margin-right: 0px;
     }
   }
