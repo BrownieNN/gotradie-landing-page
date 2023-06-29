@@ -272,6 +272,7 @@ const ButtonGroup = styled.div`
     height: auto;
     margin-right: 16px;
   }
+  
   @media (max-width: 1354px) {
     display: flex;
     img {
@@ -291,5 +292,9 @@ const ButtonGroup = styled.div`
       height: auto;
       margin-right: 0px;
     }
+    /* Add flex-grow property to make buttons fill the available space */
+    a {
+      flex-grow: 1;
+    }
   }
-`
+`;
