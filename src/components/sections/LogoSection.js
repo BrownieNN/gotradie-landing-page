@@ -4,12 +4,15 @@ import TradeLogo from "../layout/TradeLogos"
 import { themes } from "../styles/ColorStyles"
 import { H2 } from "../styles/TextStyles"
 
-function LogoSection() {
+function LogoSection(props) {
+  const {
+    title
+  } = props
   return (
     <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
-          <Title>Watch our 60sec promo video</Title>
+          <Title>{title || "Watch our 60sec promo video"}</Title>
         </TextWrapper>
         <TradeLogo />
       </ContentWrapper>

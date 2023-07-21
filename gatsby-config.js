@@ -18,6 +18,13 @@ module.exports = {
     //     },
     //   },
     // },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-MPJPQLR",
+        includeInDevelopment: true, // Set this to true if you want GTM in development mode
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     {
@@ -47,5 +54,9 @@ module.exports = {
 
   flags: {
     DEV_SSR: false,
+    develop: {
+      host: "192.168.0.255",
+      // Other configurations...
+    },
   },
 }

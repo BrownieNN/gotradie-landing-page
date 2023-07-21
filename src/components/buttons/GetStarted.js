@@ -49,7 +49,7 @@ const Wrapper = styled.div`
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5); */
   border-radius: 8px;
-  width: 250px;
+  max-width: 250px;
   height: 52px;
   display: grid;
   grid-template-columns: auto 18px;
