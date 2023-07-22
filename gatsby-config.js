@@ -24,11 +24,6 @@ module.exports = {
         trackingIds: [
           "YG-GGYKZWSJE4",
         ],
-        pluginConfig: {
-          head: true, // Add the script to the <head> instead of the <body>
-          // Set send_page_view to true to track page views
-          send_page_view: true,
-        },
       },
     },
     {
