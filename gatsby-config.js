@@ -26,7 +26,8 @@ module.exports = {
         ],
         pluginConfig: {
           head: true, // Add the script to the <head> instead of the <body>
-          respectDNT: true, // Respect visitor's Do Not Track preference
+          // Set send_page_view to true to track page views
+          send_page_view: true,
         },
       },
     },
