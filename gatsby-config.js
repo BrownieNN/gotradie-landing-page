@@ -19,6 +19,18 @@ module.exports = {
     //   },
     // },
     {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: [
+          "YG-GGYKZWSJE4",
+        ],
+        pluginConfig: {
+          head: true, // Add the script to the <head> instead of the <body>
+          respectDNT: true, // Respect visitor's Do Not Track preference
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-MPJPQLR",
