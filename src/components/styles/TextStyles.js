@@ -41,7 +41,7 @@ export const BodyMain = styled.p`
 `
 
 export const MediumText = styled.p`
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   line-height: 140%;
 

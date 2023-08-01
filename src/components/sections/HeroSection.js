@@ -1,14 +1,30 @@
-import React, { createRef, useEffect } from "react"
-import styled, { keyframes } from "styled-components"
-import { themes } from "../styles/ColorStyles"
-import { ButtonText, H1, MediumText } from "../styles/TextStyles"
-import lottie from "lottie-web"
-import animationData from "../animations/lottie/walkthrough2.json"
-import FourColumnSection from "./FourColumnSection"
+import React, { createRef, useEffect, useState } from "react";
+import styled, { keyframes, css } from "styled-components";
+import { themes } from "../styles/ColorStyles";
+import { ButtonText, H1, MediumText } from "../styles/TextStyles";
+import lottie from "lottie-web";
+import animationData from "../animations/lottie/walkthrough2.json";
+import FourColumnSection from "./FourColumnSection";
 
 function HeroSection(props) {
-  let animationContainer = createRef()
-  let anim = null
+  let animationContainer = createRef();
+  let anim = null;
+  const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
+  const [scaleIn, setScaleIn] = useState(false);
+  const emojiRef = createRef();
+  const emojis = ["🔨", "🪚", "🧱", "🪠", "⚡", "🏠", "🪴", "🌳", "🚦", "🏗️", "🚧", "📋", "🪳", "🪨", "🦺", "🔑", "🪟",];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentEmojiIndex((prevIndex) =>
+        prevIndex === emojis.length - 1 ? 0 : prevIndex + 1
+      );
+      // Set scaleIn to true to trigger the animation
+      setScaleIn(true);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [emojis.length]);
 
   useEffect(() => {
     anim = lottie.loadAnimation({
@@ -17,53 +33,106 @@ function HeroSection(props) {
       loop: true,
       autoplay: true,
       animationData: animationData,
-    })
-    return () => anim.destroy() // optional clean up for unmounting
-  }, [])
+    });
+    return () => anim.destroy();
+  }, []);
+
+  useEffect(() => {
+    if (scaleIn) {
+      const animationEndHandler = () => {
+        setScaleIn(false);
+      };
+      const emojiElement = emojiRef.current;
+      emojiElement.addEventListener("animationend", animationEndHandler);
+      return () => {
+        emojiElement.removeEventListener("animationend", animationEndHandler);
+      };
+    }
+  }, [scaleIn]);
 
   return (
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
           <Lockup>
-            <Title><span>Move aside Whatsapp,</span><br/>we've got tradie chat sorted</Title>
+            <Title>
+              The Messaging App <br />
+              <span>
+                Built For Work <AnimatedEmoji scaleIn={scaleIn} ref={emojiRef}>
+                  {emojis[currentEmojiIndex]}
+                </AnimatedEmoji>
+              </span>
+            </Title>
           </Lockup>
           <Description>
-          Simplify the way your team, subbies and worksites
-connect, communicate & collaborate in a purpose built messaging app
+            Simplify the way your team, worksites and clients communicate &
+            more.
           </Description>
           <FourColumnSection />
           <ButtonGroup>
-          <a
-            href="https://apps.apple.com/au/app/gotradie/id1497078123"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/images/app/apple-store-badge_sml.svg" alt="Apple Store" />
-          </a>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="/images/app/google-play-badge_sml.svg"
-              alt="Google Play Store"
-            />
-          </a>
-        </ButtonGroup>
-        <Subtitle>Try for free<span> no credit card required</span></Subtitle>
+            <a
+              href="https://apps.apple.com/au/app/gotradie/id1497078123"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="/images/app/apple-store-badge_sml.svg"
+                alt="Apple Store"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="/images/app/google-play-badge_sml.svg"
+                alt="Google Play Store"
+              />
+            </a>
+          </ButtonGroup>
+          <Subtitle>
+            Try for free<span> no credit card required</span>
+          </Subtitle>
         </TextWrapper>
-        {/* <AnimationWrapper>
-          <div className="mockup1" />
-          <Walkthrough ref={animationContainer} />
-        </AnimationWrapper> */}
       </ContentWrapper>
     </Wrapper>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;
+
+const emojiScaleIn = keyframes`
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
+const AnimatedEmoji = styled.span`
+  font-size: 64px;
+  margin-left: 4px;
+  display: inline-block;
+  transform-origin: center;
+  animation: ${({ scaleIn }) =>
+    scaleIn
+      ? css`
+          ${emojiScaleIn} 0.5s ease
+        `
+      : "none"};
+  @media (max-width: 1354px) {
+
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 40px;
+  }  
+`;
 
 const AnimationWrapper = styled.div`
   position: relative;
@@ -182,15 +251,16 @@ const TextWrapper = styled.div`
 
 
 const Title = styled(H1)`
-  font-size: 62px;
-  line-height: 68px;
+  font-size: 74px;
+  line-height: 80px;
   text-align: center;
   color: ${themes.dark.text1};
   span {
-    background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    // background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // color: transparent;
+    color: #54C5C0;
 }
 
 @media (max-width: 1354px) {
@@ -201,6 +271,11 @@ const Title = styled(H1)`
     font-size: 40px;
     line-height: 48px;
     text-align: center;
+
+    /* Remove the <br/> on mobile */
+    br {
+      display: none;
+    }
   }
 `
 
