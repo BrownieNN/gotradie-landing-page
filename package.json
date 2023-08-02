@@ -33,6 +33,8 @@
     "react-modal": "^3.16.1",
     "react-player": "^2.12.0",
     "react-plyr": "^2.2.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^6.0.0-rc.6"
   },
   "devDependencies": {

@@ -9,6 +9,7 @@ import FeatureSection2 from "../components/sections/FeatureSection2"
 import FeatureSection3 from "../components/sections/FeatureSection3"
 import CenterAlignSection from "../components/sections/CenterAlignSection"
 import VideoSection from "../components/sections/VideoSection"
+import PricingTable from "../components/sections/PricingTable"
 import SEO from "../components/layout/seo"
 
 function IndexPage() {
@@ -78,6 +79,7 @@ function IndexPage() {
         animationImageThree="/images/animations/results.png"
         animationImageFive="/images/animations/message-results.png"
       />
+       <PricingTable />
       <CenterAlignSection />
       <AppSection />
     </Layout>
