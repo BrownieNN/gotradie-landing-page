@@ -24,7 +24,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import icon from '/static/images/favicon/favicon.png'
-import socialBanner from '/static/images/Website-meta.png'
+import socialBanner from '/static/images/meta/website-meta.png'
 
 const Metadata = ({ title, description, imageUrl, imageWidth, imageHeight, url }) => (
   <div>
