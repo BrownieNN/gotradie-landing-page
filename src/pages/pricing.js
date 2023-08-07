@@ -11,6 +11,8 @@ function Landscapers() {
     title: "A fair Price for all businesses",
     description: "No nonense pricing, start for free no credit card needed",
     imageUrl: "/static/images/Website-meta.png",
+    imageWidth: 1200, // Specify the image width
+    imageHeight: 630, // Specify the image height
     url: "https://www.gotradie.com.au/pricing",
   };
 

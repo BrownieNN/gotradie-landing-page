@@ -22,16 +22,17 @@
 
 import React from 'react'
 import Helmet from 'react-helmet'
-import PropTypes from 'prop-types' // Import PropTypes
+import PropTypes from 'prop-types'
 import icon from '/static/images/favicon/favicon.png'
 import socialBanner from '/static/images/Website-meta.png'
 
-const Metadata = ({ title, description, imageUrl, url }) => (
+const Metadata = ({ title, description, imageUrl, imageWidth, imageHeight, url }) => (
   <div>
     <Helmet>
       <title>{title}</title>
-
       <meta property='og:image' content={imageUrl || socialBanner} />
+      {imageWidth && <meta property='og:image:width' content={imageWidth} />}
+      {imageHeight && <meta property='og:image:height' content={imageHeight} />}
       <meta property='og:locale' content='en_US' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content={title} />
@@ -41,11 +42,12 @@ const Metadata = ({ title, description, imageUrl, url }) => (
   </div>
 )
 
-// Define prop types
 Metadata.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
+  imageWidth: PropTypes.number, // Add image width prop
+  imageHeight: PropTypes.number, // Add image height prop
   url: PropTypes.string,
 }
 

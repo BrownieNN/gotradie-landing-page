@@ -18,6 +18,8 @@ function IndexPage() {
     title: "The Messenger App Built For Work 🔨",
     description: "Simplify the way your team, worksites and clients communicate & more.",
     imageUrl: "/static/images/Website-meta.png",
+    imageWidth: 1200, // Specify the image width
+    imageHeight: 630, // Specify the image height
     url: "https://www.gotradie.com.au",
   };
 
