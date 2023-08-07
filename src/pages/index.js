@@ -13,9 +13,17 @@ import PricingTable from "../components/sections/PricingTable"
 import SEO from "../components/layout/seo"
 
 function IndexPage() {
+
+  const seoProps = {
+    title: "The Messenger App Built For Work 🔨",
+    description: "Simplify the way your team, worksites and clients communicate & more.",
+    imageUrl: "/static/images/Website-meta.png",
+    url: "https://www.gotradie.com.au",
+  };
+
   return (
     <Layout>
-      <SEO />
+      <SEO {...seoProps} />
       <HeroSection />
       <VideoSection />
       <LogoSection />
