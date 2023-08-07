@@ -7,7 +7,7 @@ export default function Tooltip({ isVisible, content, position, onClose, highlig
   }
 
   return (
-    <TooltipWrapper position={position}>
+    <TooltipWrapper position={position} highlight={highlight}>
       <CloseIcon highlight={highlight} onClick={onClose}><h6>X</h6></CloseIcon>
       <TooltipContent>{content}</TooltipContent>
     </TooltipWrapper>
@@ -16,7 +16,7 @@ export default function Tooltip({ isVisible, content, position, onClose, highlig
 
 const TooltipWrapper = styled.div`
   position: absolute;
-  top: 312px;
+  top: 166px;
   color: #fff;
   border-radius: 4px;
   padding: 8px;
@@ -24,6 +24,20 @@ const TooltipWrapper = styled.div`
   width: 227px;
   height: 100px;
   box-shadow: rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 1354px) {
+  }
+
+  @media (max-width: 480px) {
+    top: 166px;
+    width: 100%;
+    height: 120px;
+
+  ${(props) =>
+    props.highlight &&
+    `top: 155px;
+  `}
+}
 `;
 
 const TooltipContent = styled.div``;

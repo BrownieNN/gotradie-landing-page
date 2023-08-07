@@ -58,7 +58,7 @@ export default function PricingTable() {
         </ToggleLabel>
       </ToggleWrapper>
       </TextWrapper>
-      <Slider {...settings}>
+      <StyledSlider {...settings}>
         {priceData.map((item, index) => (
           <PricingColumn
             item={{ ...item, isYearly }}
@@ -71,7 +71,7 @@ export default function PricingTable() {
             
           />
         ))}
-      </Slider>
+      </StyledSlider>
     </Wrapper>
   );
 }
@@ -174,3 +174,31 @@ const Body = styled(MediumText)`
   max-width: 780px;
   margin: auto;
 `
+
+const StyledSlider = styled(Slider)`
+  .slick-dots {
+    bottom: -40px; /* Adjust the position as needed */
+    li {
+      margin: 0 4px; /* Adjust the spacing between dots */
+      button {
+        width: 12px; /* Adjust the dot size */
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5); /* Dot color */
+        &::before {
+          display: none; /* Hide the inner dot */
+        }
+        &:hover {
+          background: rgba(255, 255, 255, 0.8); /* Hover color */
+        }
+      }
+      &.slick-active {
+        button {
+          background: #54C5C0; /* Active dot color */
+          width: 14px; /* Active dot size */
+          height: 14px;
+        }
+      }
+    }
+  }
+`;

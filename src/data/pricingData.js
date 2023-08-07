@@ -53,7 +53,7 @@ export const priceData = [
         url: "https://app.gotradie.com.au/signup", // Add the URL for this item
         tooltipImage: "",
         tooltipHeadline: "How will i be charged?",
-        tooltipText: "Easy use GoTradie for 30 days and we'll send you an onvoice to pay at the end of the month",
+        tooltipText: "Easy use GoTradie for 30 days and we'll send you an invoice to pay at the end of the month",
     },
     {
         icon: "/images/icons/team-white.svg",
@@ -80,7 +80,7 @@ export const priceData = [
         url: "https://app.gotradie.com.au/signup", // Add the URL for this item
         tooltipImage: "",
         tooltipHeadline: "How will i be charged?",
-        tooltipText: "Easy use GoTradie for 30 days and we'll send you an onvoice to pay at the end of the month",
+        tooltipText: "Easy use GoTradie for 30 days and we'll send you an invoice to pay at the end of the month",
     },
     {
         icon: "/images/icons/email-white.svg",

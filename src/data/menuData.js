@@ -14,6 +14,14 @@ export const menuData = [
     showInFooter: true, // Show in footer
   },
   { 
+    title: "Pricing", 
+    icon: "/images/icons/careers.svg",
+    link: "/pricing",
+    showInHeader: true, // Show in header
+    showInFooter: false, // Show in footer
+    showBackground: false,
+  },
+  { 
     title: "Careers", 
     icon: "/images/icons/careers.svg",
     link: "/careers",
@@ -26,6 +34,8 @@ export const menuData = [
     link: "https://app.gotradie.com.au/signup",
     showInHeader: true, // Show in header
     showInFooter: false, // Show in footer
+    showBackground: true,
+
   },
   {
     title: "Log in",
@@ -33,16 +43,15 @@ export const menuData = [
     link: "https://app.gotradie.com.au/login",
     showInHeader: true, // Show in header
     showInFooter: false, // Show in footer
+    showBackground: true,
   },
 
 ]
 
 export const tooltipData = [
+  { title: "Pricing", icon: "/images/icons/Wallet.png", link: "/pricing" },
   { title: "Sign up", icon: "/images/icons/signup.svg", link: "https://app.gotradie.com.au/signup" },
   { title: "Log in", icon: "/images/icons/login.svg", link: "https://app.gotradie.com.au/login" },
   { title: "Careers", icon: "/images/icons/careers.svg", link: "/careers" },
-  { title: "", icon: "/images/app/apple-store-badge_sml.svg", link: "https://apps.apple.com/au/app/gotradie/id1497078123" },
-  { title: "", icon: "/images/app/google-play-badge_sml.svg", link: "https://play.google.com/store/apps/details?id=com.gotradie.paleale" },
-  
 ]
 

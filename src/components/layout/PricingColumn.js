@@ -287,6 +287,20 @@ const ToolTipWrapper = styled.div`
     left: 0 !important;
     border-radius: 7px !important;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 120px;
+
+    img{
+      width: 100% !important;
+      height: 118px !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      border-radius: 7px !important;
+    }
+  }
 `
 
 const ToolTipText = styled.div`
