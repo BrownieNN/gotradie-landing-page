@@ -47,7 +47,7 @@ const handleFrequencyClick = (event) => {
               <Frequency onClick={handleFrequencyClick}>{item.frequency}</Frequency>
               <InfoIcon><img src="/images/icons/Info.svg"/></InfoIcon>
               {tooltipContent && (
-                 <Tooltip
+                <Tooltip
                   isVisible={isTooltipVisible}
                   content={
                     <ToolTipWrapper highlight={highlight}>
@@ -55,15 +55,16 @@ const handleFrequencyClick = (event) => {
                         <img src={tooltipContent.tooltipImage} alt={tooltipContent.tooltipHeadline} />
                       )}
                       <ToolTipText>
-                      <h3>{tooltipContent.tooltipHeadline}</h3>
-                      <p>{tooltipContent.tooltipText}</p>
+                        <h3>{tooltipContent.tooltipHeadline}</h3>
+                        <p>{tooltipContent.tooltipText}</p>
                       </ToolTipText>
                     </ToolTipWrapper>
-                      
                   }
                   position={tooltipPosition}
-               />
-              )}
+                  onClose={() => setIsTooltipVisible(false)} // Close the tooltip when the close icon is clicked
+                  highlight={highlight} // Pass the highlight prop to the Tooltip
+                />
+                )}
             </>
           )}
        </PriceWrapper>
@@ -134,7 +135,7 @@ const PriceColumn = styled.div`
 `
 
 const TextWrapper = styled.div`
-  position: relavtive;
+  position: relative;
   display: block;
   height: auto;
   margin-bottom: 16px;
@@ -281,10 +282,10 @@ const ToolTipWrapper = styled.div`
   img{
     width: 225px !important;
     height: 98px !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 7px;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 7px !important;
   }
 `
 
