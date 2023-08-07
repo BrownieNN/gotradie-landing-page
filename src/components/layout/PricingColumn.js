@@ -279,8 +279,8 @@ const ToolTipWrapper = styled.div`
   `}
   
   img{
-    width: 225px;
-    height: 98px;
+    width: 225px !important;
+    height: 98px !important;
     position: absolute;
     top: 0;
     left: 0;
