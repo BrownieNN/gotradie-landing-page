@@ -17,7 +17,7 @@ function IndexPage() {
   const seoProps = {
     title: "The Messenger App Built For Work 🔨",
     description: "Simplify the way your team, worksites and clients communicate & more.",
-    imageUrl: "https://gt-landing-staging.netlify.app/images/shots/hero-shot1.png", // Use the absolute URL
+    imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta.png", // Use the absolute URL
     imageWidth: 1200, // Specify the image width
     imageHeight: 630, // Specify the image height
     url: "https://www.gotradie.com.au",
