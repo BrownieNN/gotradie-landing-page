@@ -5,31 +5,22 @@ import { Link } from "gatsby"
 
 export default function GetStarted(props) {
   const scrollToElement = require("scroll-to-element")
-  const { title } = props
+  const { title, url } = props; // Add the 'url' prop
+  
   const handleLinkClick = (e, target) => {
-    // NODE-SAFE CODE
-    // Gatsby uses Node to generate our pages.
-    // Node doesn't know what a window is.
-    // Be sure to wrap any of your browser interactions
-    // in some sort of node-safe if statement like this:
-
     if (typeof window !== "undefined") {
-      // First, are we on the home page?
-      // If so, let's scroll to the desired block,
-      // which was passed in as an onClick method on our <Link />.
-      // If an event was also passed, we'll preventDefault()
-
       if (window.location.pathname === "/") {
-        if (e) e.preventDefault()
+        e.preventDefault();
         scrollToElement(target, {
-          offset: -95, // Offset a fixed header if you please
+          offset: -95,
           duration: 1000,
-        })
+        });
       }
     }
-  }
+  };
+
   return (
-    <Link onClick={e => handleLinkClick(e, "#app")} to={"/#app"}>
+    <Link href={url} onClick={e => handleLinkClick(e)}>
       <Wrapper>
         <TextWrapper>
           <Title>{title || "Download"}</Title>
@@ -101,5 +92,13 @@ const IconWrapper = styled.div`
 
   ${Wrapper}:hover & {
     /* filter: hue-rotate(10deg) brightness(150%) saturate(120%); */
+  }
+
+  img {
+    position: absolute;
+    top: 0px !important;
+    left: 0px !important;
+    width: 18px !important;
+    height: 18px !important;
   }
 `

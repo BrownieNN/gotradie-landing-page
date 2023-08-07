@@ -79,6 +79,7 @@ function IndexPage() {
         animationImageThree="/images/animations/results.png"
         animationImageFive="/images/animations/message-results.png"
       />
+       <PricingTable />
       <CenterAlignSection />
       <AppSection />
     </Layout>
