@@ -10,7 +10,7 @@ function Landscapers() {
   const seoProps = {
     title: "A fair Price for all businesses",
     description: "No nonense pricing, start for free no credit card needed",
-    imageUrl: "/static/images/Website-meta.png",
+    imageUrl: "https://www.gotradie.com.au/static/images/Website-meta.png", // Use the absolute URL
     imageWidth: 1200, // Specify the image width
     imageHeight: 630, // Specify the image height
     url: "https://www.gotradie.com.au/pricing",
