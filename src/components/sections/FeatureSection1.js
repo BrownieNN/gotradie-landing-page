@@ -19,6 +19,8 @@ function FeatureSectionOne(props) {
     iconThree,
     animationImageOne,
     animationImageTwo,
+    buttonTitle,
+    buttonUrl
   } = props
   return (
     <Wrapper id="features">
@@ -52,7 +54,7 @@ function FeatureSectionOne(props) {
           </Description>
           <ButtonWrapper>
             <InnerButtonWrapper>
-              <GetStarted title="Get Started" />
+              <GetStarted title={buttonTitle || "Get Started" } url={buttonUrl || "https://app.gotradie.com.au/signup"} />
             </InnerButtonWrapper>
           </ButtonWrapper>
         </TextWrapper>
