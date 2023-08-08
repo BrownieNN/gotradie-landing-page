@@ -14,7 +14,21 @@ export const menuData = [
     showInFooter: true, // Show in footer
   },
   { 
-    title: "Pricing", 
+    title: "How does it work?", 
+    icon: "/images/icons/careers.svg",
+    showInHeader: true, // Show in header
+    showInFooter: false, // Show in footer
+    showBackground: false,
+  },
+  { 
+    title: "Who's it for?", 
+    icon: "/images/icons/careers.svg",
+    showInHeader: true, // Show in header
+    showInFooter: false, // Show in footer
+    showBackground: false,
+  },
+  { 
+    title: "How much?", 
     icon: "/images/icons/careers.svg",
     link: "/pricing",
     showInHeader: true, // Show in header
@@ -29,6 +43,14 @@ export const menuData = [
     showInFooter: true, // Show in footer
   },
   {
+    title: "Log in",
+    icon: "/images/icons/login.svg",
+    link: "https://app.gotradie.com.au/login",
+    showInHeader: true, // Show in header
+    showInFooter: false, // Show in footer
+    showBackground: true,
+  },
+  {
     title: "Create account",
     icon: "/images/icons/signup.svg",
     link: "https://app.gotradie.com.au/signup",
@@ -37,21 +59,28 @@ export const menuData = [
     showBackground: true,
 
   },
-  {
-    title: "Log in",
-    icon: "/images/icons/login.svg",
-    link: "https://app.gotradie.com.au/login",
-    showInHeader: true, // Show in header
-    showInFooter: false, // Show in footer
-    showBackground: true,
-  },
-
 ]
 
 export const tooltipData = [
-  { title: "Pricing", icon: "/images/icons/Wallet.png", link: "/pricing" },
+  { title: "How's it work?", icon: "/images/icons/info.svg", link: "/pricing" },
+  {
+    title: "Who's it for",
+    icon: "/images/icons/arrow-down.svg",
+    subLinks: [
+      { title: "Home Builders", emoji: "🏠", link: "Builders" },
+      { title: "Landscapers", emoji: "🌳", link: "/Landscapers" },
+      { title: "Electrician & Solar", emoji: "⚡", link: "/Electricians" },
+      { title: "Maintenance & Repair", emoji: "🪠", link: "/Plumbers" },
+      { title: "Gardeners", emoji: "🪴", link: "/Bricklayers" },
+      { title: "Construction", emoji: "🏗️", link: "/Constructions" },
+      { title: "Project management", emoji: "📋", link: "/Constructions" },
+      { title: "Traffic control", emoji: "🚦", link: "/Traffic" },
+      { title: "Civil Works", emoji: "🚧", link: "/Civil" },
+      // Add more subpage links as needed
+    ],
+  },
+  { title: "How much?", icon: "/images/icons/Wallet.png", link: "/pricing" },
   { title: "Sign up", icon: "/images/icons/signup.svg", link: "https://app.gotradie.com.au/signup" },
   { title: "Log in", icon: "/images/icons/login.svg", link: "https://app.gotradie.com.au/login" },
   { title: "Careers", icon: "/images/icons/careers.svg", link: "/careers" },
 ]
-

@@ -112,7 +112,7 @@ const TextWrapper = styled.div`
 const Subtitle = styled(MediumText)`
   color: ${themes.dark.text1};
   font-weight: 800;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 2px;
 
   @media (max-width: 480px) {

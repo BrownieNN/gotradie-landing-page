@@ -1,19 +1,18 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import HeroTwoColumn from "../components/sections/HeroTwoColumn"
-import HeroSection from "../components/sections/HeroSection"
 import AppSection from "../components/sections/AppSection"
 import LogoSection from "../components/sections/LogoSection"
 import FeatureSection1 from "../components/sections/FeatureSection1"
 import FeatureSection2 from "../components/sections/FeatureSection2"
 import FeatureSection3 from "../components/sections/FeatureSection3"
-import CenterAlignSection from "../components/sections/CenterAlignSection"
+import FaqSection from "../components/sections/FaqSection"
 
 function Landscapers() {
   return (
     <Layout>
       <HeroTwoColumn
-        subtitle={<p style={{color: "#54C5C0"}}>FOR LANDSCAPERS</p>}
+        subtitle={<p style={{color: "#54C5C0"}}>🌳 FOR LANDSCAPERS</p>}
         title={<p style={{color: "white"}}>Your team communication <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>the way you like it</span></p>}
         description="Wrangle your team with seamless communication, capture photo, videos, docos and more all in one place"
         animationImageOne="/images/shots/hero-shot1.png"
@@ -65,7 +64,7 @@ function Landscapers() {
         animationImageThree="/images/animations/office-chat.png"
         animationImageFour="/images/animations/notifications.png"
       />
-      <CenterAlignSection />
+      <FaqSection />
       <AppSection />
     </Layout>
   )

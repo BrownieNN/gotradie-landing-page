@@ -60,7 +60,7 @@ export default function Header() {
         )}
         <HamburgerWrapper>
           <MenuButton
-            item={{ title: "", icon: "/images/icons/hamburger.svg", link: "/" }}
+            item={{ icon: "/images/icons/hamburger.svg", title: "", link: "/" }}
             onClick={event => handleClick(event)}
           />
         </HamburgerWrapper>
@@ -91,7 +91,7 @@ const Wrapper = styled.div`
 
 const MenuWrapper = styled.div`
   display: grid;
-  gap: 30px;
+  gap: 24px;
   grid-template-columns: repeat(${props => props.count}, auto);
 
   @media (max-width: 768px) {
@@ -104,10 +104,6 @@ const MenuWrapper = styled.div`
 
 const HamburgerWrapper = styled.div`
   display: none;
-  background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2),
-      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
 
   @media (max-width: 768px) {
     display: block;
