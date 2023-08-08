@@ -116,8 +116,8 @@ const PriceColumn = styled.div`
   }
 
   @media (max-width: 480px) {
-    margin-right: 8px;
-    margin-left: 8px;
+    margin-right: 16px;
+    margin-left: 16px;
   }
   
   /* Add custom styles to highlight the preferred choice */
@@ -192,6 +192,10 @@ const Price = styled.div`
   font-style: normal;
   font-weight: 700;
   display: inline-block; /* Add this line to ensure the width adjusts */
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `
 
 const Frequency = styled.div`
