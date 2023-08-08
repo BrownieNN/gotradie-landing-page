@@ -58,7 +58,7 @@ function IndexPage() {
         animationImageThree="/images/animations/search-field.svg"
         animationImageFive="/images/animations/chats.png"
       />
-      <FeatureSection3
+      <FeatureSection1
         subtitle="Easily collaborate and get more done"
         title={<p style={{color: "white"}}>Bridging the gap between <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> site & office and everyone in between</span></p>}
         tagTitleOne="Collaborate"
