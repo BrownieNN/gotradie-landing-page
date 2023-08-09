@@ -118,6 +118,7 @@ const PriceColumn = styled.div`
   @media (max-width: 480px) {
     margin-right: 8px;
     margin-left: 8px;
+    margin-top: 24px;
   }
   
   /* Add custom styles to highlight the preferred choice */
@@ -126,7 +127,7 @@ const PriceColumn = styled.div`
     `
     background: #FFFFFF;
     color: #153549;
-    transform: translateY(-16px);
+    transform: translateY(-8px);
 
     .icon {
       transform: translateX(1px);

@@ -29,7 +29,7 @@ export default function PricingTable() {
       {
         breakpoint: 1345,
         settings: {
-          slidesToShow: 2, // Show 2 slides at a time for smaller screens
+          slidesToShow: 1, // Show 2 slides at a time for smaller screens
         },
       },
       {
@@ -86,16 +86,19 @@ const Wrapper = styled.div`
   display: block;
   max-width: 1234px;
   margin: auto;
+  overflow: hidden;
 
   @media (max-width: 1354px) {
   }
 
   @media (max-width: 480px) {
-    width: 345px;
+    width: 100%;
     padding: 24px 0px 45px 0px;
-  }
-  .slick-list{
-    overflow: visible;
+
+    .slick-list{
+      overflow: visible;
+      width: 100%;
+    }
   }
 `;
 
@@ -177,7 +180,17 @@ const Body = styled(MediumText)`
 
 const StyledSlider = styled(Slider)`
   .slick-dots {
-    bottom: -40px; /* Adjust the position as needed */
+    position: absolute;
+    top: -40px; /* Adjust the position to move the dots above the carousel */
+    left: 50%; /* Center the dots horizontally */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
     li {
       margin: 0 4px; /* Adjust the spacing between dots */
       button {
@@ -200,5 +213,10 @@ const StyledSlider = styled(Slider)`
         }
       }
     }
+  }
+
+  .slick-list{
+    z-index: 1;
+    overflow: visible;
   }
 `;
