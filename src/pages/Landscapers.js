@@ -14,7 +14,7 @@ function Landscapers() {
   const seoProps = {
     title: "Simple Communication for Landscapers 🌳",
     description: "Unlock your teams potential & do more with less",
-    imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta.png", // Use the absolute URL
+    imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-landscapers.png", // Use the absolute URL
     imageWidth: 1200, // Specify the image width
     imageHeight: 630, // Specify the image height
     url: "https://www.gotradie.com.au/Landscapers",

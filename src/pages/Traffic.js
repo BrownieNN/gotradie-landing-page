@@ -14,7 +14,7 @@ function TrafficControl() {
     const seoProps = {
         title: "Simple Communication for Traffic Management 🚦",
         description: "Simple co-ordination the way you like it",
-        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta.png", // Use the absolute URL
+        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-traffic.png", // Use the absolute URL
         imageWidth: 1200, // Specify the image width
         imageHeight: 630, // Specify the image height
         url: "https://www.gotradie.com.au/Traffic",

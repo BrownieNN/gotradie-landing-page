@@ -14,7 +14,7 @@ function ProjectManagement() {
     const seoProps = {
         title: "Simple Communication for Project Management 📋",
         description: "Not on site? Empower your team & their productivity everyday",
-        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta.png", // Use the absolute URL
+        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-project-management.png", // Use the absolute URL
         imageWidth: 1200, // Specify the image width
         imageHeight: 630, // Specify the image height
         url: "https://www.gotradie.com.au/ProjectManagement",

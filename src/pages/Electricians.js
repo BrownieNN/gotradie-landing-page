@@ -14,7 +14,7 @@ function Electricans() {
     const seoProps = {
         title: "Simple Communication for Electricians ⚡",
         description: "Empower your team better with comms & info in one place",
-        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta.png", // Use the absolute URL
+        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-electricians.png", // Use the absolute URL
         imageWidth: 1200, // Specify the image width
         imageHeight: 630, // Specify the image height
         url: "https://www.gotradie.com.au/Electricians",
