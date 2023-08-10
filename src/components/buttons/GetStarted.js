@@ -51,8 +51,12 @@ const Wrapper = styled.div`
   justify-content: center;
   /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+
   @media (max-width: 480px) {
-    width: 340px;
+    max-width: 100%;
   }
 
   *,

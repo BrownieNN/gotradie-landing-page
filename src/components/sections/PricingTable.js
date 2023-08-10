@@ -105,7 +105,7 @@ const Wrapper = styled.div`
 const TextWrapper = styled.div`
   max-width: 954px;
   display: grid;
-  padding-top: 60px;
+  padding-top: 120px;
   gap: 24px;
   margin: auto;
   margin-bottom: 24px;

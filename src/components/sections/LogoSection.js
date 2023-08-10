@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 54px 0px 100px 0px;
+  padding: 54px 0px 0px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;
@@ -53,7 +53,7 @@ const ContentWrapper = styled.div`
     max-width: 345px;
     grid-template-columns: 345px;
     gap: 20px;
-    padding: 24px 20px 100px;
+    padding: 60px 20px 100px;
     justify-content: center;
   }
 `

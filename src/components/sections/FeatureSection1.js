@@ -19,14 +19,18 @@ function FeatureSectionOne(props) {
     iconThree,
     animationImageOne,
     animationImageTwo,
+    buttonTitle,
+    buttonUrl
   } = props
   return (
     <Wrapper id="features">
       <ContentWrapper>
-        <FeatureAnimationOne
-          backgroundOne={animationImageOne}
-          backgroundTwo={animationImageTwo}
-        />
+        <ImageWrapper>
+          <FeatureAnimationOne
+            backgroundOne={animationImageOne}
+            backgroundTwo={animationImageTwo}
+          />
+        </ImageWrapper>
         <TextWrapper>
           <Lockup>
             <Subtitle>{subtitle || "No nonense communication"}</Subtitle>
@@ -52,7 +56,7 @@ function FeatureSectionOne(props) {
           </Description>
           <ButtonWrapper>
             <InnerButtonWrapper>
-              <GetStarted title="Get Started" />
+              <GetStarted title={buttonTitle || "Get Started" } url={buttonUrl || "https://app.gotradie.com.au/signup"} />
             </InnerButtonWrapper>
           </ButtonWrapper>
         </TextWrapper>
@@ -71,20 +75,21 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
-  overflow: visible;
+  overflow: hidden;
 `
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 60px 0px 340px 0px;
+  padding: 120px 0px 120px 0px;
   display: grid;
   gap: 33px;
   grid-template-columns: auto 588px;
 
-  @media (max-width: 1354px) {
+  @media (max-width: 1024px) {
+    max-width: 740px;
     grid-template-columns: auto;
     gap: 60px;
-    padding: 0px 20px 680px;
+    padding: 0px 20px 120px;
     justify-content: center;
     text-align: center;
   }
@@ -93,14 +98,32 @@ const ContentWrapper = styled.div`
     max-width: 345px;
     grid-template-columns: 345px;
     gap: 60px;
-    padding: 0px 20px 510px;
+    padding: 0px 20px 60px;
   }
 `
+const ImageWrapper = styled.div`
+    max-width: 588px;
+    height: 350px;
+    position: relative;
+    
+    @media (max-width: 1024px) {
+      max-width: 760px;
+    }
+
+    @media (max-width: 480px) {
+      max-width: 345px;
+    }
+`
+
 const TextWrapper = styled.div`
   max-width: 588px;
   display: grid;
   padding-top: 60px;
   gap: 32px;
+
+  @media (max-width: 1024px) {
+    max-width: 760px;
+  }
 
   @media (max-width: 480px) {
     max-width: 345px;
@@ -152,7 +175,8 @@ line-height: 48px;
   
 
   @media (max-width: 480px) {
-    font-size: 42px;
+    font-size: 32px;
+    line-height: 40px;
     text-align: left;
   }
 `
@@ -193,13 +217,11 @@ const ButtonWrapper = styled.div`
   display: grid;
   gap: 8px;
 
-  @media (max-width: 1354px) {
-    justify-content: center;
+  @media (max-width: 1024px) {
     text-align: center;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: auto;
   }
 `
 

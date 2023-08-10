@@ -23,20 +23,6 @@ const Wrapper = styled.div`
   width: 558px;
   height: auto;
 
-  @media (max-width: 1354px) {
-    transform: scale(0.9) translateX(40px) translateY(700px);
-    transform-origin: top left;
-  }
-
-  @media (max-width: 450px) {
-    transform: scale(0.58) translateX(10px) translateY(1300px);
-  }
-
-  /* div {
-    transform: rotateY(-20deg) rotateX(20deg);
-    perspective-origin: bottom left;
-  } */
-
   * {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -66,6 +52,20 @@ const BackgroundImageOne = styled.div`
   background: ${props => `url(${props.backgroundOne}) no-repeat top center`};
   background-size: contain;
   overflow: visible;
+
+  @media (max-width: 1024px) {
+    width: 558px;
+    height: 558px;
+    left: 0px;
+    top: 50px;
+  }
+
+
+  @media (max-width: 480px) {
+    width: 338px;
+    top: 0;
+    left: 0;
+  }
 `
 /*Services*/
 const BackgroundImageTwo = styled.div`
@@ -77,6 +77,19 @@ const BackgroundImageTwo = styled.div`
   background: ${props => `url(${props.backgroundTwo}) no-repeat top center`};
   background-size: contain;
   overflow: visible;
+
+  @media (max-width: 1024px) {
+    width: 148px;
+    height: 297px;
+    left: 410px;
+    top: 116px;
+  }
+
+  @media (max-width: 480px) {
+    height: 228px;
+    top: 120px;
+    left: 203px;
+  }
 `
 
 const BackgroundImageThree = styled.div`
@@ -88,6 +101,19 @@ const BackgroundImageThree = styled.div`
   background: ${props => `url(${props.backgroundThree}) no-repeat top center`};
   background-size: contain;
   overflow: visible;
+
+  @media (max-width: 1024px) {
+    width: 237px;
+    height: 151px;
+    left: -28px;
+    top: 3px;
+  }
+
+  @media (max-width: 480px) {
+    width: 208px;
+    top: 200px;
+    left: 10px;
+  }
 `
 
 const BackgroundImageFour = styled.div`
@@ -99,4 +125,17 @@ const BackgroundImageFour = styled.div`
   background: ${props => `url(${props.backgroundFour}) no-repeat top center`};
   background-size: contain;
   overflow: visible;
+
+  @media (max-width: 1024px) {
+    width: 242px;
+    height: 109px;
+    left: 366px;
+    top: 41px;
+  }
+
+  @media (max-width: 480px) {
+    width: 168px;
+    top: 90px;
+    left: 140px;
+  }
 `

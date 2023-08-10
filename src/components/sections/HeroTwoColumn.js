@@ -13,6 +13,10 @@ function HeroTwoColumn(props) {
     description,
     animationImageOne,
     animationImageTwo,
+    buttonTitle,
+    buttonUrl,
+    buttonTitleTwo,
+    buttonUrlTwo
   } = props
   return (
     <Wrapper id="features">
@@ -27,14 +31,16 @@ function HeroTwoColumn(props) {
               "No need for mutliple apps. We made it easy to chat to your team, client & tradies in one place"}
           </Description>
           <ButtonWrapper>
-              <GetStarted title="Ask for demo" />
-              <SecondaryButton title="Try for free" />
+          <GetStarted title={buttonTitle || "Try for free" } url={buttonUrl || "https://app.gotradie.com.au/signup"} />
+          <SecondaryButton title={buttonTitleTwo || "Ask for demo" } url={buttonUrlTwo || "https://calendly.com/adamfazzani_gotradie/15min"} />
           </ButtonWrapper>
         </TextWrapper>
-        <FeatureAnimationOne
-          backgroundOne={animationImageOne}
-          backgroundTwo={animationImageTwo}
-        />
+        <ImageWrapper>
+          <FeatureAnimationOne
+            backgroundOne={animationImageOne}
+            backgroundTwo={animationImageTwo}
+          />
+        </ImageWrapper>
       </ContentWrapper>
     </Wrapper>
   )
@@ -50,7 +56,7 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
-  overflow: visible;
+  overflow: hidden;
 `
 const ContentWrapper = styled.div`
   max-width: 1234px;
@@ -63,7 +69,7 @@ const ContentWrapper = styled.div`
   @media (max-width: 1354px) {
     grid-template-columns: auto;
     gap: 60px;
-    padding: 0px 20px 680px;
+    padding: 100px 20px 0px;
     justify-content: center;
     text-align: center;
   }
@@ -72,9 +78,16 @@ const ContentWrapper = styled.div`
     max-width: 345px;
     grid-template-columns: 345px;
     gap: 60px;
-    padding: 0px 20px 510px;
+    padding: 64px 20px 0px;
   }
 `
+
+const ImageWrapper = styled.div`
+  max-width: 588px;
+  height: 359px;
+  position: relative;
+`
+
 const TextWrapper = styled.div`
   max-width: 600px;
   display: grid;
@@ -133,7 +146,8 @@ line-height: 64px;
   
 
   @media (max-width: 480px) {
-    font-size: 42px;
+    font-size: 40px;
+    line-height: 45px;
     text-align: left;
   }
 `
@@ -182,6 +196,7 @@ const ButtonWrapper = styled.div`
 
   @media (max-width: 480px) {
     grid-template-columns: auto;
+    gap: 16px;
   }
 `
 

@@ -214,7 +214,7 @@ const ContentWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    padding: 24px 0px 45px 0px;
+    padding: 54px 0px 45px 0px;
   }
 `
 const TextWrapper = styled.div`

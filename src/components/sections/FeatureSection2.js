@@ -22,6 +22,8 @@ function FeatureSectionTwo(props) {
     animationImageThree,
     animationImageFour,
     animationImageFive,
+    buttonTitle,
+    buttonUrl
   } = props
   return (
     <Wrapper>
@@ -51,17 +53,19 @@ function FeatureSectionTwo(props) {
           </Description>
           <ButtonWrapper>
             <InnerButtonWrapper>
-              <GetStarted title="Get Started" />
+            <GetStarted title={buttonTitle || "Get Started" } url={buttonUrl || "https://app.gotradie.com.au/signup"} />
             </InnerButtonWrapper>
           </ButtonWrapper>
         </TextWrapper>
-        <FeatureAnimationTwo
-          backgroundOne={animationImageOne}
-          backgroundTwo={animationImageTwo}
-          backgroundThree={animationImageThree}
-          backgroundFour={animationImageFour}
-          backgroundFive={animationImageFive}
-        />
+        <ImageWrapper>
+          <FeatureAnimationTwo
+            backgroundOne={animationImageOne}
+            backgroundTwo={animationImageTwo}
+            backgroundThree={animationImageThree}
+            backgroundFour={animationImageFour}
+            backgroundFive={animationImageFive}
+          />
+        </ImageWrapper>
       </ContentWrapper>
     </Wrapper>
   )
@@ -77,20 +81,21 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
-  overflow: visible;
+  overflow: hidden;
 `
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 60px 0px 340px 0px;
+  padding: 120px 0px 120px 0px;
   display: grid;
   gap: 33px;
   grid-template-columns: auto 588px;
 
-  @media (max-width: 1354px) {
+  @media (max-width: 1024px) {
+    max-width: 760px;
     grid-template-columns: auto;
     gap: 60px;
-    padding: 0px 20px 680px;
+    padding: 0px 20px 120px;
     justify-content: center;
     text-align: center;
   }
@@ -99,9 +104,27 @@ const ContentWrapper = styled.div`
     max-width: 345px;
     grid-template-columns: 345px;
     gap: 60px;
-    padding: 0px 20px 440px;
+    padding: 0px 20px 60px;
   }
 `
+const ImageWrapper = styled.div`
+    max-width: 588px;
+    height: 350px;
+    position: relative;
+
+    @media (max-width: 1024px) {
+        max-width: 760px;
+        height: 470px;
+       order: 1; /* Reverse the order on mobile */
+    }
+
+    @media (max-width: 480px) {
+      max-width: 480px;
+      order: 1; /* Reverse the order on mobile */
+    }
+
+`
+
 const TextWrapper = styled.div`
   max-width: 588px;
   display: grid;
@@ -117,6 +140,12 @@ const TextWrapper = styled.div`
     justify-content: center;
     text-align: center;
     padding: 0px 8px;
+    order: 2; /* Reverse the order on mobile */
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 760px;
+    order: 2; /* Reverse the order on mobile */
   }
 
   > * {
@@ -156,7 +185,8 @@ line-height: 48px;
   }
 
   @media (max-width: 480px) {
-    font-size: 42px;
+    font-size: 32px;
+    line-height: 40px;
     text-align: left;
   }
 `
@@ -197,12 +227,10 @@ const ButtonWrapper = styled.div`
   gap: 8px;
 
   @media (max-width: 1354px) {
-    justify-content: center;
     text-align: center;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: auto;
   }
 `
 

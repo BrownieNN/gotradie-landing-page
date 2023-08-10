@@ -15,20 +15,6 @@ const Wrapper = styled.div`
   position: relative;
   width: 558px;
 
-  @media (max-width: 1354px) {
-    transform: scale(0.9) translateY(620px);
-    transform-origin: top left;
-  }
-
-  @media (max-width: 450px) {
-    transform: scale(0.57) translateY(1300px);
-  }
-
-  /* div {
-    transform: rotateY(-20deg) rotateX(20deg);
-    perspective-origin: bottom left;
-  } */
-
   * {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -54,9 +40,21 @@ const BackgroundImageOne = styled.div`
   width: 413px;
   height: 574px;
   left: 30px;
-  top: 50px;
+  top: 0px;
   background: ${props => `url(${props.backgroundOne}) no-repeat top center`};
   background-size: contain;
+
+  @media (max-width: 1024px) {
+    width: 315px;
+    left: 120px;
+    top: 0px;
+  }
+
+  @media (max-width: 480px) {
+    width: 230px;
+    left: 0px;
+    top: 0px;
+  }
 `
 
 const BackgroundImageTwo = styled.div`
@@ -67,4 +65,17 @@ const BackgroundImageTwo = styled.div`
   top: 78px;
   background: ${props => `url(${props.backgroundTwo}) no-repeat top center`};
   background-size: contain;
+
+  @media (max-width: 1024px) {
+    width: 204px;
+    left: 390px;
+    top: 0px;
+  }
+
+  @media (max-width: 480px) {
+    width: 177px;
+    height: 400px;
+    top: 20px;
+    left: 160px;
+  }
 `

@@ -25,12 +25,14 @@ function FeatureSectionThree(props) {
   return (
     <Wrapper>
       <ContentWrapper>
-      <FeatureAnimationThree
+        <ImageWrapper>
+        <FeatureAnimationThree
           backgroundOne={animationImageOne}
           backgroundTwo={animationImageTwo}
           backgroundThree={animationImageThree}
           backgroundFour={animationImageFour}
         />
+        </ImageWrapper>
         <TextWrapper>
           <Lockup>
             <Subtitle>{subtitle || "No nonense communication"}</Subtitle>
@@ -76,12 +78,12 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   //background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
-  overflow: visible;
+  overflow: hidden;
 `
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 60px 0px 340px 0px;
+  padding: 120px 0px 120px 0px;
   display: grid;
   gap: 33px;
   grid-template-columns: auto 588px;
@@ -89,7 +91,7 @@ const ContentWrapper = styled.div`
   @media (max-width: 1354px) {
     grid-template-columns: auto;
     gap: 60px;
-    padding: 0px 20px 680px;
+    padding: 0px 20px 60px;
     justify-content: center;
     text-align: center;
   }
@@ -98,9 +100,16 @@ const ContentWrapper = styled.div`
     max-width: 345px;
     grid-template-columns: 345px;
     gap: 60px;
-    padding: 0px 20px 440px;
+    padding: 0px 20px 60px;
   }
 `
+
+const ImageWrapper = styled.div`
+    max-width: 588px;
+    height: 350px;
+    position: relative;
+`
+
 const TextWrapper = styled.div`
   max-width: 588px;
   display: grid;
@@ -155,7 +164,8 @@ line-height: 48px;
   }
 
   @media (max-width: 480px) {
-    font-size: 42px;
+    font-size: 32px;
+    line-height: 40px;
     text-align: left;
   }
 `
@@ -197,12 +207,10 @@ const ButtonWrapper = styled.div`
   gap: 8px;
 
   @media (max-width: 1354px) {
-    justify-content: center;
     text-align: center;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: auto;
   }
 `
 

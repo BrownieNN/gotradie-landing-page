@@ -9,22 +9,22 @@ import FeatureSection2 from "../components/sections/FeatureSection2"
 import FeatureSection3 from "../components/sections/FeatureSection3"
 import FaqSection from "../components/sections/FaqSection"
 
-function Landscapers() {
-
-  const seoProps = {
-    title: "Simple Communication for Landscapers 🌳",
-    description: "Unlock your teams potential & do more with less",
-    imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta.png", // Use the absolute URL
-    imageWidth: 1200, // Specify the image width
-    imageHeight: 630, // Specify the image height
-    url: "https://www.gotradie.com.au/Landscapers",
-  };
-
+function Construction() {
+    
+    const seoProps = {
+        title: "Simple Communication for Construction 🏗️",
+        description: "Better transparency, effeciency & productivity every working day",
+        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta.png", // Use the absolute URL
+        imageWidth: 1200, // Specify the image width
+        imageHeight: 630, // Specify the image height
+        url: "https://www.gotradie.com.au/Construction",
+      };
+    
   return (
     <Layout>
-      <SEO {...seoProps} />
+    <SEO {...seoProps} />
       <HeroTwoColumn
-        subtitle={<p style={{color: "#54C5C0"}}>🌳 FOR LANDSCAPERS</p>}
+        subtitle={<p style={{color: "#54C5C0"}}>🏗️ FOR CONSTRUCTION</p>}
         title={<p style={{color: "white"}}>Your team communication <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>the way you like it</span></p>}
         description="Wrangle your team with seamless communication, capture photo, videos, docos and more all in one place"
         animationImageOne="/images/shots/hero-shot1.png"
@@ -82,4 +82,4 @@ function Landscapers() {
   )
 }
 
-export default Landscapers
+export default Construction

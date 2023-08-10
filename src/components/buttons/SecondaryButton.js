@@ -1,15 +1,32 @@
 import React from "react"
 import styled from "styled-components"
 import { ButtonText } from "../styles/TextStyles"
+import { Link } from "gatsby"
+
 
 export default function SecondaryButton(props) {
-  const { title } = props
+  const scrollToElement = require("scroll-to-element")
+  const { title, url } = props; // Add the 'url' prop
+  
+  const handleLinkClick = (e, target) => {
+    if (typeof window !== "undefined") {
+      if (window.location.pathname === "/") {
+        e.preventDefault();
+        scrollToElement(target, {
+          offset: -95,
+          duration: 1000,
+        });
+      }
+    }
+  };
   return (
-    <Wrapper onClick={props.onClick}>
-      <TextWrapper>
-        <Title>{title || "Get pro access"}</Title>
-      </TextWrapper>
-    </Wrapper>
+    <Link href={url} onClick={e => handleLinkClick(e)}>
+      <Wrapper onClick={props.onClick}>
+        <TextWrapper>
+          <Title>{title || "Get pro access"}</Title>
+        </TextWrapper>
+      </Wrapper>
+    </Link>
   )
 }
 

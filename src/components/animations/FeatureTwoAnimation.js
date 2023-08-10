@@ -25,20 +25,6 @@ const Wrapper = styled.div`
   width: 558px;
   height: auto;
 
-  @media (max-width: 1354px) {
-    transform: scale(0.9) translateX(40px);
-    transform-origin: top left;
-  }
-
-  @media (max-width: 450px) {
-    transform: scale(0.58) translateX(40px);
-  }
-
-  /* div {
-    transform: rotateY(-20deg) rotateX(20deg);
-    perspective-origin: bottom left;
-  } */
-
   * {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -68,6 +54,20 @@ const BackgroundImageOne = styled.div`
   background: ${props => `url(${props.backgroundOne}) no-repeat top center`};
   background-size: contain;
   overflow: visible;
+
+  @media (max-width: 1024px) {
+    width: 404px;
+    height: 496px;
+    left: 158px;
+    top: 55px;
+  }
+
+  @media (max-width: 480px) {
+    width: 264px;
+    height: 496px;
+    left: 30px;
+    top: 70px;
+  }
 `
 /*Services*/
 const BackgroundImageTwo = styled.div`
@@ -79,6 +79,14 @@ const BackgroundImageTwo = styled.div`
   background: ${props => `url(${props.backgroundTwo}) no-repeat top center`};
   background-size: contain;
   overflow: visible;
+
+  @media (max-width: 480px) {
+    width: 263px;
+    height: 130px;
+    left: 0px;
+    top: 34px;
+  }
+  
 `
 /*Calendar*/
 const BackgroundImageThree = styled.div`
@@ -89,6 +97,21 @@ const BackgroundImageThree = styled.div`
   top: 168px;
   background: ${props => `url(${props.backgroundThree}) no-repeat top center`};
   background-size: contain;
+
+  @media (max-width: 1024px) {
+    width: 293.61px;
+    height: 273px;
+    left: 453px;
+    top: 168px;
+  }
+
+  @media (max-width: 480px) {
+    width: 293.61px;
+    height: 183px;
+    left: 110px;
+    top: 148px;
+}
+  }
 `
 /*Areas*/
 const BackgroundImageFour = styled.div`
@@ -107,8 +130,22 @@ const BackgroundImageFive = styled.div`
   width: 287.36px;
   height: 175.82px;
   left: 0px;
-  top: 465px;
+  top: 405px;
   background: ${props => `url(${props.backgroundFive}) no-repeat top center`};
   background-size: contain;
   overflow: visible;
+  
+  @media (max-width: 1024px) {
+    width: 287.36px;
+    height: 175.82px;
+    left: 0px;
+    top: 335px;
+  }
+
+  @media (max-width: 480px) {
+    width: 177px;
+    height: 400px;
+    top: 360px;
+    left: 0;
+  }
 `

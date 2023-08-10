@@ -127,10 +127,11 @@ const DropdownItem = styled(Link)`
 
 
 const MenuItem = styled.div`
+  font-size: 13px;
   color: rgba(255, 255, 255);
   display: flex;
   grid-template-columns: 24px auto;
-  gap: ${props => (props.title ? "10px" : "0px")};
+  gap: ${props => (props.title ? "10px" : "8px")};
   align-items: center;
   padding: 16px 24px;
   border-radius: 10px;
@@ -148,13 +149,20 @@ const MenuItem = styled.div`
     display: none;
     width: 16px;
     height: 16px;
-    margin-right: 8px;
   }
 
-  @media (max-width: 768px) {
-    box-shadow: none;
-    background: none;
+  @media (max-width: 1024px) {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
     padding: 10px;
+    ${props =>
+      props.showBackground &&
+      css`
+        background: none;
+        border: none;
+        box-shadow: none;
+      `}
     img {
       display: block;
     }

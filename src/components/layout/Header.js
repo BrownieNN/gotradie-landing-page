@@ -75,14 +75,14 @@ export default function Header() {
 const Wrapper = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: 44px auto;
+  grid-template-columns: 32px auto;
   width: 100%;
   justify-content: space-between;
   padding: 24px 110px;
   align-items: center;
 
-  @media (max-width: 768px) {
-    padding: 16px; 30px;
+  @media (max-width: 1024px) {
+    padding: 16px 32px;
   }
   @media (max-width: 450px) {
     padding: 16px 24px;
@@ -94,7 +94,7 @@ const MenuWrapper = styled.div`
   gap: 24px;
   grid-template-columns: repeat(${props => props.count}, auto);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     > a {
       display: none;
     }
@@ -105,7 +105,7 @@ const MenuWrapper = styled.div`
 const HamburgerWrapper = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: block;
   }
 `

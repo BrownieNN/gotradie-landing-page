@@ -62,25 +62,26 @@ export const menuData = [
 ]
 
 export const tooltipData = [
-  { title: "How's it work?", icon: "/images/icons/info.svg", link: "/pricing" },
+  { title: "How's it work?", icon: "/images/icons/info.svg", link: "/pricing", showBackground: true },
   {
     title: "Who's it for",
     icon: "/images/icons/arrow-down.svg",
+    showBackground: true,
     subLinks: [
-      { title: "Home Builders", emoji: "🏠", link: "Builders" },
+      { title: "Home Builders", emoji: "🏠", link: "/Builders" },
       { title: "Landscapers", emoji: "🌳", link: "/Landscapers" },
       { title: "Electrician & Solar", emoji: "⚡", link: "/Electricians" },
-      { title: "Maintenance & Repair", emoji: "🪠", link: "/Plumbers" },
-      { title: "Gardeners", emoji: "🪴", link: "/Bricklayers" },
-      { title: "Construction", emoji: "🏗️", link: "/Constructions" },
-      { title: "Project management", emoji: "📋", link: "/Constructions" },
+      { title: "Maintenance & Repair", emoji: "🪠", link: "/Maintenance" },
+      { title: "Gardeners", emoji: "🪴", link: "/Gardeners" },
+      { title: "Construction", emoji: "🏗️", link: "/Construction" },
+      { title: "Project management", emoji: "📋", link: "/ProjectMangement" },
       { title: "Traffic control", emoji: "🚦", link: "/Traffic" },
       { title: "Civil Works", emoji: "🚧", link: "/Civil" },
       // Add more subpage links as needed
     ],
   },
-  { title: "How much?", icon: "/images/icons/Wallet.png", link: "/pricing" },
-  { title: "Sign up", icon: "/images/icons/signup.svg", link: "https://app.gotradie.com.au/signup" },
-  { title: "Log in", icon: "/images/icons/login.svg", link: "https://app.gotradie.com.au/login" },
-  { title: "Careers", icon: "/images/icons/careers.svg", link: "/careers" },
+  { title: "How much?", icon: "/images/icons/Wallet.png", link: "/pricing", showBackground: true},
+  { title: "Sign up", icon: "/images/icons/signup.svg", link: "https://app.gotradie.com.au/signup", showBackground: true },
+  { title: "Log in", icon: "/images/icons/login.svg", link: "https://app.gotradie.com.au/login", showBackground: true },
+  { title: "Careers", icon: "/images/icons/careers.svg", link: "/careers", showBackground: true },
 ]
