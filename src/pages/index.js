@@ -11,6 +11,7 @@ import CenterAlignSection from "../components/sections/CenterAlignSection"
 import VideoSection from "../components/sections/VideoSection"
 import PricingTable from "../components/sections/PricingTable"
 import SEO from "../components/layout/seo"
+import TestimonialCarousel from "../components/sections/TestimonialSection"
 
 function IndexPage() {
 
@@ -29,7 +30,7 @@ function IndexPage() {
       <HeroSection />
       <VideoSection />
       <LogoSection />
-      <HeroAnimation />
+      <TestimonialCarousel />
       <FeatureSection1
         subtitle="Helping you keep it together"
         title={<p style={{color: "white"}}>All your work <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}> messages, photos, videos, docs and more</span></p>}
@@ -43,7 +44,7 @@ function IndexPage() {
         animationImageOne="/images/shots/hero-shot1.png"
         animationImageTwo="/images/animations/inbox.png"
       />
-      <FeatureSection2 
+      {/* <FeatureSection2 
         subtitle="In need of an extra pair of hands?"
         title={<p style={{color: "white"}}>Bringing <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> businesses, worksites and wider trade community together</span></p>}
         tagTitleOne="Subbies"
@@ -57,22 +58,7 @@ function IndexPage() {
         animationImageTwo="/images/animations/notification.svg"
         animationImageThree="/images/animations/search-field.svg"
         animationImageFive="/images/animations/chats.png"
-      />
-      <FeatureSection3
-        subtitle="Easily collaborate and get more done"
-        title={<p style={{color: "white"}}>Bridging the gap between <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> site & office and everyone in between</span></p>}
-        tagTitleOne="Collaborate"
-        tagTitleTwo="Message"
-        tagTitleThree="Manage team"
-        iconOne="/images/icons/people.svg"
-        iconTwo="/images/icons/conversation.svg"
-        iconThree="/images/icons/add-person.svg"
-        description="No more waiting to get home or back to the office. Share & receive content on GoTradie across your mobile, tablet and desktop devices"
-        animationImageOne="/images/shots/hero-shot-latop.png"
-        animationImageTwo="/images/shots/mobile-inbox.png"
-        animationImageThree="/images/animations/office-chat.png"
-        animationImageFour="/images/animations/notifications.png"
-      />
+      /> */}
      <FeatureSection2 
         subtitle="Safe as houses"
         title={<p style={{color: "white"}}>Find what you need, <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> when you need it</span></p>}
@@ -89,7 +75,22 @@ function IndexPage() {
         animationImageThree="/images/animations/results.png"
         animationImageFive="/images/animations/message-results.png"
       />
-       <PricingTable />
+      <FeatureSection3
+        subtitle="Easily collaborate and get more done"
+        title={<p style={{color: "white"}}>Bridging the gap between <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}> site & office and everyone in between</span></p>}
+        tagTitleOne="Collaborate"
+        tagTitleTwo="Message"
+        tagTitleThree="Manage team"
+        iconOne="/images/icons/people.svg"
+        iconTwo="/images/icons/conversation.svg"
+        iconThree="/images/icons/add-person.svg"
+        description="No more waiting to get home or back to the office. Share & receive content on GoTradie across your mobile, tablet and desktop devices"
+        animationImageOne="/images/shots/hero-shot-latop.png"
+        animationImageTwo="/images/shots/mobile-inbox.png"
+        animationImageThree="/images/animations/office-chat.png"
+        animationImageFour="/images/animations/notifications.png"
+      />
+      <PricingTable />
       <CenterAlignSection />
       <AppSection />
     </Layout>
