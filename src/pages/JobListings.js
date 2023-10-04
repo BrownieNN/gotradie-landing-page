@@ -30,7 +30,7 @@ const JobListings = () => {
             </InnerContainer>
            <p>{job.description}</p>
            <ButtonWrapper>
-            <a href={`mailto:sajith@gotradie.com.au?subject=${encodeURIComponent(job.title)}`} target="_blank" rel="noreferrer">
+            <a href={`mailto:info@gotradie.com.au?subject=${encodeURIComponent(job.title)}`} target="_blank" rel="noreferrer">
               <ApplyButton title="Apply now" />
             </a>
             <TextLink>

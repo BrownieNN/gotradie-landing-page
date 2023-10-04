@@ -20,7 +20,7 @@ const JobDescription = ({ pageContext }) => {
             </BackLink>
           <h3>{title}</h3>
           <span>{location}</span>
-          <a href={`mailto:sajith@gotradie.com.au?subject=${encodeURIComponent(title)}`} target="_blank" rel="noreferrer">
+          <a href={`mailto:info@gotradie.com.au?subject=${encodeURIComponent(title)}`} target="_blank" rel="noreferrer">
               <ApplyButton title="Apply now" />
           </a>
          </HeaderWrapper>
@@ -45,7 +45,7 @@ const JobDescription = ({ pageContext }) => {
             <p>{conclusion}</p>
           </ConclusionSection>
           <ButtonWrapper>
-          <a href={`mailto:sajith@gotradie.com.au?subject=${encodeURIComponent(title)}`} target="_blank" rel="noreferrer">
+          <a href={`mailto:info@gotradie.com.au?subject=${encodeURIComponent(title)}`} target="_blank" rel="noreferrer">
               <ApplyButton title="Apply now" />
           </a>
           <TextLink>
