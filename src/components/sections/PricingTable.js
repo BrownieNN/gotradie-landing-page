@@ -61,14 +61,15 @@ export default function PricingTable() {
       <TextWrapper>
       <Title><span>No nonsense</span> pricing</Title>
           <Body>
-            Save 20% when paid annually 
+            <p>Save 20% when paid annually </p>
+            <img src="/images/icons/arrow-curved.svg" title="arrow" />
           </Body>
           <ToggleWrapper>
         <ToggleLabel onClick={handleToggle} isActive={!isYearly}>
-          Monthly
+          Billed monthly
         </ToggleLabel>
         <ToggleLabel onClick={handleToggle} isActive={isYearly}>
-          Yearly
+          Billed annually
         </ToggleLabel>
       </ToggleWrapper>
       </TextWrapper>
@@ -156,18 +157,20 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   gap: 16px;
   margin-bottom: 32px;
+  margin-top: 16px;
 `;
 
 const ToggleLabel = styled.div`
-  background: ${(props) => (props.isActive ? "#54C5C0" : "rgba(255, 255, 255, 0.05)")};
+  background: ${(props) => (props.isActive ? "#54C5C0" : "rgba(255, 255, 255, 0.10)")};
   border: ${(props) => (props.isActive ? "1px solid #54C5C0" : "1px solid #FFFFFF)")};
-  padding: 8px 16px;
-  width: 150px;
+  padding: 16px 24px;
+  width: 180px;
   border-radius: 100px;
   text-align: center;
   cursor: pointer;
   font-weight: bold;
   color: #FFFFFF;
+  font-size: 15px;
 `;
 
 const Title = styled(H2)`
@@ -186,10 +189,22 @@ const Title = styled(H2)`
   }
 `
 const Body = styled(MediumText)`
+  position: relative;
   text-align: center;
   color: ${themes.dark.text1};
   max-width: 780px;
   margin: auto;
+  display: flex;
+  gap: 8px;
+
+  img{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 7px;
+    right: -55px;
+    rotate: -9deg;
+  }
 `
 
 const StyledSlider = styled(Slider)`

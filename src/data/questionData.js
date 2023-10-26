@@ -10,15 +10,15 @@ export const questionsData = [
     },
     {
       question: "How much will it cost my business?",
-      answer: "It's totally FREE to start, you can invite as as many people as you like to your business once you go over your storage limit we'll send you an in app message to upgrade, none of your data will be lost EVER"
+      answer: "TRY FOR FREE, you can invite as as many people as you like to your business once you go over your storage limit we'll send you an in app message to upgrade, none of your data will be lost EVER"
     },
     {
         question: "Will it clog up my phone storage?",
         answer: "Nope it's safely stored in the cloud meaning you can keep your works messages and media seperate to your private stuff. NOTHING is ever deleted from GoTradie"
     },
     {
-        question: "Is this another HiPages?",
-        answer: "Absolutely not, GoTradie was built to help you RUN your business enabling you better vision on what's happening on the ground when it comes to day to day communication with your team. Helping you do more with less"
+        question: "Why should i switch from Whatsapp?",
+        answer: "Whatsapp wasn't built for construction businesses. Mixing your private messages with business just won't cut it and how do you know when you message your team they are looking at your message? It's time to switch to a specialized solution designed with your industry in mind."
     },
     {
         question: "Can i see my messages on my computer?",

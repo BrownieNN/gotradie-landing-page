@@ -25,7 +25,11 @@ const handleFrequencyClick = (event) => {
   // Calculate the position of the tooltip above the frequency text
   // setTooltipPosition({ top: top - height, left: left });
   // Retrieve the tooltip content from the priceData
-  const index = priceData.findIndex((item) => item.frequency === event.target.textContent);
+  const index = priceData.findIndex(
+    (item) => 
+        isYearly ? item.yearlyFrequency === event.target.textContent : 
+                   item.monthlyFrequency === event.target.textContent
+  );
   if (index !== -1) {
     const selectedTooltipText = isYearly ? priceData[index].tooltipTextYearly : priceData[index].tooltipTextMonthly;
     setTooltipContent({
@@ -48,7 +52,7 @@ const handleFrequencyClick = (event) => {
           ) : (
             <>
               <Price>${discountedPrice}</Price> / 
-              <Frequency onClick={handleFrequencyClick}>{item.frequency}</Frequency>
+              <Frequency onClick={handleFrequencyClick}>{isYearly ? item.yearlyFrequency : item.monthlyFrequency}</Frequency>
               <InfoIcon><img src="/images/icons/Info.svg"/></InfoIcon>
               {tooltipContent && (
                 <Tooltip
@@ -72,6 +76,7 @@ const handleFrequencyClick = (event) => {
             </>
           )}
        </PriceWrapper>
+       <Business>{item.business}</Business>
         <Description>{item.description}</Description>       
         <Size>{item.size}</Size>
         <GetStarted title={item.button} url={selectedUrl} />
@@ -99,7 +104,7 @@ const PriceColumn = styled.div`
   box-shadow: 0px 21.918838500976562px 25.7868709564209px -16.76146697998047px rgba(0, 0, 0, 0.00);
   backdrop-filter: blur(3.2233588695526123px);
   display: block;
-  height: 620px;
+  height: 670px;
   margin-right: 16px;
   padding: 54px 32px;
   color: #FFFFFF;
@@ -183,7 +188,7 @@ const OfferLosenge = styled.div`
 `
 
 const TradeTitle = styled(SmallText)`
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 21px; /* 145.833% */
@@ -213,9 +218,10 @@ const Description = styled.div`
 
 const PriceWrapper = styled.div`
  display: flex;
+ gap: 4px;
  width: 100%;
  align-items: baseline;
- margin-bottom: 16px;
+ margin-bottom: 8px;
 `
 
 const Price = styled.div`
@@ -233,6 +239,15 @@ font-weight: 500;
 line-height: 18px; /* 110% */
 cursor: pointer;
 text-decoration: underline;
+`
+
+const Business = styled.div`
+position: relative;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 110% */
+margin-bottom: 24px;
 `
 
 const InfoIcon = styled.div`
@@ -276,11 +291,18 @@ img {
 }
 `
 const Size = styled.div`
-font-size: 14px;
+font-size: 15px;
 font-style: normal;
 font-weight: 600;
 line-height: 16px; /* 111.111% */
 margin-bottom: 24px;
+
+.highlight {
+    background: linear-gradient(90deg, #54C5C0 0%, #789BB6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 `
 const BreakLine = styled.div`
 font-size: 10px;
