@@ -51,8 +51,11 @@ const handleFrequencyClick = (event) => {
             <Price>{item.price}</Price>
           ) : (
             <>
-              <Price>${discountedPrice}</Price> / 
+              <Price>${discountedPrice}</Price>
+              <MonthlyWrapper>
+              <Monthly>{item.monthly}</Monthly>
               <Frequency onClick={handleFrequencyClick}>{isYearly ? item.yearlyFrequency : item.monthlyFrequency}</Frequency>
+              </MonthlyWrapper>
               <InfoIcon><img src="/images/icons/Info.svg"/></InfoIcon>
               {tooltipContent && (
                 <Tooltip
@@ -192,7 +195,7 @@ const TradeTitle = styled(SmallText)`
   font-style: normal;
   font-weight: 700;
   line-height: 21px; /* 145.833% */
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   color #FFFFFF;
 `
 
@@ -220,7 +223,7 @@ const PriceWrapper = styled.div`
  display: flex;
  gap: 4px;
  width: 100%;
- align-items: baseline;
+ align-items: end;
  margin-bottom: 8px;
 `
 
@@ -229,6 +232,17 @@ const Price = styled.div`
   font-style: normal;
   font-weight: 700;
   display: inline-block; /* Add this line to ensure the width adjusts */
+`
+
+const MonthlyWrapper = styled.div`
+padding-left: 4px;
+`
+
+const Monthly = styled.div`
+font-size: 12px;
+font-style: normal;
+font-weight: 600; 
+padding-bottom: 3px;
 `
 
 const Frequency = styled.div`
@@ -260,7 +274,7 @@ margin-left: 4px;
 
 img {
   position: absolute;
-  top: 0px;
+  top: -3px;
   left: 0px;
   width: 10px;
   height: 10px;

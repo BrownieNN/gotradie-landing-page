@@ -171,6 +171,12 @@ const ToggleLabel = styled.div`
   font-weight: bold;
   color: #FFFFFF;
   font-size: 15px;
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    padding: 12px 18px;
+    width: 150px;
+  }
 `;
 
 const Title = styled(H2)`
@@ -185,6 +191,7 @@ const Title = styled(H2)`
 
   @media (max-width: 480px) {
     font-size: 40px;
+    line-height: 45px;
     text-align: center;
   }
 `
