@@ -42,8 +42,8 @@ export const priceData = [
         yearlyUrl: "https://buy.stripe.com/28o4iY7gS4hlcjC14a",
         button: "Buy now",
         tooltipImage: "",
-        tooltipHeadline: "How will i be charged?",
-        tooltipText: "Easy use GoTradie for 30 days and we'll send you an invoice to pay at the end of the month",
+        tooltipTextMonthly: "From the date you purchase your subscription, GoTradie will charge your card at the end of 30 days. Simply set & forget",
+        tooltipTextYearly: "From the date you purchase your subscription, GoTradie will charge your card at the end of 365 days. Simply set & forget",
     },
     {
         // icon: "/images/icons/team-white.svg",

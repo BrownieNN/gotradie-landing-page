@@ -27,7 +27,11 @@ const handleFrequencyClick = (event) => {
   // Retrieve the tooltip content from the priceData
   const index = priceData.findIndex((item) => item.frequency === event.target.textContent);
   if (index !== -1) {
-    setTooltipContent(priceData[index]);
+    const selectedTooltipText = isYearly ? priceData[index].tooltipTextYearly : priceData[index].tooltipTextMonthly;
+    setTooltipContent({
+      ...priceData[index],
+      tooltipText: selectedTooltipText
+    });
   }
 };
 
@@ -56,7 +60,7 @@ const handleFrequencyClick = (event) => {
                       )}
                       <ToolTipText>
                         <h3>{tooltipContent.tooltipHeadline}</h3>
-                        <p>{tooltipContent.tooltipText}</p>
+                          <p>{tooltipContent.tooltipText}</p>
                       </ToolTipText>
                     </ToolTipWrapper>
                   }

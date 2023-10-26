@@ -11,7 +11,7 @@ const ContactSalesBanner = ({ onClick }) => (
       Get in touch with our sales team who'll be happy to help you out.
     </Text>
     </InnerContainer>
-    <GetStarted title="Contact sales" url="https://app.gotradie.com.au/signup" />
+    <GetStarted title="Contact sales" url="https://calendly.com/adamfazzani_gotradie/30min" />
   </Container>
 );
 
