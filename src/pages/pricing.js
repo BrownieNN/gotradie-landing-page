@@ -3,6 +3,8 @@ import Layout from "../components/layout/layout"
 import PricingTable from "../components/sections/PricingTable"
 import AppSection from "../components/sections/AppSection"
 import FaqSection from "../components/sections/FaqSection"
+import EnterpriseSection from "../components/sections/EnterpriseSection"
+import ThreeColumnSection from "../components/sections/ThreeColumnSections"
 import SEO from "../components/layout/seo"
 
 function Landscapers() {
@@ -20,6 +22,8 @@ function Landscapers() {
     <Layout>
       <SEO {...seoProps} />
       <PricingTable />
+      <EnterpriseSection />
+      <ThreeColumnSection />
       <FaqSection />
       <AppSection />
     </Layout>

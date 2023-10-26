@@ -9,7 +9,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function PricingTable() {
-  const desktopColumns = 4;
+  const desktopColumns = 3;
+  const tabletColumns = 3;
+  const tabletPortraitColumns = 1;
   const mobileColumns = 1;
 
   // Add the state and toggle function
@@ -33,6 +35,18 @@ export default function PricingTable() {
         },
       },
       {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: tabletColumns, // Show 2 slides at a time for smaller screens
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: tabletPortraitColumns, // Show 2 slides at a time for smaller screens
+        },
+      },
+      {
         breakpoint: 480,
         settings: {
           slidesToShow: mobileColumns, // Show 1 slide at a time for even smaller screens
@@ -45,9 +59,9 @@ export default function PricingTable() {
   return (
     <Wrapper>
       <TextWrapper>
-      <Title>A fair go <span>for all businesses</span></Title>
+      <Title><span>No nonsense</span> pricing</Title>
           <Body>
-            No nonense pricing, start for free no credit card needed 
+            Save 20% when paid annually 
           </Body>
           <ToggleWrapper>
         <ToggleLabel onClick={handleToggle} isActive={!isYearly}>
@@ -84,7 +98,7 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   display: block;
-  max-width: 1234px;
+  max-width: 1024px;
   margin: auto;
   overflow: hidden;
 

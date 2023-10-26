@@ -40,9 +40,9 @@ export default function PanelSection() {
     <Wrapper ref={ref}>
       <PanelWrapper>
         <ContentWrapper>
-          <Profile>
+          {/* <Profile>
             <img src="/images/avatars/adam.png" alt="adam" />
-          </Profile>
+          </Profile> */}
           <TextWrapper>
             <Title>Give it a go & book a demo</Title>
             <Subtitle>
@@ -59,9 +59,9 @@ export default function PanelSection() {
           </ButtonGroup>
         </ContentWrapper>
       </PanelWrapper>
-      <div ref={tooltipRef}>
+      {/* <div ref={tooltipRef}>
         <ContactForm isOpen={isOpen} />
-      </div>
+      </div> */}
     </Wrapper>
   )
 }
@@ -138,7 +138,7 @@ const Profile = styled.div`
 `
 
 const TextWrapper = styled.div`
-  display: grid;
+  display: flex;
   gap: 6px;
 
   @media (max-width: 1354px) {
