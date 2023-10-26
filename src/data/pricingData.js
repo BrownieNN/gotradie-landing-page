@@ -14,7 +14,9 @@ export const priceData = [
         benefitFive: "1 x Admin role",
         benefitSix: "In-app & email support",
         benefitSeven: "",
-        url: "https://app.gotradie.com.au/signup", // Add the URL for this item
+        monthlyUrl: "https://app.gotradie.com.au/signup",
+        yearlyUrl: "https://app.gotradie.com.au/signup",
+        button: "try for free",
          // Add tooltip content for the first item
         tooltipImage: "/images/animations/no-cash.gif",
         tooltipHeadline: "",
@@ -36,7 +38,9 @@ export const priceData = [
         benefitFive: "Unlimited admin roles",
         benefitSix: "In-app, phone & email",
         benefitSeven: "Team Onboarding",
-        url: "https://app.gotradie.com.au/signup", // Add the URL for this item
+        monthlyUrl: "https://buy.stripe.com/00geXC8kW8xB97q004",
+        yearlyUrl: "https://buy.stripe.com/28o4iY7gS4hlcjC14a",
+        button: "Buy now",
         tooltipImage: "",
         tooltipHeadline: "How will i be charged?",
         tooltipText: "Easy use GoTradie for 30 days and we'll send you an invoice to pay at the end of the month",
@@ -56,7 +60,9 @@ export const priceData = [
         benefitFive: "Unlimited admin roles",
         benefitSix: "Dedicated account manager",
         benefitSeven: "Team Onboarding",
-        url: "https://app.gotradie.com.au/signup", // Add the URL for this item
+        monthlyUrl: "https://buy.stripe.com/dR62aQfNo3dhfvO9AH",
+        yearlyUrl: "https://buy.stripe.com/aEU6r644G9BF3N6bIL",
+        button: "buy now",
         tooltipImage: "",
         tooltipHeadline: "How will i be charged?",
         tooltipText: "Easy use GoTradie for 30 days and we'll send you an invoice to pay at the end of the month",

@@ -9,7 +9,8 @@ export default function PricingColumn(props) {
   const { item, isYearly, isFirstColumn, isLastColumn, url, highlight } = props; // Destructure isFirstColumn, isLastColumn, and url
   const priceInt = item.price === "Contact us" ? "Contact us" : parseInt(item.price.slice(1)); // Remove the "$" sign before parsing
   const discountedPrice = isYearly ? Math.round(priceInt * 0.8) : priceInt; // Calculate the discounted price here
-  
+  const selectedUrl = isYearly ? item.yearlyUrl : item.monthlyUrl;
+
   const getStartedText = isFirstColumn ? "Try for Free" : isLastColumn ? "Email us" : "Try for free"; // Define the text for the "Get Started" button
 
   // Add state and event handlers for the tooltip
@@ -69,7 +70,7 @@ const handleFrequencyClick = (event) => {
        </PriceWrapper>
         <Description>{item.description}</Description>       
         <Size>{item.size}</Size>
-        <GetStarted title={getStartedText} url={url} />
+        <GetStarted title={item.button} url={selectedUrl} />
       </TextWrapper>
       <BreakLine>What's included</BreakLine>
       <BulletList>
