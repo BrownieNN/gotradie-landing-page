@@ -66,10 +66,10 @@ export default function PricingTable() {
           </Body>
           <ToggleWrapper>
         <ToggleLabel onClick={handleToggle} isActive={!isYearly}>
-          Billed monthly
+          Pay monthly
         </ToggleLabel>
         <ToggleLabel onClick={handleToggle} isActive={isYearly}>
-          Billed annually
+          Pay annually
         </ToggleLabel>
       </ToggleWrapper>
       </TextWrapper>

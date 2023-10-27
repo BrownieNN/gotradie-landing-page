@@ -6,18 +6,21 @@ const FeaturesSection = () => (
     <Heading>Included across all packages</Heading>
     <FeaturesGrid>
       <Feature>
+        <Icon><img src="/images/icons/desktop.svg" title="desktop"/></Icon>
         <FeatureTitle>Web app access</FeatureTitle>
         <FeatureText>
           All your content seamlessly synced across mobile and desktop for the whole team to use
         </FeatureText>
       </Feature>
       <Feature>
+        <Icon><img src="/images/icons/lock-fill.svg" title="secure"/></Icon>
         <FeatureTitle>Secure cloud storage</FeatureTitle>
         <FeatureText>
           Never lose content! Photos, videos, documents, messages and more stored in the cloud and not on device
         </FeatureText>
       </Feature>
       <Feature>
+        <Icon><img src="/images/icons/search.svg" title="directory"/></Icon>
         <FeatureTitle>Directory listing</FeatureTitle>
         <FeatureText>
           Be found on GoTradie by other businesses on the app and grow your subbie network
@@ -82,6 +85,7 @@ const FeaturesGrid = styled.div`
 `;
 
 const Feature = styled.div`
+
 @media (max-width: 480px) {
   padding-bottom: 32px;
 }
@@ -109,4 +113,16 @@ font-weight: 500;
 text-align: center;
 line-height: 21px; /* 150% */
 color: white;
+`;
+
+const Icon = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  img{
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
 `;
