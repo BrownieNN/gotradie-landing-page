@@ -9,7 +9,8 @@ export default function PricingColumn(props) {
   const { item, isYearly, isFirstColumn, isLastColumn, url, highlight } = props; // Destructure isFirstColumn, isLastColumn, and url
   const priceInt = item.price === "Contact us" ? "Contact us" : parseInt(item.price.slice(1)); // Remove the "$" sign before parsing
   const discountedPrice = isYearly ? Math.round(priceInt * 0.8) : priceInt; // Calculate the discounted price here
-  
+  const selectedUrl = isYearly ? item.yearlyUrl : item.monthlyUrl;
+
   const getStartedText = isFirstColumn ? "Try for Free" : isLastColumn ? "Email us" : "Try for free"; // Define the text for the "Get Started" button
 
   // Add state and event handlers for the tooltip
@@ -24,27 +25,37 @@ const handleFrequencyClick = (event) => {
   // Calculate the position of the tooltip above the frequency text
   // setTooltipPosition({ top: top - height, left: left });
   // Retrieve the tooltip content from the priceData
-  const index = priceData.findIndex((item) => item.frequency === event.target.textContent);
+  const index = priceData.findIndex(
+    (item) => 
+        isYearly ? item.yearlyFrequency === event.target.textContent : 
+                   item.monthlyFrequency === event.target.textContent
+  );
   if (index !== -1) {
-    setTooltipContent(priceData[index]);
+    const selectedTooltipText = isYearly ? priceData[index].tooltipTextYearly : priceData[index].tooltipTextMonthly;
+    setTooltipContent({
+      ...priceData[index],
+      tooltipText: selectedTooltipText
+    });
   }
 };
 
 
   return (
     <PriceColumn title={item.tile} highlight={highlight} color="#FFFFFF">
-      <img src={item.icon} alt={item.title} />
+      {/* <img src={item.icon} alt={item.title} /> */}
       <TextWrapper>
-        <OfferLosenge>{item.offer}</OfferLosenge>
+        {/* <OfferLosenge>{item.offer}</OfferLosenge> */}
         <TradeTitle>{item.title}</TradeTitle>
-        <Description>{item.description}</Description>
         <PriceWrapper>
           {item.price === "Contact us" ? (
             <Price>{item.price}</Price>
           ) : (
             <>
-              <Price>${discountedPrice}</Price> / 
-              <Frequency onClick={handleFrequencyClick}>{item.frequency}</Frequency>
+              <Price>${discountedPrice}</Price>
+              <MonthlyWrapper>
+              <Monthly>{item.monthly}</Monthly>
+              <Frequency onClick={handleFrequencyClick}>{isYearly ? item.yearlyFrequency : item.monthlyFrequency}</Frequency>
+              </MonthlyWrapper>
               <InfoIcon><img src="/images/icons/Info.svg"/></InfoIcon>
               {tooltipContent && (
                 <Tooltip
@@ -56,7 +67,7 @@ const handleFrequencyClick = (event) => {
                       )}
                       <ToolTipText>
                         <h3>{tooltipContent.tooltipHeadline}</h3>
-                        <p>{tooltipContent.tooltipText}</p>
+                          <p>{tooltipContent.tooltipText}</p>
                       </ToolTipText>
                     </ToolTipWrapper>
                   }
@@ -68,19 +79,21 @@ const handleFrequencyClick = (event) => {
             </>
           )}
        </PriceWrapper>
-
+       <Business>{item.business}</Business>
+        <Description>{item.description}</Description>       
         <Size>{item.size}</Size>
-        <GetStarted title={getStartedText} url={url} />
+        <GetStarted title={item.button} url={selectedUrl} />
       </TextWrapper>
       <BreakLine>What's included</BreakLine>
       <BulletList>
-        <Bullet><EmojiIcon>{item.emojiOne}</EmojiIcon> <p>{item.benefitOne}</p></Bullet>
-        <Bullet><EmojiIcon>{item.emojiTwo}</EmojiIcon> <p>{item.benefitTwo}</p></Bullet>
-        <Bullet><EmojiIcon>{item.emojiThree}</EmojiIcon> <p>{item.benefitThree}</p></Bullet>
-        <Bullet><EmojiIcon>{item.emojiFour}</EmojiIcon> <p>{item.benefitFour}</p></Bullet>
-        <Bullet><EmojiIcon>{item.emojiFive}</EmojiIcon> <p>{item.benefitFive}</p></Bullet>
-        <Bullet><EmojiIcon>{item.emojiSix}</EmojiIcon> <p>{item.benefitSix}</p></Bullet>
-        <Bullet><EmojiIcon>{item.emojiSeven}</EmojiIcon> <p>{item.benefitSeven}</p></Bullet>
+        <Bullet><EmojiIcon><img src="/images/icons/verified.svg"/></EmojiIcon><p>{item.benefitOne}</p></Bullet>
+        <Bullet><EmojiIcon><img src="/images/icons/verified.svg"/></EmojiIcon> <p>{item.benefitTwo}</p></Bullet>
+        <Bullet><EmojiIcon><img src="/images/icons/verified.svg"/></EmojiIcon> <p>{item.benefitThree}</p></Bullet>
+        <Bullet><EmojiIcon><img src="/images/icons/verified.svg"/></EmojiIcon> <p>{item.benefitFour}</p></Bullet>
+        <Bullet><EmojiIcon><img src="/images/icons/verified.svg"/></EmojiIcon> <p>{item.benefitFive}</p></Bullet>
+        <BreakLine>Account support</BreakLine>
+        <Bullet><EmojiIcon><img src="/images/icons/verified.svg"/></EmojiIcon> <p>{item.benefitSix}</p></Bullet>
+        {item.benefitSeven ? <Bullet><EmojiIcon><img src="/images/icons/verified.svg"/></EmojiIcon><p>{item.benefitSeven}</p></Bullet> : null}
       </BulletList>
     </PriceColumn>
   )
@@ -94,9 +107,9 @@ const PriceColumn = styled.div`
   box-shadow: 0px 21.918838500976562px 25.7868709564209px -16.76146697998047px rgba(0, 0, 0, 0.00);
   backdrop-filter: blur(3.2233588695526123px);
   display: block;
-  height: auto;
+  height: 670px;
   margin-right: 16px;
-  padding: 32px;
+  padding: 54px 32px;
   color: #FFFFFF;
 
 
@@ -112,20 +125,43 @@ const PriceColumn = styled.div`
     }
   }
 
-  @media (max-width: 1354px) {
+  @media (max-width: 1024px) {
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-top: 24px;
   }
 
   @media (max-width: 480px) {
     margin-right: 16px;
     margin-left: 16px;
+    margin-top: 24px;
+
+    ${(props) =>
+      props.highlight &&
+      `
+      transform: translateY(-8px);
+  
+      .icon {
+        transform: translateX(1px);
+      }
+    `}
   }
   
   /* Add custom styles to highlight the preferred choice */
   ${(props) =>
     props.highlight &&
     `
-    background: #FFFFFF;
-    color: #153549;
+    border: 2px solid var(--slate, #54C5C0);
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 21.918838500976562px 25.7868709564209px -16.76146697998047px rgba(0, 0, 0, 0.00);
+    backdrop-filter: blur(3.2233588695526123px);
+    color: #FFFFFF;
     transform: translateY(-16px);
 
     .icon {
@@ -138,7 +174,7 @@ const TextWrapper = styled.div`
   position: relative;
   display: block;
   height: auto;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 `
 const OfferLosenge = styled.div`
   background: #789BB6;
@@ -155,11 +191,11 @@ const OfferLosenge = styled.div`
 `
 
 const TradeTitle = styled(SmallText)`
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 21px; /* 145.833% */
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   color #FFFFFF;
 `
 
@@ -170,6 +206,9 @@ const EmojiIcon = styled(SmallText)`
   font-weight: 700;
   line-height: 24px; /* 145.833% */
   padding-right: 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 `
 
 const Description = styled.div`
@@ -177,14 +216,15 @@ const Description = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 `
 
 const PriceWrapper = styled.div`
  display: flex;
+ gap: 4px;
  width: 100%;
- align-items: baseline;
- margin-bottom: 12px;
+ align-items: end;
+ margin-bottom: 8px;
 `
 
 const Price = styled.div`
@@ -192,10 +232,17 @@ const Price = styled.div`
   font-style: normal;
   font-weight: 700;
   display: inline-block; /* Add this line to ensure the width adjusts */
+`
 
-  @media (max-width: 480px) {
-    font-size: 30px;
-  }
+const MonthlyWrapper = styled.div`
+padding-left: 4px;
+`
+
+const Monthly = styled.div`
+font-size: 12px;
+font-style: normal;
+font-weight: 600; 
+padding-bottom: 3px;
 `
 
 const Frequency = styled.div`
@@ -208,6 +255,15 @@ cursor: pointer;
 text-decoration: underline;
 `
 
+const Business = styled.div`
+position: relative;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 110% */
+margin-bottom: 24px;
+`
+
 const InfoIcon = styled.div`
 position: relative;
 display block;
@@ -218,7 +274,7 @@ margin-left: 4px;
 
 img {
   position: absolute;
-  top: 0px;
+  top: -3px;
   left: 0px;
   width: 10px;
   height: 10px;
@@ -232,9 +288,9 @@ display: flex;
 align-items: center;
 font-size: 12px;
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 line-height: 16px; /* 111.111% */
-margin-bottom: 12px;
+margin-bottom: 16px;
 
 p{
 
@@ -249,18 +305,27 @@ img {
 }
 `
 const Size = styled.div`
-font-size: 12px;
+font-size: 15px;
 font-style: normal;
 font-weight: 600;
 line-height: 16px; /* 111.111% */
 margin-bottom: 24px;
+
+.highlight {
+    background: linear-gradient(90deg, #54C5C0 0%, #789BB6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 `
 const BreakLine = styled.div`
-font-size: 14px;
+font-size: 10px;
 font-style: normal;
 font-weight: 700;
 line-height: 18px; /* 111.111% */
 margin-bottom: 16px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
 `
 
 const ToolTipWrapper = styled.div`
