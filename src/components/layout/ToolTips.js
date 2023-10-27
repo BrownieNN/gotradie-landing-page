@@ -16,7 +16,7 @@ export default function Tooltip({ isVisible, content, position, onClose, highlig
 
 const TooltipWrapper = styled.div`
   position: absolute;
-  top: 166px;
+  top: 74px;
   color: #fff;
   border-radius: 4px;
   padding: 8px;
@@ -35,7 +35,7 @@ const TooltipWrapper = styled.div`
 
   ${(props) =>
     props.highlight &&
-    `top: 155px;
+    `top: 64px;
   `}
 }
 `;
