@@ -9,7 +9,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function PricingTable() {
-  const desktopColumns = 4;
+  const desktopColumns = 3;
+  const tabletColumns = 3;
+  const tabletPortraitColumns = 1;
   const mobileColumns = 1;
 
   // Add the state and toggle function
@@ -33,6 +35,18 @@ export default function PricingTable() {
         },
       },
       {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: tabletColumns, // Show 2 slides at a time for smaller screens
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: tabletPortraitColumns, // Show 2 slides at a time for smaller screens
+        },
+      },
+      {
         breakpoint: 480,
         settings: {
           slidesToShow: mobileColumns, // Show 1 slide at a time for even smaller screens
@@ -45,16 +59,17 @@ export default function PricingTable() {
   return (
     <Wrapper>
       <TextWrapper>
-      <Title>A fair go <span>for all businesses</span></Title>
+      <Title><span>No nonsense</span> pricing</Title>
           <Body>
-            No nonense pricing, start for free no credit card needed 
+            <p>Save 20% when paid annually </p>
+            <img src="/images/icons/arrow-curved.svg" title="arrow" />
           </Body>
           <ToggleWrapper>
         <ToggleLabel onClick={handleToggle} isActive={!isYearly}>
-          Monthly
+          Pay monthly
         </ToggleLabel>
         <ToggleLabel onClick={handleToggle} isActive={isYearly}>
-          Yearly
+          Pay annually
         </ToggleLabel>
       </ToggleWrapper>
       </TextWrapper>
@@ -84,7 +99,7 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   display: block;
-  max-width: 1234px;
+  max-width: 1024px;
   margin: auto;
   overflow: hidden;
 
@@ -105,7 +120,7 @@ const Wrapper = styled.div`
 const TextWrapper = styled.div`
   max-width: 954px;
   display: grid;
-  padding-top: 60px;
+  padding-top: 120px;
   gap: 24px;
   margin: auto;
   margin-bottom: 24px;
@@ -142,18 +157,26 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   gap: 16px;
   margin-bottom: 32px;
+  margin-top: 16px;
 `;
 
 const ToggleLabel = styled.div`
-  background: ${(props) => (props.isActive ? "#54C5C0" : "rgba(255, 255, 255, 0.05)")};
+  background: ${(props) => (props.isActive ? "#54C5C0" : "rgba(255, 255, 255, 0.10)")};
   border: ${(props) => (props.isActive ? "1px solid #54C5C0" : "1px solid #FFFFFF)")};
-  padding: 8px 16px;
-  width: 150px;
+  padding: 16px 24px;
+  width: 180px;
   border-radius: 100px;
   text-align: center;
   cursor: pointer;
   font-weight: bold;
   color: #FFFFFF;
+  font-size: 15px;
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    padding: 12px 18px;
+    width: 150px;
+  }
 `;
 
 const Title = styled(H2)`
@@ -168,19 +191,42 @@ const Title = styled(H2)`
 
   @media (max-width: 480px) {
     font-size: 40px;
+    line-height: 45px;
     text-align: center;
   }
 `
 const Body = styled(MediumText)`
+  position: relative;
   text-align: center;
   color: ${themes.dark.text1};
   max-width: 780px;
   margin: auto;
+  display: flex;
+  gap: 8px;
+
+  img{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 7px;
+    right: -55px;
+    rotate: -9deg;
+  }
 `
 
 const StyledSlider = styled(Slider)`
   .slick-dots {
-    bottom: -40px; /* Adjust the position as needed */
+    position: absolute;
+    top: -40px; /* Adjust the position to move the dots above the carousel */
+    left: 50%; /* Center the dots horizontally */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
     li {
       margin: 0 4px; /* Adjust the spacing between dots */
       button {
@@ -203,5 +249,10 @@ const StyledSlider = styled(Slider)`
         }
       }
     }
+  }
+
+  .slick-list{
+    z-index: 1;
+    overflow: visible;
   }
 `;
