@@ -30,7 +30,7 @@ export default function PricingTable() {
     speed: 500,
     slidesToShow: desktopColumns,
     slidesToScroll: 1,
-    initialSlide: window.innerWidth < 480 ? 1 : 0, // Start with the second slide on mobile
+    initialSlide: typeof window !== 'undefined' && window.innerWidth < 480 ? 1 : 0,
     responsive: [
       {
         breakpoint: 1345,
