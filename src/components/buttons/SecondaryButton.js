@@ -46,8 +46,9 @@ const Wrapper = styled.div`
   gap: 8px;
   justify-content: center;
   /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
+  
   @media (max-width: 480px) {
-    width: 340px;
+    width: 100%;
   }
   *,
   & {

@@ -30,7 +30,7 @@ export default function MenuButton(props) {
   }
 
   const toggleDropdown = () => {
-    if (item.title === "Who's it for?") {
+    if (item.title === "Who's it for") {
       setIsDropdownOpen(!isDropdownOpen);
     }
   };
@@ -54,7 +54,7 @@ export default function MenuButton(props) {
         <img src={item.icon} alt={item.title} />
         {item.title}
       </MenuItem>
-      {isDropdownOpen && item.title === "Who's it for?" && (
+      {isDropdownOpen && item.title === "Who's it for" && (
         <div ref={dropdownRef}>
         <Dropdown>
           {menuTrade.map((dropdownItem, index) => (

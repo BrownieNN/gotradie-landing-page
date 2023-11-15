@@ -39,7 +39,7 @@ const BackgroundImageOne = styled.div`
   position: absolute;
   width: 413px;
   height: 574px;
-  left: 30px;
+  left: 100px;
   top: 0px;
   background: ${props => `url(${props.backgroundOne}) no-repeat top center`};
   background-size: contain;

@@ -10,6 +10,9 @@ const VideoSection = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isBlurred, setIsBlurred] = useState(false);
   const playerRef = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(true); // New state to control animation
+
+  const contentWrapperRef = useRef(null); // Ref for the content wrapper
 
   useEffect(() => {
     const initializePlayer = async () => {
@@ -26,6 +29,17 @@ const VideoSection = () => {
           modestBranding: 1,
         },
       });
+
+      const handleAnimationEnd = () => {
+        setIsAnimating(false);
+      };
+
+      // Add event listener to the content wrapper
+    const contentWrapper = contentWrapperRef.current;
+   
+    if (contentWrapper) {
+      contentWrapper.addEventListener('animationend', handleAnimationEnd);
+    }
 
       Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p));
 
@@ -46,6 +60,9 @@ const VideoSection = () => {
       return () => {
         if (player) {
           player.destroy();
+        }
+        if (contentWrapper) {
+          contentWrapper.removeEventListener('animationend', handleAnimationEnd);
         }
       };
     };
@@ -97,7 +114,11 @@ const VideoSection = () => {
   };
 
   return (
-    <ContentWrapper isVideoPlaying={isVideoPlaying}>
+    <ContentWrapper
+      ref={contentWrapperRef}
+      isVideoPlaying={isVideoPlaying}
+      isAnimating={isAnimating} // Pass the new state as a prop
+    >
       {showThumbnail && (
         <ThumbnailWrapper onClick={handleThumbnailClick} ref={thumbnailRef}>
           <img src="/images/Video/promo-thumb.png" alt="Thumbnail" className="thumbnail-image" />
@@ -115,6 +136,16 @@ const VideoSection = () => {
 };
 
 export default VideoSection;
+
+ // Styled component for the section
+
+ const animation = keyframes`
+ 0% { opacity: 0; transform: translateY(-10px); filter: blur(10px); }
+ 100% { opacity: 1; transform: translateY(0px); filter: blur(0px); }
+`
+
+const Section = styled.div`
+`;
 
 
 const fadeIn = keyframes`
@@ -186,6 +217,7 @@ const ThumbnailWrapper = styled.div`
 
   img {
     width: 100%;
+    
   }
 `;
 
@@ -196,6 +228,15 @@ const ContentWrapper = styled.div`
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 24px rgba(84, 197, 192, 0.5);
+  
+  // Apply animation only if isAnimating is true
+  ${({ isAnimating }) =>
+    isAnimating &&
+    css`
+      opacity: 0;
+      animation: ${animation} 1s 0.3s;
+    `}
+
 
   @media (max-width: 1354px) {
     margin: 0px 24px;

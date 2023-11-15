@@ -30,10 +30,10 @@ function HeroTwoColumn(props) {
             {description ||
               "No need for mutliple apps. We made it easy to chat to your team, client & tradies in one place"}
           </Description>
-          <ButtonWrapper>
-          <GetStarted title={buttonTitle || "Try for free" } url={buttonUrl || "https://app.gotradie.com.au/signup"} />
-          <SecondaryButton title={buttonTitleTwo || "Ask for demo" } url={buttonUrlTwo || "https://calendly.com/adamfazzani_gotradie/15min"} />
-          </ButtonWrapper>
+          <ButtonGroup>
+            <GetStarted title="Try for free" url= "https://app.gotradie.com.au/signup" />
+            <SecondaryButton title="Book demo" url= "https://calendly.com/adamfazzani_gotradie/30min" />
+          </ButtonGroup>
         </TextWrapper>
         <ImageWrapper>
           <FeatureAnimationOne
@@ -86,25 +86,6 @@ const ImageWrapper = styled.div`
   max-width: 588px;
   height: 359px;
   position: relative;
-`
-
-const TextWrapper = styled.div`
-  max-width: 600px;
-  display: grid;
-  padding-top: 100px;
-  gap: 32px;
-
-  @media (max-width: 480px) {
-    max-width: 345px;
-    -webkit-box-pack: center;
-    display: grid;
-    grid-template-columns: 330px;
-    gap: 30px;
-    justify-content: center;
-    text-align: center;
-    padding: 0px 8px;
-}
-  }
 
   > * {
     opacity: 0;
@@ -119,7 +100,52 @@ const TextWrapper = styled.div`
     :nth-child(3) {
       animation-delay: 0.4s;
     }
+    :nth-child(4) {
+      animation-delay: 0.6s;
+    }
   }
+
+   @media (max-width: 480px) {
+    display: none;
+   }
+`
+
+const TextWrapper = styled.div`
+  max-width: 588px;
+  display: grid;
+  padding-top: 100px;
+  padding-left: 32px;
+  gap: 32px;
+
+  > * {
+    opacity: 0;
+    animation: ${animation} 1s forwards;
+
+    :nth-child(1) {
+      animation-delay: 0s;
+    }
+    :nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    :nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    :nth-child(4) {
+      animation-delay: 0.6s;
+    }
+  }
+
+  @media (max-width: 480px) {
+    max-width: 345px;
+    padding-left: 0px;
+    -webkit-box-pack: center;
+    display: grid;
+    grid-template-columns: 330px;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 0px;
+  } 
 `
 
 const Subtitle = styled(MediumText)`
@@ -184,21 +210,39 @@ const Lockup = styled.div`
     }
   }
 `
-const ButtonWrapper = styled.div`
-    display: grid;
-    columns: 2 auto;
-    grid-template-columns: repeat(2,auto);
+const ButtonGroup = styled.div`
+display: flex;
+justify-content: start;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
 
+  
   @media (max-width: 1354px) {
-    justify-content: center;
-    text-align: center;
+    display: flex;
+    img {
+      width: 250px;
+      height: 75px;
+      margin-right: 0px;
+    }
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: auto;
-    gap: 16px;
+    width: 100%;
+    padding: 0px;
+    display: block;
+    gap: 8px;
+    img {
+      width: 100%;
+      height: auto;
+      margin-right: 0px;
+    }
+    /* Add flex-grow property to make buttons fill the available space */
+    a {
+      flex-grow: 1;
+    }
   }
-`
+`;
 
 const TagWrapper = styled.div`
   display: flex;

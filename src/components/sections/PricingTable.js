@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled, { keyframes } from "styled-components"
+import React, { useState, useEffect, useRef } from 'react';
+import styled, { css, keyframes } from 'styled-components';
 import { H2, MediumText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 import { priceData } from "../../data/pricingData";
@@ -14,6 +14,9 @@ export default function PricingTable() {
   const tabletPortraitColumns = 1;
   const mobileColumns = 1;
 
+  const [isVisible, setIsVisible] = useState(false); // State to track visibility for the fade-in effect
+  const sectionRef = useRef(null); // Ref for the section to observe
+
   // Add the state and toggle function
   const [isYearly, setIsYearly] = useState(false);
 
@@ -27,6 +30,7 @@ export default function PricingTable() {
     speed: 500,
     slidesToShow: desktopColumns,
     slidesToScroll: 1,
+    initialSlide: window.innerWidth < 480 ? 1 : 0, // Start with the second slide on mobile
     responsive: [
       {
         breakpoint: 1345,
@@ -56,7 +60,38 @@ export default function PricingTable() {
     ],
   };
 
+  // Set up the intersection observer API
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Only one entry is observed: the sectionRef current element.
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Set visibility state to true when the section is intersecting the viewport
+          // If you only want the animation to occur once, disconnect the observer after this
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.5, // Trigger the callback when the section is at least 10% visible in the viewport
+      }
+    );
+
+    // Start observing the section
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    // Clean up the observer on component unmount
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
+
   return (
+    <Section ref={sectionRef} isVisible={isVisible}>
     <Wrapper>
       <TextWrapper>
       <Title><span>No nonsense</span> pricing</Title>
@@ -88,8 +123,26 @@ export default function PricingTable() {
         ))}
       </StyledSlider>
     </Wrapper>
+    </Section>
   );
 }
+
+// Styled component for the section
+const Section = styled.section`
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+opacity: 0;
+transform: translateY(20px);
+visibility: hidden;
+
+// When isVisible is true, apply the styles for the visible state
+${({ isVisible }) =>
+  isVisible &&
+  css`
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  `}
+`;
 
 const animation = keyframes`
   0% { opacity: 0; transform: translateY(-10px); filter: blur(10px); }
@@ -134,21 +187,6 @@ const TextWrapper = styled.div`
     justify-content: center;
     text-align: center;
     padding: 0 8px;
-  }
-
-  > * {
-    opacity: 0;
-    animation: ${animation} 1s forwards;
-
-    :nth-child(1) {
-      animation-delay: 0s;
-    }
-    :nth-child(2) {
-      animation-delay: 0.2s;
-    }
-    :nth-child(3) {
-      animation-delay: 0.4s;
-    }
   }
 `
 
@@ -215,6 +253,7 @@ const Body = styled(MediumText)`
 `
 
 const StyledSlider = styled(Slider)`
+
   .slick-dots {
     position: absolute;
     top: -40px; /* Adjust the position to move the dots above the carousel */

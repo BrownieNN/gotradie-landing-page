@@ -1,26 +1,80 @@
-import React from "react"
-import styled, { keyframes } from "styled-components"
+import React, { useState, useEffect, useRef } from 'react';
+import styled, { css, keyframes } from 'styled-components';
 import TradeLogo from "../layout/TradeLogos"
 import { themes } from "../styles/ColorStyles"
 import { H2 } from "../styles/TextStyles"
 
 function LogoSection(props) {
+
+  const [isVisible, setIsVisible] = useState(false); // State to track visibility for the fade-in effect
+  const sectionRef = useRef(null); // Ref for the section to observe
+
+  // Set up the intersection observer API
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Only one entry is observed: the sectionRef current element.
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Set visibility state to true when the section is intersecting the viewport
+          // If you only want the animation to occur once, disconnect the observer after this
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.8, // Trigger the callback when the section is at least 10% visible in the viewport
+      }
+    );
+
+    // Start observing the section
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    // Clean up the observer on component unmount
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
+
   const {
     title
   } = props
   return (
+    <Section ref={sectionRef} isVisible={isVisible}>
     <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
-          <Title>{title || "Watch our 60sec promo video"}</Title>
+          <Title>{title || "TRUSTED BY TRADE COMPANIES & ASSOCIATIONS"}</Title>
         </TextWrapper>
         <TradeLogo />
       </ContentWrapper>
     </Wrapper>
+    </Section>
   )
 }
 
+
 export default LogoSection
+
+// Styled component for the section
+const Section = styled.section`
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+opacity: 0;
+transform: translateY(20px);
+visibility: hidden;
+
+// When isVisible is true, apply the styles for the visible state
+${({ isVisible }) =>
+  isVisible &&
+  css`
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  `}
+`;
 
 const animation = keyframes`
   0% { opacity: 0; transform: translateY(-10px); filter: blur(10px); }
@@ -35,7 +89,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 954px;
   margin: 0 auto;
-  padding: 54px 0px 0px 0px;
+  padding: 120px 0px 0px 0px;
   display: grid;
   gap: 33px;
   justify-content: center;
@@ -95,6 +149,7 @@ const Title = styled(H2)`
   color: ${themes.dark.text1};
   text-align: center;
   font-size: 16px;
+  line-height: 21px;
   letter-spacing: 6px;
   text-transform: uppercase;
   span {

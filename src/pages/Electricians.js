@@ -8,79 +8,82 @@ import FeatureSection1 from "../components/sections/FeatureSection1"
 import FeatureSection2 from "../components/sections/FeatureSection2"
 import FeatureSection3 from "../components/sections/FeatureSection3"
 import FaqSection from "../components/sections/FaqSection"
+import FeatureDetailLeft from "../components/sections/FeatureDetailLeft";
+import FeatureDetailRight from "../components/sections/FeatureDetailRight";
+import FinalSection from "../components/sections/FinalSection";
 
-function Electricans() {
+function Electricians() {
 
     const seoProps = {
-        title: "Simple Communication for Electricians ⚡",
-        description: "Empower your team better with comms & info in one place",
-        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-electricians.png", // Use the absolute URL
-        imageWidth: 1200, // Specify the image width
-        imageHeight: 630, // Specify the image height
-        url: "https://www.gotradie.com.au/Electricians",
+      title: "Simple Communication for Electricians ⚡",
+      description: "Empower your team better with comms & info in one place",
+      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-electricians.png", // Use the absolute URL
+      imageWidth: 1200, // Specify the image width
+      imageHeight: 630, // Specify the image height
+      url: "https://www.gotradie.com.au/Electricians",
       };
-
-
+      
   return (
     <Layout>
     <SEO {...seoProps} />
       <HeroTwoColumn
-        subtitle={<p style={{color: "#54C5C0"}}>⚡ FOR ELECTRICIANS</p>}
-        title={<p style={{color: "white"}}>Your team communication <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>the way you like it</span></p>}
-        description="Wrangle your team with seamless communication, capture photo, videos, docos and more all in one place"
+        subtitle={<p style={{color: "#54C5C0"}}>⚡ ELECTRICAL & SOLAR</p>}
+        title={<p style={{color: "white"}}><span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>Empower</span> your electrical & solar business</p>}
+        description="Seamlessly convey technical instructions, ensure compliance, and gain instant access to critical documents. Take control of your day-to-day operations"
         animationImageOne="/images/shots/hero-shot1.png"
-        animationImageTwo="/images/animations/inbox.png"
       />
-      <LogoSection
-        title="in good company"
+      <FeatureDetailLeft
+        // Assign the ref to a standard HTML element within FeatureDetailLeft
+        subtitle="Clips"
+        title="Simplified technical documentation"
+        description="Manage complex technical documents effortlessly. Share detailed instructions, compliance data, and safety protocols with your team, ensuring precision in every project."
+        phoneHero="/images/phones/phone-clips.png"
+        // featureText="OUT OF THE BOX FEATURES"
+        // subFeatureOne="Language translation "
+        // subIconOne="/images/icons/translate.svg"
+        // subFeatureTwo="Read receipts on messages"
+        // subIconTwo="/images/icons/eye.svg"
+        // subFeatureThree="Emoji reactions"
+        // subIconThree="/images/icons/thumbs-up.svg"
+        // subFeatureFour="Content privacy"
+        // subIconFour="/images/icons/lock.svg"
       />
-      <FeatureSection1
-        subtitle="No nonsense communication"
-        title="Seamlessly Connect and Communicate with Your Team"
-        tagTitleOne="Chat to your team"
-        tagTitleTwo="Photos & videos"
-        tagTitleThree="Organised inbox"
-        iconOne="/images/icons/people.svg"
-        iconTwo="/images/icons/gallery.svg"
-        iconThree="/images/icons/transfer.svg"
-        description="Streamline collaboration and boost productivity by messaging your team effortlessly on our dedicated landscaping messaging platform."
-        animationImageOne="/images/shots/hero-shot1.png"
-        animationImageTwo="/images/animations/inbox.png"
+      <FeatureDetailRight
+        // Assign the ref to a standard HTML element within FeatureDetailLeft
+        subtitle="WORKSITES"
+        title="Clear Communication, Better Results"
+        description="Hold video chats for in-depth technical discussions. Clarify complex instructions, assess project progress, and ensure your team comprehends every detail without delay."
+        phoneHero="/images/phones/phone-worksites.png"
+        // featureText="OUT OF THE BOX FEATURES"
+        // subFeatureOne="Filter by assigned, team & more"
+        // subIconOne="/images/icons/filter.svg"
+        // subFeatureTwo="Add docs, photo’s & videos to tasks"
+        // subIconTwo="/images/icons/gallery.svg"
+        // subFeatureThree="Shuffle order of To-do list"
+        // subIconThree="/images/icons/shuffle.svg"
+        // subFeatureFour="Auto-save To-do lists"
+        // subIconFour="/images/icons/valid.svg"
       />
-      <FeatureSection2 
-        subtitle="Unlimited storage"
-        title="Capture Your Outdoor Masterpieces in One Place"
-        tagTitleOne="Subbies"
-        tagTitleTwo="Network"
-        tagTitleThree="Connect"
-        iconOne="/images/icons/people.svg"
-        iconTwo="/images/icons/search.svg"
-        iconThree="/images/icons/conversation.svg"
-        description="Store and showcase your stunning before & after photos and videos in a single, visually captivating hub. A treasure trove of your hard yakka"
-        animationImageOne="/images/shots/hero-shot4.png"
-        animationImageTwo="/images/animations/notification.svg"
-        animationImageThree="/images/animations/search-field.svg"
-        animationImageFive="/images/animations/chats.png"
-      />
-      <FeatureSection3
-        subtitle="Organise & showcase"
-        title="Transform Chaos into Picture-Perfect Order with Effortless Photo Organization"
-        tagTitleOne="Collaborate"
-        tagTitleTwo="Message"
-        tagTitleThree="Manage team"
-        iconOne="/images/icons/people.svg"
-        iconTwo="/images/icons/conversation.svg"
-        iconThree="/images/icons/add-person.svg"
-        description="Say goodbye to endless scrolling! Easily create folders using clips, bringing harmony to your photo storsge. Find what you need in a snap."
-        animationImageOne="/images/shots/hero-shot-latop.png"
-        animationImageTwo="/images/shots/mobile-inbox.png"
-        animationImageThree="/images/animations/office-chat.png"
-        animationImageFour="/images/animations/notifications.png"
+      <FeatureDetailLeft
+        // Assign the ref to a standard HTML element within FeatureDetailLeft
+        subtitle="To-do lists"
+        title="Updates at Your Fingertips"
+        description="From high-maintenance jobs to civil infrastructure projects, and stay in the loop with job updates and completions from the team. Ensuring you’ve got all the answer for clients"
+        phoneHero="/images/phones/phone-tasks.png"
+        // featureText="OUT OF THE BOX FEATURES"
+        // subFeatureOne="Language translation "
+        // subIconOne="/images/icons/translate.svg"
+        // subFeatureTwo="Read receipts on messages"
+        // subIconTwo="/images/icons/eye.svg"
+        // subFeatureThree="Emoji reactions"
+        // subIconThree="/images/icons/thumbs-up.svg"
+        // subFeatureFour="Content privacy"
+        // subIconFour="/images/icons/lock.svg"
       />
       <FaqSection />
-      <AppSection />
+      <FinalSection />
     </Layout>
   )
 }
 
-export default Electricans
+export default Electricians

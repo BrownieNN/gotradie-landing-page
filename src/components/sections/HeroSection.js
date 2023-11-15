@@ -5,6 +5,8 @@ import { ButtonText, H1, MediumText } from "../styles/TextStyles";
 import lottie from "lottie-web";
 import animationData from "../animations/lottie/walkthrough2.json";
 import FourColumnSection from "./FourColumnSection";
+import GetStarted from "../buttons/GetStarted";
+import SecondaryButton from "../buttons/SecondaryButton";
 
 function HeroSection(props) {
   let animationContainer = createRef();
@@ -58,42 +60,19 @@ function HeroSection(props) {
             <Title>
               The Messaging App <br />
               <span>
-                Built For Work <AnimatedEmoji scaleIn={scaleIn} ref={emojiRef}>
+                Built For Hard Work <AnimatedEmoji scaleIn={scaleIn} ref={emojiRef}>
                   {emojis[currentEmojiIndex]}
                 </AnimatedEmoji>
               </span>
             </Title>
           </Lockup>
           <Description>
-            Simplify the way your team, worksites and clients communicate &
-            more.
+          Empower your team & transform chaos into collaboration.
           </Description>
-          <FourColumnSection />
           <ButtonGroup>
-            <a
-              href="https://apps.apple.com/au/app/gotradie/id1497078123"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/images/app/apple-store-badge_sml.svg"
-                alt="Apple Store"
-              />
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.gotradie.paleale"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/images/app/google-play-badge_sml.svg"
-                alt="Google Play Store"
-              />
-            </a>
+          <GetStarted title="Try for free" url= "https://app.gotradie.com.au/signup" />
+          <SecondaryButton title="Book demo" url= "https://calendly.com/adamfazzani_gotradie/30min" />
           </ButtonGroup>
-          <Subtitle>
-            Try for free<span> no credit card required</span>
-          </Subtitle>
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
@@ -205,7 +184,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
-  padding: 54px 0px 54px 0px;
+  padding: 120px 0px 72px 0px;
   display: flex;
   justify-content: center;
 
@@ -225,7 +204,7 @@ const TextWrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 480px) {
-    width: 100%
+    width: 100%;
     justify-content: center;
     text-align: center;
     padding: 0 24px;
@@ -339,14 +318,12 @@ const Subtitle = styled(ButtonText)`
 `
 
 const ButtonGroup = styled.div`
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
 
-  img {
-    width: 200px;
-    height: auto;
-    margin-right: 16px;
-  }
   
   @media (max-width: 1354px) {
     display: flex;
@@ -360,7 +337,7 @@ const ButtonGroup = styled.div`
   @media (max-width: 480px) {
     width: 100%;
     padding: 0px;
-    display: flex;
+    display: block;
     gap: 8px;
     img {
       width: 100%;

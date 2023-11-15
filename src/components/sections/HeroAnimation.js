@@ -3,7 +3,7 @@ import { themes } from "../styles/ColorStyles"
 import styled, { keyframes } from "styled-components"
 import { H1 } from "../styles/TextStyles"
 import lottie from "lottie-web"
-import animationData from "../animations/lottie/messages.json"
+import animationData from "../animations/lottie/messages-three.json"
 
 function HeroAnimation() {
   let animationContainer = createRef()
@@ -23,12 +23,12 @@ function HeroAnimation() {
   return (
     <Wrapper id="why">
       <ContentWrapper>
-        <TextWrapper>
-          <Title><span>Every ping, swoosh, and ding</span> all in one place</Title>
-        </TextWrapper>
         <AnimationWrapper>
           <Animation ref={animationContainer} />
         </AnimationWrapper>
+        <TextWrapper>
+          <Title>“where did you send that again?”</Title>
+        </TextWrapper>
       </ContentWrapper>
     </Wrapper>
   )
@@ -64,9 +64,9 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  max-width: 1234px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 80px 0px 120px 0px;
+  padding: 0px 0px 0px 0px;
   display: grid;
   gap: 60px;
 
@@ -81,7 +81,7 @@ const ContentWrapper = styled.div`
   @media (max-width: 480px) {
     max-width: 345px;
     grid-template-columns: 345px;
-    padding: 80px 0px 120px 0px;
+    padding: 0px 0px 0px 0px;
     gap: 40px;
   }
 `
@@ -94,7 +94,6 @@ const animation = keyframes`
 
 const TextWrapper = styled.div`
   max-width: 980px;
-  padding-top: 60px;
   text-align: center;
   margin: auto;
 
@@ -128,22 +127,20 @@ const TextWrapper = styled.div`
 `
 
 const Title = styled(H1)`
-  color: ${themes.dark.text1};
-  line-height: 78px;
-  span {
-    background: linear-gradient(90deg, #54C5C0 0%, #789BB6 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  color: #54C5C0;
+  
   @media (max-width: 1354px) {
     text-align: center;
   }
 
   @media (max-width: 480px) {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 14px;
+    line-height: 21px;
     text-align: left;
   }
 `

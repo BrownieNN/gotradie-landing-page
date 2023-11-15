@@ -14,21 +14,30 @@ export const menuData = [
     showInFooter: true, // Show in footer
   },
   { 
-    title: "How does it work?", 
+    title: "How does it work", 
+    icon: "/images/icons/careers.svg",
+    link: "/Features",
+    showInHeader: true, // Show in header
+    showInFooter: false, // Show in footer
+    showBackground: false,
+  },
+  { 
+    title: "Who's it for", 
     icon: "/images/icons/careers.svg",
     showInHeader: true, // Show in header
     showInFooter: false, // Show in footer
     showBackground: false,
   },
   { 
-    title: "Who's it for?", 
+    title: "Why change", 
     icon: "/images/icons/careers.svg",
+    link: "/Why",
     showInHeader: true, // Show in header
     showInFooter: false, // Show in footer
     showBackground: false,
   },
   { 
-    title: "How much?", 
+    title: "Pricing", 
     icon: "/images/icons/careers.svg",
     link: "/pricing",
     showInHeader: true, // Show in header
@@ -62,7 +71,7 @@ export const menuData = [
 ]
 
 export const tooltipData = [
-  { title: "How's it work?", icon: "/images/icons/info.svg", link: "/pricing", showBackground: true },
+  { title: "How's it work", icon: "/images/icons/info.svg", link: "/pricing", showBackground: true },
   {
     title: "Who's it for",
     icon: "/images/icons/arrow-down.svg",

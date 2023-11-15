@@ -1,25 +1,25 @@
 // testimonialData.js
 const testimonialData = [
     {
-      quote: `"People were missing information. <span class='highlight'>Photos at the end of the day were going into different albums & inboxes</span>, it just got very jumbled and messy"`,
+      quote: `"<span class='highlight'>Photos at the end of the day were going into different albums & inboxes. It was just a jumbled mess before GoTradie</span>"`,
       videoUrl: "/images/Video/greenstone.mp4",
       avatar: "/images/avatars/dan.png",
       business: "Greenstone Home & Garden",
       trade: "Landscaper"
     },
     {
-        quote: "Butopia",
-        videoUrl: "/images/Video/greenstone.mp4",
-        avatar: "",
-        business: "",
-        trade: ""
+        quote: `"<span class='highlight'>We're able to do more projects with same amount of team, I don't need do the dreaded 4pm whip around.</span>"`,
+        videoUrl: "/images/Video/butopia.mp4",
+        avatar: "/images/avatars/amanda-greg.png",
+        business: "Butopia Building",
+        trade: "Residential Builders"
     },
     {
-      quote: "WS CLadding",
-      videoUrl: "/images/Video/greenstone.mp4",
-      avatar: "",
-      business: "",
-      trade: ""
+      quote: `"<span class='highlight'>Not knowing where everything was whether that be what the client has said, things were getting lost</span>"`,
+      videoUrl: "/images/Video/powersolar.mp4",
+      avatar: "/images/avatars/kieran.png",
+      business: "Power & Solar Group",
+      trade: "Level 2 ASP Electrician & Solar"
     },
     // Add more testimonial objects as needed
   ];

@@ -40,7 +40,7 @@ const Wrapper = styled.div`
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5); */
   border-radius: 8px;
-  max-width: 250px;
+  width: 250px;
   height: 52px;
   display: grid;
   grid-template-columns: auto 18px;
@@ -52,11 +52,12 @@ const Wrapper = styled.div`
   /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 
   @media (max-width: 1024px) {
-    max-width: 100%;
+    width: 100%;
   }
 
   @media (max-width: 480px) {
-    max-width: 100%;
+    width: 100%;
+    margin-bottom: 16px;
   }
 
   *,
