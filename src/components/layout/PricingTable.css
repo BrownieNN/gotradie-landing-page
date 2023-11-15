@@ -1,0 +1,44 @@
+/* PricingTable.css */
+.pricing-table-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+  }
+  
+  .pricing-column {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pricing-column h3 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  
+  .pricing-column p.price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-column ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pricing-column li {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+  
+  /* Mobile Responsive Settings */
+  @media screen and (max-width: 768px) {
+    .slick-slider {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
