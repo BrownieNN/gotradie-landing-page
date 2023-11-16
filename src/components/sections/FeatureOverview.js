@@ -237,7 +237,6 @@ const ContentContainer = styled.div`
 
 const SmallTitle = styled.h5`
   color: #54c5c0;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -252,7 +251,6 @@ const SmallTitle = styled.h5`
 
 const BigTitle = styled.h1`
   color: #ffffff;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 45px;
   font-weight: 700;
   line-height: 51px;
@@ -369,7 +367,6 @@ const Icon = styled.img`
 
 const Headline = styled.h3`
   color: #ffffff;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 21px;
   font-weight: 700;
   line-height: 32px;
@@ -379,7 +376,6 @@ const Headline = styled.h3`
 
 const BodyCopy = styled.p`
   color: #ffffff;
-  font-family: "Montserrat-Medium", Helvetica;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
@@ -388,7 +384,6 @@ const BodyCopy = styled.p`
 
 const TextLink = styled.a`
   color: #54c5c0;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;

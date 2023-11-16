@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { css, keyframes } from 'styled-components';
-import WorksData from '../../data/WorksData';
+import AdditionalData from '../../data/AdditionalData';
 
 // React component
 const FeatureOverview = () => {
@@ -46,12 +46,13 @@ const FeatureOverview = () => {
         <BigTitle>But wait theres more</BigTitle>
         {/* Mobile Slider */}
         <BoxContainer>
-          {WorksData.map((work, index) => (
+          {AdditionalData.map((work, index) => (
            <Box 
            key={work.id}
            index={index}
          >
                 <TextWrapper>
+                <Subtitle>{work.subtitle}</Subtitle>
                 <Headline>{work.title}</Headline>
                     <BodyCopy>{work.body}</BodyCopy>
                         {work.links.map((link, index) => (
@@ -121,9 +122,8 @@ const ContentContainer = styled.div`
   }
 `;
 
-const SmallTitle = styled.h5`
+const Subtitle = styled.h5`
   color: #54c5c0;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -278,6 +278,21 @@ const Box = styled.div`
 
       }
     }
+  }
+`;
+
+const SmallTitle = styled.h5`
+  color: #54c5c0;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 14px;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+
+  @media (max-width: 768px) {
+    text-align: center;
   }
 `;
 

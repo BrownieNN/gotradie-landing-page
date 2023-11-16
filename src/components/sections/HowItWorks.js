@@ -124,7 +124,6 @@ const ContentContainer = styled.div`
 
 const SmallTitle = styled.h5`
   color: #54c5c0;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -175,7 +174,6 @@ padding: 32px 32px 0px 32px;
 
 const BigTitle = styled.h1`
   color: #ffffff;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 45px;
   font-weight: 700;
   line-height: 51px;
@@ -284,7 +282,6 @@ const Box = styled.div`
 
 const Headline = styled.h3`
   color: #ffffff;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 28px;
   font-weight: 700;
   line-height: 32px;
@@ -294,7 +291,6 @@ const Headline = styled.h3`
 
 const BodyCopy = styled.p`
   color: #ffffff;
-  font-family: "Montserrat-Medium", Helvetica;
   font-size: 15px;
   font-weight: 500;
   line-height: 21px;
@@ -339,7 +335,6 @@ const TileImage = styled.img`
 
 const TextLink = styled.a`
   color: #54c5c0;
-  font-family: "Montserrat-Bold", Helvetica;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
