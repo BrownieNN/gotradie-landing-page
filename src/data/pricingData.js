@@ -3,7 +3,7 @@ export const priceData = [
         // icon: "/images/icons/thumbs-up-white.svg",
         // offer: "Give it a crack",
         title: "Mates Rates",
-        description: "up to 20 members",
+        description: "up to 5 members",
         price: "$0",
         size: "2GB Storage included",
         monthly: "",

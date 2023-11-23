@@ -151,7 +151,7 @@ const Subtitle = styled(MediumText)`
 
 const Title = styled(H1)`
 font-size:62px;
-line-height: 64px;
+line-height: 70px;
   color: ${themes.dark.text1};
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);

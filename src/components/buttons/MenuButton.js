@@ -2,12 +2,16 @@ import React, { useEffect, useRef, useState } from "react"
 import styled, { css } from "styled-components";
 import { Link } from "gatsby";
 import { menuTrade } from "../../data/menuTrade";
+import { useLocation } from '@reach/router';
 
 export default function MenuButton(props) {
+  const whoIsItForPaths = ['/Landscapers', '/Builders', '/Electricians', '/Maintenance', '/Gardeners', '/Construction', '/Traffic', '/Civil', '/Cleaning', '/HVAC', '/Roofing', '/Architects', '/FitOut', '/Carpenters', '/SteelFabrication', '/ProjectManagement',/* other related paths */];
+  const location = useLocation();
   const { item, onClick } = props;
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const ref = useRef()
   const dropdownRef = useRef()
+  const isActive = location.pathname === item.link || (item.title === "Who's it for" && whoIsItForPaths.includes(location.pathname));
 
   const handleItemClick = (event) => {
     if (item.link.startsWith("mailto:")) {
@@ -30,10 +34,12 @@ export default function MenuButton(props) {
   }
 
   const toggleDropdown = () => {
-    if (item.title === "Who's it for") {
+    // Check if the screen width is greater than 1024px (desktop)
+    if (window.innerWidth > 1024 && item.title === "Who's it for") {
       setIsDropdownOpen(!isDropdownOpen);
     }
   };
+  
 
   useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -50,7 +56,8 @@ export default function MenuButton(props) {
       <MenuItem
         showBackground={item.showBackground}
         onClick={toggleDropdown}
-      >
+        isActive={isActive}
+        >
         <img src={item.icon} alt={item.title} />
         {item.title}
       </MenuItem>
@@ -89,7 +96,7 @@ const Dropdown = styled.div`
     position: absolute;
     padding: 20px;
     top: 80px;
-    right: 564px;
+    right: 23%;
     background: rgba(15, 14, 71, 0.3);
     box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
@@ -101,8 +108,8 @@ const Dropdown = styled.div`
     z-index: 10;
     display: grid;
     gap: 10px;
-    columns: 3 auto;
-    grid-template-columns: repeat(3, auto);
+    columns: 4 auto;
+    grid-template-columns: repeat(4, auto);
 `;
 
 const ItemWrapper = styled.div`
@@ -135,6 +142,7 @@ const MenuItem = styled.div`
   align-items: center;
   padding: 16px 24px;
   border-radius: 10px;
+  color: ${props => props.isActive ? '#54C5C0' : 'rgba(255, 255, 255)'};
 
   /* Apply background color only if showBackground is true */
   ${props =>
@@ -144,6 +152,8 @@ const MenuItem = styled.div`
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1),
         inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
     `}
+
+
 
   img {
     display: none;

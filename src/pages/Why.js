@@ -14,9 +14,9 @@ import PlainText from "../components/sections/PlainText"
 function Why() {
 
     const seoProps = {
-      title: "Simple Communication for Electricians ⚡",
-      description: "Empower your team better with comms & info in one place",
-      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-electricians.png", // Use the absolute URL
+      title: "Why businesses should ditch SMS, Email, WhatsApp and Messenger",
+      description: "In today's fast-paced construction and trade industries, efficient communication is the cornerstone of success.",
+      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-generic.png", // Use the absolute URL
       imageWidth: 1200, // Specify the image width
       imageHeight: 630, // Specify the image height
       url: "https://www.gotradie.com.au/why",
@@ -49,7 +49,7 @@ function Why() {
         caption="“Yeh it’s on my phone somewhere i think”"
       />
       <FeatureDetailLeft
-        title="Media Chaos vs. Effortless Media Management"
+        title="Media chaos vs. effortless media management"
         description=
         {
           <p>
@@ -66,7 +66,7 @@ function Why() {
         caption="“I sent you the plan, you sweet with what we discussed”"
       />
        <FeatureDetailLeft
-        title="Task Tracking Woes vs. Task Mastery and Quality Assurance"
+        title="Task tracking woes vs. task mastery and quality assurance"
         description=
         {
           <p>
@@ -83,7 +83,7 @@ function Why() {
         caption="“He took off with all my pricing list & setup his own business”"
       />
       <FeatureDetailLeft
-        title="Privacy and Data Security vs. Peace of Mind"
+        title="Privacy and data security vs. peace of mind"
         description=
         {
           <p>
@@ -92,15 +92,15 @@ function Why() {
           <p>GoTradie prioritizes your data's security and privacy. Enjoy peace of mind knowing that your project information is protected by robust security measures, preserving business info confidentiality and ensuring data integrity.</p>
           </p>
         }
-        phoneHero="/images/phones/phone-privacy.png"
+        phoneHero="/images/phones/Plumbers/Plumber-chat.png"
       />
       <GifSection
         // Assign the ref to a standard HTML element within FeatureDetailLeft
-        gifImage="/images/gifs/sausage-throw.gif"
-        caption="“The plumber, sparky’s want to know about the bathroom specs”"
+        gifImage="/images/gifs/exhausted.jpg"
+        caption="“Can i borrow you for sec?”"
       />
       <FeatureDetailLeft
-        title="Limited Growth vs. Collaboration and Growth"
+        title="Limited growth vs. collaboration and growth"
         description=
         {
           <p>

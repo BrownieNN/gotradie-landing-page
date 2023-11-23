@@ -339,6 +339,7 @@ const TextLink = styled.a`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding-right: 16px;
 
   &:hover {
     text-decoration: underline;

@@ -3,7 +3,7 @@ import styled, { css, keyframes } from 'styled-components';
 import AdditionalData from '../../data/AdditionalData';
 
 // React component
-const FeatureOverview = () => {
+const AdditionalFeatures = () => {
 
   const [isVisible, setIsVisible] = useState(false); // State to track visibility for the fade-in effect
   const sectionRef = useRef(null); // Ref for the section to observe
@@ -55,11 +55,6 @@ const FeatureOverview = () => {
                 <Subtitle>{work.subtitle}</Subtitle>
                 <Headline>{work.title}</Headline>
                     <BodyCopy>{work.body}</BodyCopy>
-                        {work.links.map((link, index) => (
-                            <TextLink key={index} href={link.url}>
-                                {link.text}
-                            </TextLink>
-                            ))}
                 </TextWrapper>
                 <ImageWrapper>
                     <TileImage src={work.image} alt={work.title} />
@@ -73,7 +68,7 @@ const FeatureOverview = () => {
   );
 };
 
-export default FeatureOverview;
+export default AdditionalFeatures;
 
  // Styled component for the section
 
@@ -130,7 +125,7 @@ const Subtitle = styled.h5`
   line-height: 14px;
   text-transform: uppercase;
   padding-bottom: 16px;
-  text-align: center;
+  text-align: left;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -141,11 +136,10 @@ const TextWrapper = styled.div``
 
 const ImageWrapper = styled.div`
 
-width: 100%;
-height: 278px;
-// border: 1px solid green;
-overflow: hidden;
-padding: 32px 32px 0px 32px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
 
 @media (max-width: 768px) {
   width: 300px;
@@ -230,7 +224,6 @@ const Box = styled.div`
     }
     &:nth-child(3) {
       grid-template-columns: minmax(auto, 2fr) 1fr; // Adjust the ratio according to your design needs
-
       // Target the image wrapper inside the third tile to adjust its width
       > :last-child {
         grid-column: 1;
@@ -290,6 +283,7 @@ const SmallTitle = styled.h5`
   line-height: 14px;
   text-transform: uppercase;
   padding-bottom: 16px;
+  text-align: center;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -316,13 +310,11 @@ const BodyCopy = styled.p`
 `;
 
 const TileImage = styled.img`
-  width: 100%;
-  height: auto;
-  display: block;
+      width: 460px;
 
   // Adjustments for the third tile's image
   ${Box}:nth-child(3) & {
-    width: 88%; // Adjust the width as necessary
+    width: 100%; // Adjust the width as necessary
     margin-top: 0;
     height: auto;
     display: block;

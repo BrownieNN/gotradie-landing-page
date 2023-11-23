@@ -2,55 +2,55 @@ import React, { createRef, useEffect, useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import { themes } from "../styles/ColorStyles";
 import { ButtonText, H1, MediumText } from "../styles/TextStyles";
-import lottie from "lottie-web";
-import animationData from "../animations/lottie/walkthrough2.json";
-import FourColumnSection from "./FourColumnSection";
+// import lottie from "lottie-web";
+// import animationData from "../animations/lottie/walkthrough2.json";
+// import FourColumnSection from "./FourColumnSection";
 import GetStarted from "../buttons/GetStarted";
 import SecondaryButton from "../buttons/SecondaryButton";
 
 function HeroSection(props) {
-  let animationContainer = createRef();
-  let anim = null;
-  const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
-  const [scaleIn, setScaleIn] = useState(false);
-  const emojiRef = createRef();
-  const emojis = ["🔨", "🪚", "🧱", "🪠", "⚡", "🏠", "🪴", "🌳", "🚦", "🏗️", "🚧", "📋", "🪳", "🪨", "🦺", "🔑", "🪟",];
+  // let animationContainer = createRef();
+  // let anim = null;
+  // const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
+  // const [scaleIn, setScaleIn] = useState(false);
+  // const emojiRef = createRef();
+  // const emojis = ["🔨", "🪚", "🧱", "🪠", "⚡", "🏠", "🪴", "🌳", "🚦", "🏗️", "🚧", "📋", "🪳", "🪨", "🦺", "🔑", "🪟",];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentEmojiIndex((prevIndex) =>
-        prevIndex === emojis.length - 1 ? 0 : prevIndex + 1
-      );
-      // Set scaleIn to true to trigger the animation
-      setScaleIn(true);
-    }, 1000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentEmojiIndex((prevIndex) =>
+  //       prevIndex === emojis.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //     // Set scaleIn to true to trigger the animation
+  //     setScaleIn(true);
+  //   }, 1000);
 
-    return () => clearInterval(interval);
-  }, [emojis.length]);
+  //   return () => clearInterval(interval);
+  // }, [emojis.length]);
 
-  useEffect(() => {
-    anim = lottie.loadAnimation({
-      container: animationContainer.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: animationData,
-    });
-    return () => anim.destroy();
-  }, []);
+  // useEffect(() => {
+  //   anim = lottie.loadAnimation({
+  //     container: animationContainer.current,
+  //     renderer: "svg",
+  //     loop: true,
+  //     autoplay: true,
+  //     animationData: animationData,
+  //   });
+  //   return () => anim.destroy();
+  // }, []);
 
-  useEffect(() => {
-    if (scaleIn) {
-      const animationEndHandler = () => {
-        setScaleIn(false);
-      };
-      const emojiElement = emojiRef.current;
-      emojiElement.addEventListener("animationend", animationEndHandler);
-      return () => {
-        emojiElement.removeEventListener("animationend", animationEndHandler);
-      };
-    }
-  }, [scaleIn]);
+  // useEffect(() => {
+  //   if (scaleIn) {
+  //     const animationEndHandler = () => {
+  //       setScaleIn(false);
+  //     };
+  //     const emojiElement = emojiRef.current;
+  //     emojiElement.addEventListener("animationend", animationEndHandler);
+  //     return () => {
+  //       emojiElement.removeEventListener("animationend", animationEndHandler);
+  //     };
+  //   }
+  // }, [scaleIn]);
 
   return (
     <Wrapper>
@@ -58,12 +58,8 @@ function HeroSection(props) {
         <TextWrapper>
           <Lockup>
             <Title>
-              The Messaging App <br />
-              <span>
-                Built For Hard Work <AnimatedEmoji scaleIn={scaleIn} ref={emojiRef}>
-                  {emojis[currentEmojiIndex]}
-                </AnimatedEmoji>
-              </span>
+              The messaging app <br />
+                built for <span>hard work</span>
             </Title>
           </Lockup>
           <Description>
@@ -235,12 +231,11 @@ const Title = styled(H1)`
   text-align: center;
   color: ${themes.dark.text1};
   span {
-    // background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // color: transparent;
-    color: #54C5C0;
-}
+    background: linear-gradient(90deg, #54C5C0 0%, #789BB6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 
 @media (max-width: 1354px) {
   text-align: center;

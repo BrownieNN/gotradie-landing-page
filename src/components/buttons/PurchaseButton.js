@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { ButtonText } from "../styles/TextStyles"
+import { Link } from 'gatsby';
 
 export default function PurchaseButton(props) {
-  const { title, className } = props
+  const { title, to, className } = props
   return (
-    <Wrapper className={className} onClick={props.onClick}>
+    <Wrapper to={to} className={className} onClick={props.onClick}>
       <TextWrapper>
         <Title>{title || "Download"}</Title>
       </TextWrapper>
@@ -16,7 +17,7 @@ export default function PurchaseButton(props) {
   )
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
   cursor: pointer;
   background: #54c5c0;
   /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),

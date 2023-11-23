@@ -82,7 +82,7 @@ const FeatureOverview = () => {
          </ImageTransitionWrapper>
       <ContentContainer>
         <SmallTitle>LEVEL UP FROM WHATSAPP OR SMS</SmallTitle>
-        <BigTitle>Why GoTradie is a No-Brainer for your Business</BigTitle>
+        <BigTitle>Why GoTradie is a <br />No-Brainer for your Business</BigTitle>
         {/* Mobile Slider */}
         <MobileSlider {...settings}>
             {featureData.map((feature, idx) => (

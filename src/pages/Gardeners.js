@@ -11,13 +11,14 @@ import FaqSection from "../components/sections/FaqSection"
 import FeatureDetailLeft from "../components/sections/FeatureDetailLeft";
 import FeatureDetailRight from "../components/sections/FeatureDetailRight";
 import FinalSection from "../components/sections/FinalSection";
+import PanelSection from "../components/sections/PanelSection"
 
 function Gardeners() {
 
     const seoProps = {
       title: "Simple Communication for Gardeners 🪴",
-      description: "Easily keep & find all your photo's and info, safe & secure",
-      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-gardeners.png", // Use the absolute URL
+      description: "Grow your garden business with less",
+      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-generic.png", // Use the absolute URL
       imageWidth: 1200, // Specify the image width
       imageHeight: 630, // Specify the image height
       url: "https://www.gotradie.com.au/Gardeners",
@@ -37,7 +38,7 @@ function Gardeners() {
         subtitle="To-do lists"
         title="Breathe easy with quick job delegation"
         description="GoTradie empowers gardening teams with rapid job delegation. Easily assign, record, and invoice quick garden tasks, ensuring efficient client billing"
-        phoneHero="/images/phones/phone-tasks.png"
+        phoneHero="/images/phones/Gardeners/Gardeners-to-do.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Language translation "
         // subIconOne="/images/icons/translate.svg"
@@ -53,7 +54,7 @@ function Gardeners() {
         subtitle="Clips"
         title="Get the rub of the green"
         description="With GoTradie's Clips, effortlessly organize and share garden photos to clients. Prove your expertise and settle disputes with ease."
-        phoneHero="/images/phones/phone-clips.png"
+        phoneHero="/images/phones/Gardeners/Gardeners-clips.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Filter by assigned, team & more"
         // subIconOne="/images/icons/filter.svg"
@@ -69,7 +70,7 @@ function Gardeners() {
         subtitle="Privacy"
         title="Don’t let anyone cut your grass"
         description="GoTradie provides a secure data, safeguarding your pricing Rest easy knowing your sensitive information is protected against people knowing the ins and outs of your business."
-        phoneHero="/images/phones/phone-privacy.png"
+        phoneHero="/images/phones/Gardeners/Gardeners-chat.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Language translation "
         // subIconOne="/images/icons/translate.svg"
@@ -79,6 +80,13 @@ function Gardeners() {
         // subIconThree="/images/icons/thumbs-up.svg"
         // subFeatureFour="Content privacy"
         // subIconFour="/images/icons/lock.svg"
+      />
+       <PanelSection 
+        profile="/images/avatars/avenue-one.png"
+        title="Special mention to Avenue One"
+        subtitle="Images & screens provided by Avenue One Gardens, proud member of GoTradie"
+        buttonTitle="Check them out"
+        buttonUrl="https://www.instagram.com/lou.projects/"
       />
       <FaqSection />
       <FinalSection />

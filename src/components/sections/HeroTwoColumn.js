@@ -1,12 +1,29 @@
-import React from "react"
+import React, { createRef, useEffect } from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
+import lottie from "lottie-web"
 import FeatureAnimationOne from "../animations/FeatureOneAnimation"
 import GetStarted from "../buttons/GetStarted"
 import SecondaryButton from "../buttons/SecondaryButton"
+import animationData from "../animations/lottie/Walkthrough-updated.json"
 
 function HeroTwoColumn(props) {
+  let animationContainer = createRef();
+  let anim = null;
+
+  useEffect(() => {
+    anim = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+    })
+    return () => anim.destroy() // optional clean up for unmounting
+  }, [])
+
+
   const {
     subtitle,
     title,
@@ -35,12 +52,9 @@ function HeroTwoColumn(props) {
             <SecondaryButton title="Book demo" url= "https://calendly.com/adamfazzani_gotradie/30min" />
           </ButtonGroup>
         </TextWrapper>
-        <ImageWrapper>
-          <FeatureAnimationOne
-            backgroundOne={animationImageOne}
-            backgroundTwo={animationImageTwo}
-          />
-        </ImageWrapper>
+        <AnimationWrapper>
+          <Animation ref={animationContainer} />
+        </AnimationWrapper>
       </ContentWrapper>
     </Wrapper>
   )
@@ -82,6 +96,23 @@ const ContentWrapper = styled.div`
   }
 `
 
+const AnimationWrapper = styled.div`
+  max-width: 558px;
+  display: flex;
+  margin: 0 auto;
+  @media (max-width: 480px) {
+    display: none;
+  }
+`
+
+const Animation = styled.div`
+  max-width: 558px;
+  height: auto;
+  @media (max-width: 480px) {
+    max-width: 345px;
+  }
+`
+
 const ImageWrapper = styled.div`
   max-width: 588px;
   height: 359px;
@@ -113,9 +144,9 @@ const ImageWrapper = styled.div`
 const TextWrapper = styled.div`
   max-width: 588px;
   display: grid;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-left: 32px;
-  gap: 32px;
+  gap: 16px;
 
   > * {
     opacity: 0;
@@ -160,7 +191,7 @@ const Subtitle = styled(MediumText)`
 `
 
 const Title = styled(H1)`
-font-size:62px;
+font-size:54px;
 line-height: 64px;
   color: ${themes.dark.text1};
   span {

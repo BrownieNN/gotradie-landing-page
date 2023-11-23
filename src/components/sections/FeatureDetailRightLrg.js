@@ -158,11 +158,19 @@ overflow: hidden;
 
 
 @media (max-width: 768px) {
-    grid-template-columns: repeat(1,1fr);
-    max-width: 345px;
-    padding: 54px 0px;
-    gap: 32px;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 345px;
+  padding: 80px 0px;
+  gap: 32px;
+
+  // Assuming you have two child elements, you can reverse their order like this:
+  & > :first-child {
+    order: 2;
   }
+  & > :last-child {
+    order: 1;
+  }
+}
 `;
 
 const FadeInImage = styled.img`
@@ -230,8 +238,8 @@ width: 100%;
   img {
     position: relative;
     width: 100%;
-    top: 42px;
-    right: -40px;
+    top: 0px;
+    right: 0px;
     }
   }
 `;

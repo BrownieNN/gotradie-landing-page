@@ -16,8 +16,8 @@ function Maintenance() {
 
     const seoProps = {
       title: "Simple Communication for Maintenance & Repair 🪠",
-      description: "Never lose info or photos, secure & safe, accessable in a few taps",
-      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-maintenance.png", // Use the absolute URL
+      description: "Communicate with your team, capture proof. Keep watertight records",
+      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-generic.png", // Use the absolute URL
       imageWidth: 1200, // Specify the image width
       imageHeight: 630, // Specify the image height
       url: "https://www.gotradie.com.au/Maintenance",
@@ -28,7 +28,7 @@ function Maintenance() {
     <SEO {...seoProps} />
       <HeroTwoColumn
         subtitle={<p style={{color: "#54C5C0"}}>🪠 FOR MAINTENANCE & REPAIR</p>}
-        title={<p style={{color: "white"}}>Your solution for <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>speed, proof, and privacy</span></p>}
+        title={<p style={{color: "white"}}>Communicate with your team, capture proof.<span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>  Keep watertight records</span></p>}
         description="GoTradie empowers maintenance and repair businesses with simplified job delegation, easy record-keeping, and data security. Do more jobs with less"
         animationImageOne="/images/shots/hero-shot1.png"
       />
@@ -37,7 +37,7 @@ function Maintenance() {
         subtitle="To-do lists"
         title="Swift delegation, speedy results"
         description="GoTradie enables fast & easy job delegation. Assign, record, and invoice quick repair tasks effortlessly, ensuring efficient operations and prompt client billing."
-        phoneHero="/images/phones/phone-tasks.png"
+        phoneHero="/images/phones/Plumbers/Plumber-to-do.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Language translation "
         // subIconOne="/images/icons/translate.svg"
@@ -53,7 +53,7 @@ function Maintenance() {
         subtitle="Chats"
         title="Your data, your fortress"
         description="GoTradie provides a secure data, safeguarding your pricing Rest easy knowing your sensitive information is protected against people knowing the ins and outs of your business."
-        phoneHero="/images/phones/phone-privacy.png"
+        phoneHero="/images/phones/Plumbers/Plumber-chat.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Filter by assigned, team & more"
         // subIconOne="/images/icons/filter.svg"
@@ -66,10 +66,10 @@ function Maintenance() {
       />
       <FeatureDetailLeft
         // Assign the ref to a standard HTML element within FeatureDetailLeft
-        subtitle="Chats"
+        subtitle="Clips"
         title="Proving excellence, one photo at a time"
-        description="With GoTradie's Proof of Works Gallery, easily organize and forward job photos to clients for disputes or as a testament to your quality service."
-        phoneHero="/images/phones/phone-clips.png"
+        description="With GoTradie's Clips, easily organize and forward job photos to clients for disputes or as a testament to your quality service."
+        phoneHero="/images/phones/Plumbers/Plumber-clips.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Language translation "
         // subIconOne="/images/icons/translate.svg"

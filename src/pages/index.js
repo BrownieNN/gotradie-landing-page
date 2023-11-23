@@ -15,6 +15,7 @@ import TestimonialCarousel from "../components/sections/TestimonialSection"
 import FeatureOverview from "../components/sections/FeatureOverview"
 import HowItWorks from "../components/sections/HowItWorks"
 import FinalSection from "../components/sections/FinalSection"
+import PanelSection from "../components/sections/PanelSection"
 
 function IndexPage() {
 
@@ -34,8 +35,9 @@ function IndexPage() {
       <VideoSection />
       <LogoSection />
       <FeatureOverview />
-      <HowItWorks />
+      <PanelSection />
       <TestimonialCarousel />
+      <HowItWorks />
       <PricingTable />
       <FinalSection />
     </Layout>

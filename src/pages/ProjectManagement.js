@@ -17,8 +17,8 @@ function ProjectManagement() {
 
     const seoProps = {
       title: "Simple Communication for Project Management 📋",
-      description: "Not on site? Empower your team & their productivity everyday",
-      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-project-management.png", // Use the absolute URL
+      description: "Powering day-to-day project execution",
+      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-project-generic.png", // Use the absolute URL
       imageWidth: 1200, // Specify the image width
       imageHeight: 630, // Specify the image height
       url: "https://www.gotradie.com.au/ProjectManagement",
@@ -29,7 +29,7 @@ function ProjectManagement() {
     <SEO {...seoProps} />
       <HeroTwoColumn
         subtitle={<p style={{color: "#54C5C0"}}>📋 FOR PROJECT MANAGERS</p>}
-        title={<p style={{color: "white"}}>Mastering <span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>project precision</span></p>}
+        title={<p style={{color: "white"}}><span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}>Powering day-to-day</span> project execution</p>}
         description="Empower your role as a project manager with GoTradie. Seamlessly connect on-site foremen and office-based project managers, achieve total transparency, and effortlessly manage tasks."
         animationImageOne="/images/shots/hero-shot1.png"
       />
@@ -52,8 +52,8 @@ function ProjectManagement() {
       <FeatureDetailRightLrg
         // Assign the ref to a standard HTML element within FeatureDetailLeft
         subtitle="Webapp"
-        title="Desktop Power, Mobile Freedom"
-        description="GoTradie offers a desktop application with all mobile features. Say goodbye to unnecessary site visits—assign tasks, manage upcoming schedules, and stay in control from anywhere."
+        title="See it all on the big screen"
+        description="GoTradie offers a desktop application with all the mobile features. Say goodbye to unnecessary site visits—assign tasks, manage upcoming schedules, and stay in control from anywhere."
         phoneHero="/images/phones/webapp.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Filter by assigned, team & more"
@@ -68,7 +68,7 @@ function ProjectManagement() {
       <FeatureDetailLeft
         // Assign the ref to a standard HTML element within FeatureDetailLeft
         subtitle="To-do lists"
-        title="Task Assignment, Task Mastery"
+        title="Task assignment, project mastery"
         description="With GoTradie, project managers can easily assign tasks to workers and manage upcoming schedules with precision. Streamline your task management for project success."
         phoneHero="/images/phones/phone-tasks.png"
         // featureText="OUT OF THE BOX FEATURES"

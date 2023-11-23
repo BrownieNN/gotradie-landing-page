@@ -11,13 +11,14 @@ import FaqSection from "../components/sections/FaqSection"
 import FeatureDetailLeft from "../components/sections/FeatureDetailLeft";
 import FeatureDetailRight from "../components/sections/FeatureDetailRight";
 import FinalSection from "../components/sections/FinalSection";
+import PanelSection from "../components/sections/PanelSection"
 
 function Electricians() {
 
     const seoProps = {
       title: "Simple Communication for Electricians ⚡",
-      description: "Empower your team better with comms & info in one place",
-      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-electricians.png", // Use the absolute URL
+      description: "Empower your electrical & solar business",
+      imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-generic.png", // Use the absolute URL
       imageWidth: 1200, // Specify the image width
       imageHeight: 630, // Specify the image height
       url: "https://www.gotradie.com.au/Electricians",
@@ -35,9 +36,9 @@ function Electricians() {
       <FeatureDetailLeft
         // Assign the ref to a standard HTML element within FeatureDetailLeft
         subtitle="Clips"
-        title="Simplified technical documentation"
-        description="Manage complex technical documents effortlessly. Share detailed instructions, compliance data, and safety protocols with your team, ensuring precision in every project."
-        phoneHero="/images/phones/phone-clips.png"
+        title="Simplified media management"
+        description="Capture safe practice effortlessly. Compliance photos, and safety protocols with your team, ensuring a safe job well done"
+        phoneHero="/images/phones/Electrician/Electrician-clips.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Language translation "
         // subIconOne="/images/icons/translate.svg"
@@ -51,9 +52,9 @@ function Electricians() {
       <FeatureDetailRight
         // Assign the ref to a standard HTML element within FeatureDetailLeft
         subtitle="WORKSITES"
-        title="Clear Communication, Better Results"
+        title="Clear communication, better results"
         description="Hold video chats for in-depth technical discussions. Clarify complex instructions, assess project progress, and ensure your team comprehends every detail without delay."
-        phoneHero="/images/phones/phone-worksites.png"
+        phoneHero="/images/phones/Electrician/Electrician-chat.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Filter by assigned, team & more"
         // subIconOne="/images/icons/filter.svg"
@@ -67,9 +68,9 @@ function Electricians() {
       <FeatureDetailLeft
         // Assign the ref to a standard HTML element within FeatureDetailLeft
         subtitle="To-do lists"
-        title="Updates at Your Fingertips"
+        title="Updates at your fingertips"
         description="From high-maintenance jobs to civil infrastructure projects, and stay in the loop with job updates and completions from the team. Ensuring you’ve got all the answer for clients"
-        phoneHero="/images/phones/phone-tasks.png"
+        phoneHero="/images/phones/Electrician/Electrician-to-do.png"
         // featureText="OUT OF THE BOX FEATURES"
         // subFeatureOne="Language translation "
         // subIconOne="/images/icons/translate.svg"
@@ -79,6 +80,13 @@ function Electricians() {
         // subIconThree="/images/icons/thumbs-up.svg"
         // subFeatureFour="Content privacy"
         // subIconFour="/images/icons/lock.svg"
+      />
+       <PanelSection 
+        profile="/images/avatars/power-solar-group.png"
+        title="Special mention to Power & Solar Group"
+        subtitle="Images & screens provided by Power & Solar Group, proud member of GoTradie"
+        buttonTitle="Check them out"
+        buttonUrl="https://www.instagram.com/powerandsolargroup/"
       />
       <FaqSection />
       <FinalSection />

@@ -3,7 +3,7 @@ import { themes } from "../styles/ColorStyles"
 import styled, { keyframes } from "styled-components"
 import { H1 } from "../styles/TextStyles"
 import lottie from "lottie-web"
-import animationData from "../animations/lottie/Messages-three.json"
+import animationData from "../animations/lottie/Messages-five.json"
 
 function HeroAnimation() {
   let animationContainer = createRef()

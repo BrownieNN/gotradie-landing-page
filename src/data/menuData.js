@@ -71,25 +71,32 @@ export const menuData = [
 ]
 
 export const tooltipData = [
-  { title: "How's it work", icon: "/images/icons/info.svg", link: "/pricing", showBackground: true },
+  { title: "How's it work", icon: "/images/icons/info.svg", link: "/Features", showBackground: true },
   {
     title: "Who's it for",
     icon: "/images/icons/arrow-down.svg",
     showBackground: true,
     subLinks: [
-      { title: "Home Builders", emoji: "🏠", link: "/Builders" },
+      { title: "Home Builders", emoji: "🔨", link: "/Builders" },
       { title: "Landscapers", emoji: "🌳", link: "/Landscapers" },
       { title: "Electrician & Solar", emoji: "⚡", link: "/Electricians" },
       { title: "Maintenance & Repair", emoji: "🪠", link: "/Maintenance" },
       { title: "Gardeners", emoji: "🪴", link: "/Gardeners" },
       { title: "Construction", emoji: "🏗️", link: "/Construction" },
-      { title: "Project management", emoji: "📋", link: "/ProjectMangement" },
+      { title: "HVAC", emoji: "☀️", link: "/HVAC" },
       { title: "Traffic control", emoji: "🚦", link: "/Traffic" },
       { title: "Civil Works", emoji: "🚧", link: "/Civil" },
-      // Add more subpage links as needed
+      { title: "Cleaning", emoji: "🧹", link: "/Cleaning" },
+      { title: "Roofing", emoji: "🏠", link: "/Roofing" },
+      { title: "Architect", emoji: "📐", link: "/Architects" },
+      { title: "Commercial Fit-out", emoji: "🏢", link: "/FitOut" },
+      { title: "Carpenters", emoji: "🪚", link: "/Carpenters" },
+      { title: "Steel fabrication", emoji: "🔩", link: "/SteelFabrication" },
+      { title: "Project management", emoji: "📋", link: "/ProjectManagement" },
     ],
   },
-  { title: "How much?", icon: "/images/icons/Wallet.png", link: "/pricing", showBackground: true},
+  { title: "Why Change", icon: "/images/icons/Wallet.png", link: "/Why", showBackground: true},
+  { title: "Pricing", icon: "/images/icons/Wallet.png", link: "/pricing", showBackground: true},
   { title: "Sign up", icon: "/images/icons/signup.svg", link: "https://app.gotradie.com.au/signup", showBackground: true },
   { title: "Log in", icon: "/images/icons/login.svg", link: "https://app.gotradie.com.au/login", showBackground: true },
   { title: "Careers", icon: "/images/icons/careers.svg", link: "/careers", showBackground: true },

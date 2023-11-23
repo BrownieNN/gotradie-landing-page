@@ -1,44 +1,34 @@
 // newSectionData.js
-const WorksData = [
+const AdditionalData = [
     {
       id: 1,
-      search: "Search",
-      title: "Download the GoTradie App",
-      body: "Available across android & iOS",
-      links: [
-        { text: "Apple Store", url: "#link1" },
-        { text: "Google Play Store", url: "#link2" },
-      ],
-      image: "/images/shots/app-phones.png", // Replace with actual image path
+      subtitle: "Search",
+      title: "Find what you need, when you need it",
+      body: "Advanced search across the inbox & threads. No more scrolling through endless email chains, SMS and WhatsApp groups",
+      image: "/images/features/search-feature.png", // Replace with actual image path
     },
     {
         id: 2,
-        title: "Invite your team to GoTradie",
-        body: "Your team, office staff, managers, subbies",
-        links: [
-          { text: "Learn more", url: "#link1" },
-        ],
-        image: "/images/shots/invite-app.png", // Replace with actual image path
+        subtitle: "Profile",
+        title: "Let your business profile do the talking",
+        body: "Customise your profile, add service areas, trade services and more",
+        image: "/images/features/profile-feature.png", // Replace with actual image path
       },
       {
         id: 3,
-        title: "Start chatting and more",
-        body: "Connect, communicate and collaborate",
-        links: [
-            { text: "Learn more", url: "#link1" },
-        ],
-        image: "/images/shots/chat-app.png", // Replace with actual image path
+        subtitle: "Directory",
+        title: "Be a part of the network",
+        body: "Get access to a directory of businesses near you. Simply send them a message or give them a call",
+        image: "/images/features/directory-feature.png", // Replace with actual image path
       },
       {
         id: 4,
-        title: "Experience the difference",
-        body: "Transform chaos into collaboration",
-        links: [
-            { text: "Learn more", url: "#link1" },
-        ],
-        image: "/images/shots/notification-app.png", // Replace with actual image path
+        subtitle: "Integration",
+        title: "Connect with your existing tools",
+        body: "Coming soon, click here to chat to one of the team to become a integration partner",
+        image: "/images/features/integrations-feature.png", // Replace with actual image path
       },
   ];
   
-  export default WorksData;
+  export default AdditionalData;
   

@@ -47,7 +47,7 @@ function LogoSection(props) {
     <Wrapper id="industries">
       <ContentWrapper>
         <TextWrapper>
-          <Title>{title || "TRUSTED BY TRADE COMPANIES & ASSOCIATIONS"}</Title>
+          <Title>{title || "Trusted by 1000’s of trade companies & associations"}</Title>
         </TextWrapper>
         <TradeLogo />
       </ContentWrapper>

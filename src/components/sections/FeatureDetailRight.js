@@ -159,7 +159,7 @@ const LayoutContainer = styled.div`
 
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     max-width: 345px;
     padding: 54px 0px;
     gap: 32px;

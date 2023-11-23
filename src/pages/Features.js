@@ -24,7 +24,7 @@ function Features() {
     const seoProps = {
         title: "GoTradie - Do more with less ⚡",
         description: "Simple features to run your business day-to-day",
-        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-electricians.png", // Use the absolute URL
+        imageUrl: "https://gt-landing-staging.netlify.app/images/meta/website-meta-generic.png", // Use the absolute URL
         imageWidth: 1200, // Specify the image width
         imageHeight: 630, // Specify the image height
         url: "https://www.gotradie.com.au/Features",
@@ -43,9 +43,9 @@ function Features() {
           <TextWrapper>
             <Lockup>
               <Title>
-              It’s never been easier<br />
+              Helping you keep it together,<br />
                 <span>
-                to do more with less
+                do more with less
                 </span>
               </Title>
             </Lockup>
@@ -82,7 +82,7 @@ function Features() {
         // Assign the ref to a standard HTML element within FeatureDetailLeft
         subtitle="Chats"
         title="Streamlined communication"
-        description="Cut through the noise with GoTradie's Chat feature. One inbox, organized for teams, worksites, and clients. Enjoy greater context on job updates, findable media, flexible worksite chats, and premium to-do lists."
+        description="Cut through the noise. One organised inbox for teams, worksites, and clients chats. Enjoy greater context on job updates, searchable media and to-do lists"
         phoneHero="/images/phones/home-hero-features.png"
         featureText="OUT OF THE BOX FEATURES"
         subFeatureOne="Language translation "
@@ -101,7 +101,7 @@ function Features() {
         innerRef={section2Ref}
         subtitle="TO-DO LISTS"
         title="Simple co-ordination the way you like it"
-        description="Simplify task management with GoTradie's To-Do List and Task feature. Create lists, assign tasks, set deadlines, attach documents, and mark tasks complete."
+        description="Helping you keep it together with  To-do List and Tasks. Create lists, assign tasks, set deadlines, attach documents, and build accountability."
         phoneHero="/images/phones/phone-tasks.png"
         featureText="OUT OF THE BOX FEATURES"
         subFeatureOne="Filter by assigned, team & more"
@@ -119,7 +119,7 @@ function Features() {
       // Assign the ref to a standard HTML element within FeatureDetailLeft
         subtitle="CLIPS"
         title="Capture every step along the way"
-        description="Clips, your customizable photo folders in GoTradie, Name and add photos for clarity, making it easy to organise photos so you can find and share in no time. Easily collaborate by sharing with your team or other businesses."
+        description="Clips, the photo folders that transform your media management. Name and add photos for clarity. Replace your phones camera app and separate your work from personal gallery."
         phoneHero="/images/phones/phone-clips.png"
         featureText="OUT OF THE BOX FEATURES"
         subFeatureOne="Unlimited slides on paid tiers"
@@ -136,8 +136,8 @@ function Features() {
       <FeatureDetailRightLrg
         className="webapp-image"
         subtitle="Webapp"
-        title="Desktop power, mobile freedom"
-        description="GoTradie offers a desktop application with all mobile features. Say goodbye to unnecessary site visits—assign tasks, manage upcoming schedules, and stay in control from anywhere."
+        title="Bridging the gap between site & office"
+        description="Say goodbye to unnecessary site visits or No more waiting to get home or back to the office. Share & receive content across your mobile, tablet and desktop devices and stay in control from anywhere."
         phoneHero="/images/phones/webapp.png"
         featureText="OUT OF THE BOX FEATURES"
         subFeatureOne="To-lists & tasks"
