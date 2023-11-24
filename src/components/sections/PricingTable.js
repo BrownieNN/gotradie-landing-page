@@ -9,8 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function PricingTable() {
-  const desktopColumns = 3;
-  const tabletColumns = 3;
+  const desktopColumns = 2;
+  const tabletColumns = 2;
   const tabletPortraitColumns = 1;
   const mobileColumns = 1;
 
@@ -30,7 +30,7 @@ export default function PricingTable() {
     speed: 500,
     slidesToShow: desktopColumns,
     slidesToScroll: 1,
-    initialSlide: typeof window !== 'undefined' && window.innerWidth < 480 ? 1 : 0,
+    initialSlide: typeof window !== 'undefined' && window.innerWidth < 480 ? 2 : 0,
     responsive: [
       {
         breakpoint: 1345,
