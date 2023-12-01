@@ -71,7 +71,7 @@ function Construction() {
         title="Be top of mind for your trade accounts"
         description="With GoTradie worksite chats, you'll be a few taps away from any enquiries so your sales team can stay in touch and build better relationships with accounts"
         phoneHero="/images/phones/Supplier/supplier-inbox.png"
-        // featureText="OUT OF THE BOX FEATURES"
+        // featureText="OUT OF THE BOX FEATURES"h
         // subFeatureOne="Filter by assigned, team & more"
         // subIconOne="/images/icons/filter.svg"
         // subFeatureTwo="Add docs, photo’s & videos to tasks"

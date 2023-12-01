@@ -168,6 +168,10 @@ const ImageWrapper = styled.div`
 
 const BigTitle = styled.h1`
   color: #ffffff;
+<<<<<<< HEAD
+=======
+  font-family: "Montserrat-Bold", Helvetica;
+>>>>>>> origin/staging
   font-size: 45px;
   font-weight: 700;
   line-height: 51px;
@@ -275,6 +279,10 @@ const Box = styled.div`
 
 const SmallTitle = styled.h5`
   color: #54c5c0;
+<<<<<<< HEAD
+=======
+  font-family: "Montserrat-Bold", Helvetica;
+>>>>>>> origin/staging
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -290,6 +298,10 @@ const SmallTitle = styled.h5`
 
 const Headline = styled.h3`
   color: #ffffff;
+<<<<<<< HEAD
+=======
+  font-family: "Montserrat-Bold", Helvetica;
+>>>>>>> origin/staging
   font-size: 28px;
   font-weight: 700;
   line-height: 32px;
@@ -299,6 +311,10 @@ const Headline = styled.h3`
 
 const BodyCopy = styled.p`
   color: #ffffff;
+<<<<<<< HEAD
+=======
+  font-family: "Montserrat-Medium", Helvetica;
+>>>>>>> origin/staging
   font-size: 15px;
   font-weight: 500;
   line-height: 21px;
@@ -341,6 +357,10 @@ const TileImage = styled.img`
 
 const TextLink = styled.a`
   color: #54c5c0;
+<<<<<<< HEAD
+=======
+  font-family: "Montserrat-Bold", Helvetica;
+>>>>>>> origin/staging
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
