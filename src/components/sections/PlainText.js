@@ -156,6 +156,8 @@ line-height: 64px;
 const Description = styled(MediumText)`
   color: #ffffff;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
 
   @media (max-width: 480px) {
     text-align: left;

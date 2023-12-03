@@ -54,9 +54,9 @@ const {
             <img src={profile || "/images/avatars/adam.png"} alt="adam" />
           </Profile>
           <TextWrapper>
-            <Title>{title || "Why make the switch from WhatsApp"}</Title>
+            <Title>{title || "Learn why your business should make the switch? "}</Title>
             <Subtitle>
-            {subtitle || "No nonense Here from the Adam founder of GoTradie about why businesses should ditch SMS, Email, WhatsApp and Messenger"} 
+            {subtitle || "Read a short blog by our Founder, Adam about why your Business should ditch using Whatsapp, SMS, Email and move to a dedicated communication platform built for work."} 
             </Subtitle>
           </TextWrapper>
           </LeftWrapper>
@@ -196,7 +196,7 @@ const TextWrapper = styled.div`
 const Title = styled(H3)`
   color: white;
   padding-bottom: 8px;
-  line-height: 31px;
+  line-height: 34px;
 
   span {
     background: linear-gradient(90deg, #128C7E 0%, #25D366 100%);

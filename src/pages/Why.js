@@ -27,17 +27,17 @@ function Why() {
     <SEO {...seoProps} />
       <HeroOneColumn
         subtitle={<p style={{color: "#54C5C0"}}>2 min Read</p>}
-        title={<p style={{color: "white"}}>Why businesses should ditch<span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}> SMS, Email, WhatsApp and Messenger</span></p>}
-        description="In today's fast-paced construction and trade industries, efficient communication is the cornerstone of success. Yet, many businesses continue to rely on traditional methods like SMS, WhatsApp, and Messenger, inadvertently holding themselves back from reaching their full potential."
+        title={<p style={{color: "white"}}>Ditch using WhatsApp, SMS Email and move to a<span style={{background: "linear-gradient(90deg, #54C5C0 0%, #789BB6 100%)",  backgroundClip:"text", WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", color: "transparent" }}> dedicated communication built for work</span></p>}
+        description="In today's fast paced world, trade, services and construction Businesses, efficient communication is the cornerstone of success. Yet, many Businesses continue to rely on platforms built for personal use, like SMS, WhatsApp and Messenger, inadvertently mixing work and private life. GoTradie finally changes all that."
       />
       <HeroAnimation />
       <FeatureDetailLeft
-        title="Fragmented conversations vs. unified communication"
+        title="Fragmented conversations vs Organised communication"
         description=
         {
           <p>
           <p style={{paddingBottom: "16px"}}>The challenge with SMS, WhatsApp, and Messenger is the fragmentation of conversations. In a bustling construction site, conversations are scattered across different groups and individuals, making it difficult to maintain context and clarity.</p>
-          <p style={{color: "#54C5C0", fontWeight: "700", fontSize: "18px", paddingBottom: "16px"}}>A Unified Communication Hub</p>
+          <p style={{color: "#54C5C0", fontWeight: "700", fontSize: "18px", paddingBottom: "16px"}}>An organised communication hub</p>
           <p>GoTradie centralizes all your project-related conversations, providing a dedicated platform for team discussions, client interactions, and partner communications. Say goodbye to the confusion of fragmented conversations and ensure everyone is on the same page.</p>
         </p>
         }
@@ -49,7 +49,7 @@ function Why() {
         caption="“Yeh it’s on my phone somewhere i think”"
       />
       <FeatureDetailLeft
-        title="Media chaos vs. effortless media management"
+        title="Media chaos vs Media management"
         description=
         {
           <p>
@@ -66,12 +66,12 @@ function Why() {
         caption="“I sent you the plan, you sweet with what we discussed”"
       />
        <FeatureDetailLeft
-        title="Task tracking woes vs. task mastery and quality assurance"
+        title="Task tracking woes vs Task mastery and quality assurance"
         description=
         {
           <p>
           <p style={{paddingBottom: "16px"}}>Assigning tasks, setting deadlines, and tracking progress on traditional platforms don’t feed through to the likes of SMS and WhatsApp. Causing delays and reworks costing businesses </p>
-          <p style={{color: "#54C5C0", fontWeight: "700", fontSize: "18px", paddingBottom: "16px"}}>Task Assignment and Quality Assurance</p>
+          <p style={{color: "#54C5C0", fontWeight: "700", fontSize: "18px", paddingBottom: "16px"}}>Task assignment and quality assurance</p>
           <p>GoTradie simplifies task management. Assign tasks, set deadlines, and track their progress without annoying them come pack up time. Giving your team greater accountability </p>
           </p>
         }
@@ -83,7 +83,7 @@ function Why() {
         caption="“He took off with all my pricing list & setup his own business”"
       />
       <FeatureDetailLeft
-        title="Privacy and data security vs. peace of mind"
+        title="Privacy & data leakage vs Secure and compliant"
         description=
         {
           <p>
@@ -100,12 +100,12 @@ function Why() {
         caption="“Can i borrow you for sec?”"
       />
       <FeatureDetailLeft
-        title="Limited growth vs. collaboration and growth"
+        title="Chaos vs Collaboration"
         description=
         {
           <p>
           <p style={{paddingBottom: "16px"}}>Traditional communication methods can hinder your business's growth potential. Collaborating with team members, clients, and subbies becomes challenging, limiting your ability to work on the business rather than in the business</p>
-          <p style={{color: "#54C5C0", fontWeight: "700", fontSize: "18px", paddingBottom: "16px"}}>More growth and profressionalism</p>
+          <p style={{color: "#54C5C0", fontWeight: "700", fontSize: "18px", paddingBottom: "16px"}}>Increased professionalism</p>
           <p>GoTradie facilitates seamless collaboration with your team, clients, and partners. As you provide superior services and showcase your craftsmanship more effectively, your business will experience accelerated growth.</p>
           </p>
         }
@@ -115,7 +115,7 @@ function Why() {
         title="Conclusion"
         description={
           <p>
-          <p style={{paddingBottom: "16px"}}>In the construction and trade industries, the decision to move away from traditional communication methods like SMS, WhatsApp, and Messenger to GoTradie is a game-changer. Addressing the concerns of fragmented conversations, media mismanagement, task tracking troubles, privacy and data security, and limited growth, GoTradie offers a unified platform that streamlines your operations, enhances communication, and drives your business forward.</p>
+          <p style={{paddingBottom: "16px"}}>The decision to move away from traditional communication methods like SMS, WhatsApp and Messenger is a game-changer. Addressing the concerns of fragmented conversations, media mismanagement, task tracking troubles, privacy and data security, and limited growth, GoTradie offers a unified platform that streamlines your operations, enhances communication, and drives your business forward.</p>
           <p>Don't let outdated communication methods hold you back from achieving your full potential. Embrace the future of trade and construction communication with GoTradie and elevate your business to new heights. Make the switch today and experience the power of streamlined, efficient, and organized communication.</p>
           </p>
         }

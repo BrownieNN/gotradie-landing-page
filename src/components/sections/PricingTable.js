@@ -94,7 +94,7 @@ export default function PricingTable() {
     <Section ref={sectionRef} isVisible={isVisible}>
     <Wrapper>
       <TextWrapper>
-      <Title><span>No nonsense</span> pricing</Title>
+      <Title><span>No nonsense </span> pricing</Title>
           <Body>
             <p>Save 20% when paid annually </p>
             <img src="/images/icons/arrow-curved.svg" title="arrow" />

@@ -43,7 +43,7 @@ const AdditionalFeatures = () => {
     <LayoutContainer>
       <ContentContainer>
         <SmallTitle>Additonal Features</SmallTitle>
-        <BigTitle>But wait theres more</BigTitle>
+        <BigTitle>But wait, there’s more</BigTitle>
         {/* Mobile Slider */}
         <BoxContainer>
           {AdditionalData.map((work, index) => (

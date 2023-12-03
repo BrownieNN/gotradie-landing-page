@@ -5,7 +5,7 @@ import GetStarted from "../buttons/GetStarted"
 const ContactSalesBanner = ({ onClick }) => (
   <Container>
     <InnerContainer>
-    <Heading>More than 20+ team members?</Heading>
+    <Heading>More than 10+ team members?</Heading>
     <Text>
       Transparent, flexible, based on active price per seat.
       Get in touch with our sales team who'll be happy to help you out.

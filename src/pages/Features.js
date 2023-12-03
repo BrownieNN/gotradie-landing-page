@@ -137,7 +137,7 @@ function Features() {
         className="webapp-image"
         subtitle="Webapp"
         title="Bridging the gap between site & office"
-        description="Say goodbye to unnecessary site visits or No more waiting to get home or back to the office. Share & receive content across your mobile, tablet and desktop devices and stay in control from anywhere"
+        description="Say goodbye to unnecessary site visits or waiting to get home or back into the office. Share & receive content across your mobile, tablet and desktop devices and stay in control from anywhere"
         phoneHero="/images/phones/webapp.png"
         featureText="OUT OF THE BOX FEATURES"
         subFeatureOne="To-lists & tasks"
