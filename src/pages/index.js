@@ -21,7 +21,7 @@ import EnterpriseSection from "../components/sections/EnterpriseSection"
 function IndexPage() {
 
   const seoProps = {
-    title: "The Messenger App Built For Work 🔨",
+    title: "The Messenger App Built For Hard Work 🔨",
     description: "Simplify the way your team, worksites and clients communicate & more.",
     imageUrl: "https://gt-landing-staging.netlify.app/images/meta/Website-meta-generic.png", // Use the absolute URL
     imageWidth: 1200, // Specify the image width
