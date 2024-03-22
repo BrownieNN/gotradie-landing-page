@@ -43,7 +43,7 @@ export const priceData = [
         benefitFive: "Unlimited admin roles",
         benefitSix: "In-app, phone & email",
         benefitSeven: "Team Onboarding",
-        monthlyUrl: "https://buy.stripe.com/00geXC8kW8xB97q004",
+        monthlyUrl: "https://buy.stripe.com/eVadTy0Su7txabufZ6",
         yearlyUrl: "https://buy.stripe.com/28o4iY7gS4hlcjC14a",
         button: "Buy now",
         tooltipImage: "",
