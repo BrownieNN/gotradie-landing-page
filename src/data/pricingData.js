@@ -44,7 +44,7 @@ export const priceData = [
         benefitSix: "In-app, phone & email",
         benefitSeven: "Team Onboarding",
         monthlyUrl: "https://buy.stripe.com/eVadTy0Su7txabufZ6",
-        yearlyUrl: "https://buy.stripe.com/28o4iY7gS4hlcjC14a",
+        yearlyUrl: "https://buy.stripe.com/eVa3eU7gS9BF6ZiaEN",
         button: "Buy now",
         tooltipImage: "",
         tooltipTextMonthly: "From the date you purchase your subscription, GoTradie will charge your card at the end of 30 days. Simply set & forget",
